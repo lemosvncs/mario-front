@@ -55,12 +55,12 @@
 <button on:click={click}> Clique </button>
 
 <ul>
-    <li>{ emocoes.emoções.alegria }</li>
-    <li>{ emocoes.emoções.tristeza }</li>
-    <li>{ emocoes.emoções.medo }</li>
-    <li>{ emocoes.emoções.nojo }</li>
-    <li>{ emocoes.emoções.raiva }</li>
-    <li>{ emocoes.emoções.surpresa }</li>
+    <li>Alegria: { emocoes.emoções.alegria }</li>
+    <li>Tristeza: { emocoes.emoções.tristeza }</li>
+    <li>Medo: { emocoes.emoções.medo }</li>
+    <li>Nojo: { emocoes.emoções.nojo }</li>
+    <li>Raiva: { emocoes.emoções.raiva }</li>
+    <li>Surpresa: { emocoes.emoções.surpresa }</li>
 </ul>
 
 <p>Carga: { emocoes.emoções.carga }</p>
