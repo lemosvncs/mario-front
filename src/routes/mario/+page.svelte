@@ -63,12 +63,12 @@
         
         
         <ul class="max-w-md space-y-1 list-disc list-inside dark:text-gray-400">
-            <li>Alegria: { emocoes.emoções.alegria }</li>
-            <li>Tristeza: { emocoes.emoções.tristeza }</li>
-            <li>Medo: { emocoes.emoções.medo }</li>
-            <li>Nojo: { emocoes.emoções.nojo }</li>
-            <li>Raiva: { emocoes.emoções.raiva }</li>
-            <li>Surpresa: { emocoes.emoções.surpresa }</li>
+            <li>Alegria: { (emocoes.emoções.alegria * 100).toFixed(2) }%</li>
+            <li>Tristeza: { (emocoes.emoções.tristeza * 100).toFixed(2) }%</li>
+            <li>Medo: { (emocoes.emoções.medo * 100).toFixed(2) }%</li>
+            <li>Nojo: { (emocoes.emoções.nojo * 100).toFixed(2) }%</li>
+            <li>Raiva: { (emocoes.emoções.raiva * 100).toFixed(2) }%</li>
+            <li>Surpresa: { (emocoes.emoções.surpresa * 100).toFixed(2) }%</li>
         </ul>
     </div>
 
