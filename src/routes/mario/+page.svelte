@@ -48,21 +48,37 @@
     
 
 </script>
+<div class="container mx-auto">
 
-<h1>Emoções</h1>
+    <div class="py-12">
+        <div class="container mx-auto">
+            <h2 class="my-6 mb-2 text-lg font-semibold text-gray-900 dark:text-white">Emoções</h2>
+        
+            <div class="mb-6">
+                <label><input bind:value={frase} placeholder="first" class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></label>
+                <button type="button" on:click={click} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"> Clique </button>
+            </div>
+        
+        </div>
+        
+        
+        <ul class="max-w-md space-y-1 list-disc list-inside dark:text-gray-400">
+            <li>Alegria: { emocoes.emoções.alegria }</li>
+            <li>Tristeza: { emocoes.emoções.tristeza }</li>
+            <li>Medo: { emocoes.emoções.medo }</li>
+            <li>Nojo: { emocoes.emoções.nojo }</li>
+            <li>Raiva: { emocoes.emoções.raiva }</li>
+            <li>Surpresa: { emocoes.emoções.surpresa }</li>
+        </ul>
+    </div>
 
-<label><input bind:value={frase} placeholder="first"></label>
-<button on:click={click}> Clique </button>
 
-<ul>
-    <li>Alegria: { emocoes.emoções.alegria }</li>
-    <li>Tristeza: { emocoes.emoções.tristeza }</li>
-    <li>Medo: { emocoes.emoções.medo }</li>
-    <li>Nojo: { emocoes.emoções.nojo }</li>
-    <li>Raiva: { emocoes.emoções.raiva }</li>
-    <li>Surpresa: { emocoes.emoções.surpresa }</li>
-</ul>
 
-<p>Carga: { emocoes.emoções.carga }</p>
-<p>{ emocoes.version } </p>
-<img src='img/mario.png' alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando" width="200" height="200"/>
+
+<!-- <p>Carga: { emocoes.emoções.carga }</p> -->
+<div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <p class="py-4">Mario: { emocoes.version } </p>
+    <img class="rounded-full w-36 h-36" src='img/mario.png' alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando" width="200" height="200"/>
+</div>
+
+</div>
