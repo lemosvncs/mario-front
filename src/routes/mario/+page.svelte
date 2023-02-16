@@ -2,6 +2,8 @@
     let emocoes = {}
     let versao = 0;
     // let data = [];
+    let frase_hl = ' ';
+
     let frase = "É melhor, muito melhor, contentar-se com a realidade. se ela não é tão brilhante como os sonhos, tem pelo menos a vantagem de existir.";
     click();
 
@@ -18,26 +20,25 @@
         let result = await res.json();
 
         versao = result.version;
+        frase_hl = result.mario.frase; // .replace('/', '');
+        frase_hl = frase_hl;
         // data = result.data;
         emocoes = result.mario.emocoes;
         emocoes = emocoes;
-        // console.log(result)
+        console.log(result)
     }
 
 </script>
 
+
 <div class="container mx-auto">
     <div class="py-12">
         <div class="container mx-auto">
-            <h2
-                class="my-6 mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-            >
-                Emoções
-            </h2>
+            <h2 class="my-6 mb-2 text-lg font-semibold text-gray-900 dark:text-white">Emoções</h2>
 
             <div class="mb-6">
-                <label
-                    ><input
+                <label>
+                    <input
                         bind:value={frase}
                         placeholder="first"
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -53,7 +54,9 @@
             </div>
         </div>
 
-        <ul class="max-w-md space-y-1 list-disc list-inside dark:text-gray-400">
+        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">{ @html frase_hl }</div>
+
+        <ul class="max-w-md space-y-1 list-disc list-inside dark:text-gray-400 p-6 ">
             <li>Alegria: {(emocoes.alegria * 100).toFixed(2)}%</li>
             <li>Tristeza: {(emocoes.tristeza * 100).toFixed(2)}%</li>
             <li>Medo: {(emocoes.medo * 100).toFixed(2)}%</li>
