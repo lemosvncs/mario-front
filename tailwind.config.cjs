@@ -6,6 +6,8 @@ const config = {
   },
 
   plugins: [],
+
+  darkMode: 'class',
 };
 
 module.exports = config;
