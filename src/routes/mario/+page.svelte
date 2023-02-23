@@ -75,17 +75,15 @@
             {/if}
 
             {#if carga !== 0}
-                <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm m-auto min-w-full">{ @html frase_hl }</div>
+                <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase_hl }</div>
 
-                <div class="">
-                    <ul class="max-w-md space-y-1 list-disc list-inside dark:text-gray-400 p-6 m-auto">
-                        <li>Alegria: {(emocoes.alegria * 100).toFixed(2)}%</li>
-                        <li>Tristeza: {(emocoes.tristeza * 100).toFixed(2)}%</li>
-                        <li>Medo: {(emocoes.medo * 100).toFixed(2)}%</li>
-                        <li>Nojo: {(emocoes.nojo * 100).toFixed(2)}%</li>
-                        <li>Raiva: {(emocoes.raiva * 100).toFixed(2)}%</li>
-                        <li>Surpresa: {(emocoes.surpresa * 100).toFixed(2)}%</li>
-                    </ul>
+                <div class="dark:text-white flex py-16 justify-center">
+                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.8}">Alegria<img class="" src="img/noto_grinning-face-with-smiling-eyes.svg">{(emocoes.alegria * 100).toFixed(2)}%</span>
+                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.8}">Tristeza<img src="img/noto_disappointed-face.svg"> {(emocoes.tristeza * 100).toFixed(2)}%</span>
+                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.8}">Medo<img src="img/noto_anxious-face-with-sweat.svg"> {(emocoes.medo * 100).toFixed(2)}%</span>
+                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.8}">Nojo<img src="img/noto_nauseated-face.svg">{(emocoes.nojo * 100).toFixed(2)}%</span>
+                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.8}" >Raiva<img src="img/noto_enraged-face.svg">{(emocoes.raiva * 100).toFixed(2)}%</span>
+                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.8}">Surpresa<img src="img/noto_astonished-face.svg">{(emocoes.surpresa * 100).toFixed(2)}%</span>
                 </div>
             {/if}
             
