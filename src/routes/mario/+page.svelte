@@ -77,13 +77,37 @@
             {#if carga !== 0}
                 <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase_hl }</div>
 
-                <div class="dark:text-white flex py-16 justify-center">
-                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.8}">Alegria<img class="" src="img/noto_grinning-face-with-smiling-eyes.svg">{(emocoes.alegria * 100).toFixed(2)}%</span>
-                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.8}">Tristeza<img src="img/noto_disappointed-face.svg"> {(emocoes.tristeza * 100).toFixed(2)}%</span>
-                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.8}">Medo<img src="img/noto_anxious-face-with-sweat.svg"> {(emocoes.medo * 100).toFixed(2)}%</span>
-                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.8}">Nojo<img src="img/noto_nauseated-face.svg">{(emocoes.nojo * 100).toFixed(2)}%</span>
-                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.8}" >Raiva<img src="img/noto_enraged-face.svg">{(emocoes.raiva * 100).toFixed(2)}%</span>
-                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.8}">Surpresa<img src="img/noto_astonished-face.svg">{(emocoes.surpresa * 100).toFixed(2)}%</span>
+                <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
+                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.8}">
+                            <h2>Alegria</h2>
+                            <img class="" src="img/noto_grinning-face-with-smiling-eyes.svg" alt="Emoji sorrindo">
+                            <p>{(emocoes.alegria * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.8}" >
+                            <h2>Tristeza</h2>
+                            <img src="img/noto_disappointed-face.svg" alt="Emoji triste">
+                            <p>{(emocoes.tristeza * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.8}">
+                            <h2>Medo</h2>
+                            <img src="img/noto_anxious-face-with-sweat.svg" alt="Emoji com cara de assustado"> 
+                            <p>{(emocoes.medo * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.8}">
+                            <h2>Nojo</h2>
+                            <img src="img/noto_nauseated-face.svg" alt="Emoji enjoado">
+                            <p>{(emocoes.nojo * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.8}" >
+                            <h2>Raiva</h2>
+                            <img src="img/noto_enraged-face.svg" alt="Emoji com raiva">
+                            <p>{(emocoes.raiva * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.8}">
+                            <h2>Surpresa</h2>
+                            <img src="img/noto_astonished-face.svg" alt="Emoji surpreso">
+                            <p>{(emocoes.surpresa * 100).toFixed(2)}%</p>
+                        </span>
                 </div>
             {/if}
             
@@ -95,7 +119,7 @@
             <p><i>Este modelo foi estatisticamente validado.</i></p>
             <!-- <p></p> -->
             <p>
-                Esta I.A. foi criado para prever emoções em textos com mais do que
+                Esta I.A. foi criada para prever emoções em textos com mais do que
                 10 palavras em frases completas.
             </p>
 
