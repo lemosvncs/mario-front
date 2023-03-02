@@ -3,10 +3,19 @@
     import Icon from 'fa-svelte';
     import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
     import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
+    import { faAnglesDown } from '@fortawesome/free-solid-svg-icons/faAnglesDown'
+    import { faAnglesUp } from '@fortawesome/free-solid-svg-icons/faAnglesUp'
+    import { escape_attribute_value } from "svelte/internal";
+
+    let infoHidden = true;
+
     let icon = faCircle;
     let paperPlane = faPaperPlane;
+    let hideButtonIcon = faAnglesDown;
+    let hideButtonText = "Saiba mais"
 
-    let emocoes = {}
+    let aval = [];
+    let emocoes = {};
     let versao = 0;
     let carga = 0;
     // let data = [];
@@ -14,6 +23,17 @@
 
     let frase = "É melhor, muito melhor, contentar-se com a realidade. se ela não é tão brilhante como os sonhos, tem pelo menos a vantagem de existir.";
     click();
+
+    function hideInfo() {
+        infoHidden = !infoHidden;
+        if (hideButtonIcon === faAnglesDown) {
+            hideButtonIcon = faAnglesUp;
+            hideButtonText = "Ver menos"
+        } else {
+            hideButtonIcon = faAnglesDown;
+            hideButtonText = "Saiba mais"
+        }
+    }
 
     export async function click() {
         // const res = await fetch("https://mario-x4fs6sryfq-rj.a.run.app/", {mode: 'no-cors'});
@@ -26,7 +46,10 @@
         // const item = await res.json();
         // return { item } ;
         let result = await res.json();
-
+        aval = result.aval;
+        
+        
+        
         versao = result.version;
         frase_hl = result.mario.frase; // .replace('/', '');
         frase_hl = frase_hl;
@@ -111,18 +134,41 @@
                 </div>
             {/if}
             
-
         </div>
-
+        <div class="container grid place-items-center">
+            <button on:click={hideInfo} class="text-white">{ hideButtonText } <Icon icon={ hideButtonIcon }></Icon></button>
+        </div>
         <!-- <p>Carga: { emocoes.emoções.carga }</p> -->
-        <div class="min-w-full p-6 rounded-lg dark:border-white dark:border-2 text-white">
+        <!-- dark:border-white dark:border-2  -->
+        
+
+        {#if infoHidden == false}
+        <div class="min-w-full p-6 rounded-lg text-white"> 
             <p><i>Este modelo foi estatisticamente validado.</i></p>
             <!-- <p></p> -->
             <p>
                 Esta I.A. foi criada para prever emoções em textos com mais do que
-                10 palavras em frases completas.
+                10 palavras em frases completas. A acurácia para cada emoção pode ser vista na tabela abaixo:
             </p>
-
+            
+            <table class="table-auto border-collapse w-1/2 border-white border-2 mt-2">
+                <thead class="text-left">
+                    <tr>
+                        <th>Emoção</th>
+                        <th>Acurácia</th>
+                        <th>Precisão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {#each aval as item, index(item.Acc)}
+                        <tr>
+                            <td>{item.Emoções}</td>
+                            <td>{item.Acc.toFixed(2)}</td>
+                            <td>{item.Prec}</td>
+                        </tr>
+                    {/each}
+                </tbody>
+            </table>
 
             <p class="py-4">{ versao }</p>
             <img
@@ -133,6 +179,7 @@
                 height="200"
             />
         </div>
+        {/if}
     </div>
     This is the end.
 </div>
