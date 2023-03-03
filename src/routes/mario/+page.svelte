@@ -100,7 +100,14 @@
             <!-- <h2 class="my-6 mb-2 text-lg font-semibold text-gray-900 dark:text-white">Emoções</h2> -->
 
             <div class="flex justify-center mb-10">
-                <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe>
+                <img
+                class="rounded-full w-36 h-36"
+                src="img/mario.png"
+                alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
+                width="200"
+                height="200"
+            />
+                <!-- <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe> -->
             </div>
             
             <!-- <p><a href="https://gifer.com">via GIFER</a></p> -->
