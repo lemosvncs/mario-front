@@ -15,6 +15,9 @@
     let hideButtonIcon = faAnglesDown;
     let hideButtonText = "Saiba mais"
 
+    let texto_feedback_pos = "Acertou"
+    let texto_feedback_neg = "Errou"
+
     let aval = [];
     let emocoes = {};
     let versao = 0;
@@ -56,6 +59,8 @@
         frase_hl = frase_hl;
         // data = result.data;
         
+        texto_feedback_pos = "Acertou"
+        texto_feedback_neg = "Errou"
 
         carga = result.mario.carga;
         carga = carga;
@@ -77,10 +82,12 @@
 
     function feedback_positivo() {
         enviar_feedback(frase, 1, emocoes.alegria, emocoes.tristeza, emocoes.medo, emocoes.nojo, emocoes.raiva, emocoes.surpresa)
+        texto_feedback_pos = "Feedback enviado"
     }
 
     function feedback_negativo() {
         enviar_feedback(frase, 0, emocoes.alegria, emocoes.tristeza, emocoes.medo, emocoes.nojo, emocoes.raiva, emocoes.surpresa)
+        texto_feedback_neg = "Feedback enviado"
     }
 
 </script>
@@ -156,8 +163,8 @@
 
         <div class="container grid place-items-center py-4 text-white">
             <div class="flex flex-row">
-                <button on:click={feedback_positivo} class="p-2 mr-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> Acertou </button>
-                <button on:click={feedback_negativo} class="p-2 ml-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> Errou </button>
+                <button on:click={feedback_positivo} class="p-2 mr-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_pos } </button>
+                <button on:click={feedback_negativo} class="p-2 ml-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
             </div>
         </div>
             
