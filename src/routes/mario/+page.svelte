@@ -173,6 +173,10 @@
                 <button on:click={feedback_negativo} class="p-2 ml-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
             </div>
         </div>
+
+        <div class="flex justify-center min-w-full pt-20 rounded-lg text-white"> 
+            <p><i>Este modelo foi estatisticamente validado.</i></p>
+        </div>
             
         </div>
         <div class="container grid place-items-center">
@@ -181,16 +185,16 @@
         <!-- <p>Carga: { emocoes.emoções.carga }</p> -->
         <!-- dark:border-white dark:border-2  -->
         
-
+        
         {#if infoHidden == false}
         <div class="min-w-full p-6 rounded-lg text-white"> 
             <p><i>Este modelo foi estatisticamente validado.</i></p>
             <!-- <p></p> -->
             <p>
                 Esta I.A. foi criada para prever emoções em textos com mais do que
-                10 palavras em frases completas. A acurácia para cada emoção pode ser vista na tabela abaixo:
-            </p>
+                10 palavras em frases completas.</p>
             
+            <!-- <p>A acurácia para cada emoção pode ser vista na tabela abaixo:</p>
             <table class="table-auto border-collapse w-1/2 border-white border-2 mt-2">
                 <thead class="text-left">
                     <tr>
@@ -208,7 +212,7 @@
                         </tr>
                     {/each}
                 </tbody>
-            </table>
+            </table> -->
 
             <p class="py-4">{ versao }</p>
             <img
