@@ -1,5 +1,6 @@
 <script>
     import Header from "../../header.svelte";
+
     import Icon from 'fa-svelte';
     import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
     import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
@@ -61,6 +62,25 @@
         emocoes = result.mario.emocoes;
         emocoes = emocoes;
         // console.log(result)
+    }
+
+    async function enviar_feedback(frase, feedback, alegria, tristeza, medo, nojo, raiva, surpresa) {
+        // const res = await fetch("https://mario-x4fs6sryfq-rj.a.run.app/", {mode: 'no-cors'});
+        let url = "https://mario-x4fs6sryfq-rj.a.run.app/?frase=" + frase + "&feedback=" + feedback + "&alegria=" + alegria + "&tristeza=" + tristeza + "&medo=" + medo + "&nojo=" + nojo + "&raiva=" + raiva + "&surpresa=" + surpresa;
+        console.log(url);
+        const res = await fetch(url, {
+            mode: "cors",
+            method: "POST",
+            headers: { dataType: "json" },
+        });
+    }
+
+    function feedback_positivo() {
+        enviar_feedback(frase, 1, emocoes.alegria, emocoes.tristeza, emocoes.medo, emocoes.nojo, emocoes.raiva, emocoes.surpresa)
+    }
+
+    function feedback_negativo() {
+        enviar_feedback(frase, 0, emocoes.alegria, emocoes.tristeza, emocoes.medo, emocoes.nojo, emocoes.raiva, emocoes.surpresa)
     }
 
 </script>
@@ -133,6 +153,13 @@
                         </span>
                 </div>
             {/if}
+
+        <div class="container grid place-items-center py-4 text-white">
+            <div class="flex flex-row">
+                <button on:click={feedback_positivo} class="p-2 mr-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> Acertou </button>
+                <button on:click={feedback_negativo} class="p-2 ml-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> Errou </button>
+            </div>
+        </div>
             
         </div>
         <div class="container grid place-items-center">
