@@ -9,6 +9,7 @@
     import { escape_attribute_value } from "svelte/internal";
 
     let infoHidden = true;
+    let scaleFactor = 0.6;
 
     let icon = faCircle;
     let paperPlane = faPaperPlane;
@@ -118,32 +119,32 @@
             {#if carga !== 0}
                 <!-- <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase }</div> -->
                 <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
-                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.7}">
+                        <span class="flex-col px-4" style="scale: {emocoes.alegria + scaleFactor}">
                             <h2>Alegria</h2>
                             <img class="" src="img/noto_grinning-face-with-smiling-eyes.svg" alt="Emoji sorrindo">
                             <p>{(emocoes.alegria * 100).toFixed(2)}%</p>
                         </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.7}" >
+                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + scaleFactor}" >
                             <h2>Tristeza</h2>
                             <img src="img/noto_disappointed-face.svg" alt="Emoji triste">
                             <p>{(emocoes.tristeza * 100).toFixed(2)}%</p>
                         </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.7}">
+                        <span class="flex-col px-4" style="scale: {emocoes.medo + scaleFactor}">
                             <h2>Medo</h2>
                             <img src="img/noto_anxious-face-with-sweat.svg" alt="Emoji com cara de assustado"> 
                             <p>{(emocoes.medo * 100).toFixed(2)}%</p>
                         </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.7}">
+                        <span class="flex-col px-4" style="scale: {emocoes.nojo + scaleFactor}">
                             <h2>Nojo</h2>
                             <img src="img/noto_nauseated-face.svg" alt="Emoji enjoado">
                             <p>{(emocoes.nojo * 100).toFixed(2)}%</p>
                         </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.7}" >
+                        <span class="flex-col px-4" style="scale: {emocoes.raiva + scaleFactor}" >
                             <h2>Raiva</h2>
                             <img src="img/noto_enraged-face.svg" alt="Emoji com raiva">
                             <p>{(emocoes.raiva * 100).toFixed(2)}%</p>
                         </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.7}">
+                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + scaleFactor}">
                             <h2>Surpresa</h2>
                             <img src="img/noto_astonished-face.svg" alt="Emoji surpreso">
                             <p>{(emocoes.surpresa * 100).toFixed(2)}%</p>
