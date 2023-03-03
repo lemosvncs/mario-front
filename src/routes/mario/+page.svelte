@@ -117,7 +117,6 @@
                                 <!-- <i class="fa-solid fa-user text-white"></i> -->
                         </button>
                 </label>
-                
             </div>
 
             {#if carga === 0}
@@ -125,7 +124,7 @@
             {/if}
 
             {#if carga !== 0}
-                <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase_hl }</div>
+                <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase }</div>
 
                 <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
                         <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.8}">
