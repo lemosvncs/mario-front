@@ -25,8 +25,8 @@
     // let data = [];
     let frase_hl = ' ';
 
-    let frase = "É melhor, muito melhor, contentar-se com a realidade. se ela não é tão brilhante como os sonhos, tem pelo menos a vantagem de existir.";
-    click();
+    let frase = '';
+    let placeholder = "Escreva uma frase e clique em enviar"; // "É melhor, muito melhor, contentar-se com a realidade. se ela não é tão brilhante como os sonhos, tem pelo menos a vantagem de existir.";
 
     function hideInfo() {
         infoHidden = !infoHidden;
@@ -51,8 +51,6 @@
         // return { item } ;
         let result = await res.json();
         aval = result.aval;
-        
-        
         
         versao = result.version;
         frase_hl = result.mario.frase; // .replace('/', '');
@@ -101,7 +99,7 @@
 
             <div class="flex justify-center mb-10">
                 <img
-                class="rounded-full w-36 h-36"
+                class="rounded-full w-36 h-36 border-white border-4"
                 src="img/mario.png"
                 alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
                 width="200"
@@ -109,13 +107,54 @@
             />
                 <!-- <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe> -->
             </div>
+
+            {#if carga == 0}
+                <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
+                    <p>...</p>
+                </div>
+            {/if}
             
             <!-- <p><a href="https://gifer.com">via GIFER</a></p> -->
+            {#if carga !== 0}
+                <!-- <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase }</div> -->
+                <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
+                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.7}">
+                            <h2>Alegria</h2>
+                            <img class="" src="img/noto_grinning-face-with-smiling-eyes.svg" alt="Emoji sorrindo">
+                            <p>{(emocoes.alegria * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.7}" >
+                            <h2>Tristeza</h2>
+                            <img src="img/noto_disappointed-face.svg" alt="Emoji triste">
+                            <p>{(emocoes.tristeza * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.7}">
+                            <h2>Medo</h2>
+                            <img src="img/noto_anxious-face-with-sweat.svg" alt="Emoji com cara de assustado"> 
+                            <p>{(emocoes.medo * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.7}">
+                            <h2>Nojo</h2>
+                            <img src="img/noto_nauseated-face.svg" alt="Emoji enjoado">
+                            <p>{(emocoes.nojo * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.7}" >
+                            <h2>Raiva</h2>
+                            <img src="img/noto_enraged-face.svg" alt="Emoji com raiva">
+                            <p>{(emocoes.raiva * 100).toFixed(2)}%</p>
+                        </span>
+                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.7}">
+                            <h2>Surpresa</h2>
+                            <img src="img/noto_astonished-face.svg" alt="Emoji surpreso">
+                            <p>{(emocoes.surpresa * 100).toFixed(2)}%</p>
+                        </span>
+                </div>
+            {/if}
 
             <div class="mb-6 dark: bg-black">
                 <label class="inline-flex w-full">
                     <input bind:value={frase}
-                        placeholder="first"
+                        placeholder={placeholder}
                         class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                         
                         <button type="button" on:click={click}
@@ -130,42 +169,6 @@
                 <p class="text-orange-500">Ops, não consigo determinar as emoções de sua frase. Tente uma frase maior.</p>
             {/if}
 
-            {#if carga !== 0}
-                <div class="block p-6 rounded-lg shadow-lg dark:bg-slate-900 text-white border-2 max-w-sm m-auto min-w-full">{ @html frase }</div>
-
-                <div class="dark:text-white flex flex-row flex-wrap lg:flex-no-wrap py-16 justify-center">
-                        <span class="flex-col px-4" style="scale: {emocoes.alegria + 0.8}">
-                            <h2>Alegria</h2>
-                            <img class="" src="img/noto_grinning-face-with-smiling-eyes.svg" alt="Emoji sorrindo">
-                            <p>{(emocoes.alegria * 100).toFixed(2)}%</p>
-                        </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.tristeza + 0.8}" >
-                            <h2>Tristeza</h2>
-                            <img src="img/noto_disappointed-face.svg" alt="Emoji triste">
-                            <p>{(emocoes.tristeza * 100).toFixed(2)}%</p>
-                        </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.medo + 0.8}">
-                            <h2>Medo</h2>
-                            <img src="img/noto_anxious-face-with-sweat.svg" alt="Emoji com cara de assustado"> 
-                            <p>{(emocoes.medo * 100).toFixed(2)}%</p>
-                        </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.nojo + 0.8}">
-                            <h2>Nojo</h2>
-                            <img src="img/noto_nauseated-face.svg" alt="Emoji enjoado">
-                            <p>{(emocoes.nojo * 100).toFixed(2)}%</p>
-                        </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.raiva + 0.8}" >
-                            <h2>Raiva</h2>
-                            <img src="img/noto_enraged-face.svg" alt="Emoji com raiva">
-                            <p>{(emocoes.raiva * 100).toFixed(2)}%</p>
-                        </span>
-                        <span class="flex-col px-4" style="scale: {emocoes.surpresa + 0.8}">
-                            <h2>Surpresa</h2>
-                            <img src="img/noto_astonished-face.svg" alt="Emoji surpreso">
-                            <p>{(emocoes.surpresa * 100).toFixed(2)}%</p>
-                        </span>
-                </div>
-            {/if}
 
         <div class="container grid place-items-center py-4 text-white">
             <div class="flex flex-row">
