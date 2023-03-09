@@ -12,7 +12,7 @@
     // import { LOGNAME } from "$env/static/private";
 
     let infoHidden = true;
-    let scaleFactor = 0.6;
+    let scaleFactor = 0.4;
     let carregando = false;
 
     let icon = faCircle;
