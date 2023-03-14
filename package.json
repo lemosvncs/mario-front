@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/adapter-netlify": "^2.0.3",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.88",
     "@sveltejs/kit": "^1.5.0",
     "autoprefixer": "^10.4.7",
     "fa-svelte": "^3.1.0",

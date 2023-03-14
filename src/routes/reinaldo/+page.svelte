@@ -31,5 +31,5 @@
             <!-- <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe> -->
         </div>
     </div>
-    <Reinaldo/>
+        <Reinaldo/>
     </div>
