@@ -6,12 +6,14 @@
     import { faKeyboard } from '@fortawesome/free-solid-svg-icons/faKeyboard'
     import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons/faCircleExclamation'
     import { faFaceSmileWink } from '@fortawesome/free-solid-svg-icons/faFaceSmileWink';
+    import { faArrowsUpToLine } from '@fortawesome/free-solid-svg-icons/faArrowsUpToLine';
     
     let paperPlane = faPaperPlane;
     let spinner = faSpinner;
     let keyboard = faKeyboard;
     let warning = faCircleExclamation;
     let wink = faFaceSmileWink;
+    let back_to_top = faArrowsUpToLine;
 
     let placeholder = '1';
 
@@ -179,11 +181,12 @@
     let inputstyle = "mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block              p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 </script>
 
-<a id="top">
+<!-- <a id="top">
     <div class="text-center text-center animate-bounce">
         <Icon icon={keyboard}/>
     </div>
-</a>
+</a> -->
+
 <div class="mx-auto text-center">
     <p>Probabilidade de você <b>NÃO</b> ser diagnosticado com hipertensão:</p>
     <h2 class="text-2xl">{reinaldo.toFixed(2)*100}%</h2>
@@ -314,15 +317,18 @@
                 <p>Não</p>
             </label>
         </div>
-        <a href="#top">
+        <div class="flex inline-flex mt-4">
             <button type="button"
-                id='botaoEnviar'
                 on:click={handleClick}
-                class="w-64 h-16 mb-16 mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                class="w-64 h-16  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                 <Icon icon={paperPlane}></Icon>
+                Enviar
                     <!-- <i class="fa-solid fa-user text-white"></i> -->
             </button>
-        </a>
+            <button type="button" class="w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                <a href="#top" class= ""><Icon icon={back_to_top}/> Voltar</a>
+            </button>
+        </div>
     </form>
     
 </div>
