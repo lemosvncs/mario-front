@@ -24,7 +24,7 @@
         <div class="flex justify-center mb-10">
             <img
             class="rounded-full w-60 h-60 border-white border-4"
-            src="img/mario.png"
+            src="img/reinaldo.png"
             alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
             width="200"
             height="200"/>
