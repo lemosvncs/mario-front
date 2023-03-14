@@ -1,8 +1,5 @@
 import './shims.js';
 import { Server } from './server/index.js';
-import 'node:stream/web';
-import 'node:buffer';
-import 'node:crypto';
 import 'assert';
 import 'net';
 import 'http';

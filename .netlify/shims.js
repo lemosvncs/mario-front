@@ -1,6 +1,3 @@
-import { ReadableStream as ReadableStream$1, TransformStream, WritableStream } from 'node:stream/web';
-import buffer from 'node:buffer';
-import { webcrypto } from 'node:crypto';
 import require$$0$1 from 'assert';
 import require$$4 from 'net';
 import require$$2 from 'http';
@@ -8,7 +5,7 @@ import require$$0$2 from 'stream';
 import require$$7 from 'buffer';
 import require$$0 from 'util';
 import require$$8 from 'querystring';
-import require$$13 from 'stream/web';
+import require$$13, { ReadableStream as ReadableStream$1, TransformStream, WritableStream } from 'stream/web';
 import require$$0$3 from 'worker_threads';
 import require$$1 from 'perf_hooks';
 import require$$4$1 from 'util/types';
@@ -19,7 +16,7 @@ import require$$3 from 'async_hooks';
 import require$$1$1 from 'console';
 import require$$3$1 from 'zlib';
 import require$$6 from 'string_decoder';
-import require$$0$5 from 'crypto';
+import require$$0$5, { webcrypto } from 'crypto';
 import require$$1$2 from 'diagnostics_channel';
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -701,94 +698,6 @@ var util$g = {
   getSocketInfo,
   isFormDataLike,
   buildURL: buildURL$2
-};
-
-let fastNow = Date.now();
-let fastNowTimeout;
-
-const fastTimers = [];
-
-function onTimeout () {
-  fastNow = Date.now();
-
-  let len = fastTimers.length;
-  let idx = 0;
-  while (idx < len) {
-    const timer = fastTimers[idx];
-
-    if (timer.expires && fastNow >= timer.expires) {
-      timer.expires = 0;
-      timer.callback(timer.opaque);
-    }
-
-    if (timer.expires === 0) {
-      timer.active = false;
-      if (idx !== len - 1) {
-        fastTimers[idx] = fastTimers.pop();
-      } else {
-        fastTimers.pop();
-      }
-      len -= 1;
-    } else {
-      idx += 1;
-    }
-  }
-
-  if (fastTimers.length > 0) {
-    refreshTimeout();
-  }
-}
-
-function refreshTimeout () {
-  if (fastNowTimeout && fastNowTimeout.refresh) {
-    fastNowTimeout.refresh();
-  } else {
-    clearTimeout(fastNowTimeout);
-    fastNowTimeout = setTimeout(onTimeout, 1e3);
-    if (fastNowTimeout.unref) {
-      fastNowTimeout.unref();
-    }
-  }
-}
-
-class Timeout {
-  constructor (callback, delay, opaque) {
-    this.callback = callback;
-    this.delay = delay;
-    this.opaque = opaque;
-    this.expires = 0;
-    this.active = false;
-
-    this.refresh();
-  }
-
-  refresh () {
-    if (!this.active) {
-      this.active = true;
-      fastTimers.push(this);
-      if (!fastNowTimeout || fastTimers.length === 1) {
-        refreshTimeout();
-        fastNow = Date.now();
-      }
-    }
-
-    this.expires = fastNow + this.delay;
-  }
-
-  clear () {
-    this.expires = 0;
-  }
-}
-
-var timers$1 = {
-  setTimeout (callback, delay, opaque) {
-    return new Timeout(callback, delay, opaque)
-  },
-  clearTimeout (timeout) {
-    if (timeout && timeout.clear) {
-      timeout.clear();
-    }
-  }
 };
 
 var utils$1;
@@ -4593,8 +4502,8 @@ function requireDataURL () {
 	  // 5. Let mimeType be the result of collecting a
 	  // sequence of code points that are not equal
 	  // to U+002C (,), given position.
-	  let mimeType = collectASequenceOfCodePointsFast(
-	    ',',
+	  let mimeType = collectASequenceOfCodePoints(
+	    (char) => char !== ',',
 	    input,
 	    position
 	  );
@@ -4707,25 +4616,6 @@ function requireDataURL () {
 	  return result
 	}
 
-	/**
-	 * A faster collectASequenceOfCodePoints that only works when comparing a single character.
-	 * @param {string} char
-	 * @param {string} input
-	 * @param {{ position: number }} position
-	 */
-	function collectASequenceOfCodePointsFast (char, input, position) {
-	  const idx = input.indexOf(char, position.position);
-	  const start = position.position;
-
-	  if (idx === -1) {
-	    position.position = input.length;
-	    return input.slice(start)
-	  }
-
-	  position.position = idx;
-	  return input.slice(start, position.position)
-	}
-
 	// https://url.spec.whatwg.org/#string-percent-decode
 	/** @param {string} input */
 	function stringPercentDecode (input) {
@@ -4795,8 +4685,8 @@ function requireDataURL () {
 	  // 3. Let type be the result of collecting a sequence
 	  // of code points that are not U+002F (/) from
 	  // input, given position.
-	  const type = collectASequenceOfCodePointsFast(
-	    '/',
+	  const type = collectASequenceOfCodePoints(
+	    (char) => char !== '/',
 	    input,
 	    position
 	  );
@@ -4820,8 +4710,8 @@ function requireDataURL () {
 	  // 7. Let subtype be the result of collecting a sequence of
 	  // code points that are not U+003B (;) from input, given
 	  // position.
-	  let subtype = collectASequenceOfCodePointsFast(
-	    ';',
+	  let subtype = collectASequenceOfCodePoints(
+	    (char) => char !== ';',
 	    input,
 	    position
 	  );
@@ -4905,8 +4795,8 @@ function requireDataURL () {
 
 	      // 2. Collect a sequence of code points that are not
 	      // U+003B (;) from input, given position.
-	      collectASequenceOfCodePointsFast(
-	        ';',
+	      collectASequenceOfCodePoints(
+	        (char) => char !== ';',
 	        input,
 	        position
 	      );
@@ -4916,8 +4806,8 @@ function requireDataURL () {
 	      // 1. Set parameterValue to the result of collecting
 	      // a sequence of code points that are not U+003B (;)
 	      // from input, given position.
-	      parameterValue = collectASequenceOfCodePointsFast(
-	        ';',
+	      parameterValue = collectASequenceOfCodePoints(
+	        (char) => char !== ';',
 	        input,
 	        position
 	      );
@@ -6639,16 +6529,11 @@ let Request$1 = class Request {
 };
 
 function processHeaderValue (key, val) {
-  if (val && typeof val === 'object') {
+  if (val && (typeof val === 'object' && !Array.isArray(val))) {
+    throw new InvalidArgumentError$i(`invalid ${key} header`)
+  } else if (headerCharRegex.exec(val) !== null) {
     throw new InvalidArgumentError$i(`invalid ${key} header`)
   }
-
-  val = val != null ? `${val}` : '';
-
-  if (headerCharRegex.exec(val) !== null) {
-    throw new InvalidArgumentError$i(`invalid ${key} header`)
-  }
-
   return `${key}: ${val}\r\n`
 }
 
@@ -6678,10 +6563,11 @@ function processHeader (request, key, val) {
   } else if (
     request.contentType === null &&
     key.length === 12 &&
-    key.toLowerCase() === 'content-type'
+    key.toLowerCase() === 'content-type' &&
+    headerCharRegex.exec(val) === null
   ) {
     request.contentType = val;
-    request.headers += processHeaderValue(key, val);
+    request.headers += `${key}: ${val}\r\n`;
   } else if (
     key.length === 17 &&
     key.toLowerCase() === 'transfer-encoding'
@@ -6691,7 +6577,7 @@ function processHeader (request, key, val) {
     key.length === 10 &&
     key.toLowerCase() === 'connection'
   ) {
-    const value = typeof val === 'string' ? val.toLowerCase() : null;
+    const value = val.toLowerCase();
     if (value !== 'close' && value !== 'keep-alive') {
       throw new InvalidArgumentError$i('invalid connection header')
     } else if (value === 'close') {
@@ -7053,12 +6939,6 @@ function buildConnector$3 ({ maxCachedSessions, socketPath, timeout, ...opts }) 
         port: port || 80,
         host: hostname
       });
-    }
-
-    // Set TCP keep alive options on the socket here instead of in connect() for the case of assigning the socket
-    if (options.keepAlive == null || options.keepAlive) {
-      const keepAliveInitialDelay = options.keepAliveInitialDelay === undefined ? 60e3 : options.keepAliveInitialDelay;
-      socket.setKeepAlive(true, keepAliveInitialDelay);
     }
 
     const cancelTimeout = setupTimeout(() => onConnectTimeout(socket), timeout);
@@ -7668,7 +7548,6 @@ function requireLlhttp_simd_wasm () {
 const assert$3 = require$$0$1;
 const net = require$$4;
 const util$b = util$g;
-const timers = timers$1;
 const Request = request$2;
 const DispatcherBase$3 = dispatcherBase;
 const {
@@ -7729,7 +7608,6 @@ const {
   kLocalAddress,
   kMaxResponseSize
 } = symbols$3;
-const FastBuffer = Buffer[Symbol.species];
 
 const kClosedResolve$1 = Symbol('kClosedResolve');
 
@@ -8025,8 +7903,9 @@ async function lazyllhttp () {
       },
       wasm_on_status: (p, at, len) => {
         assert$3.strictEqual(currentParser.ptr, p);
-        const start = at - currentBufferPtr + currentBufferRef.byteOffset;
-        return currentParser.onStatus(new FastBuffer(currentBufferRef.buffer, start, len)) || 0
+        const start = at - currentBufferPtr;
+        const end = start + len;
+        return currentParser.onStatus(currentBufferRef.slice(start, end)) || 0
       },
       wasm_on_message_begin: (p) => {
         assert$3.strictEqual(currentParser.ptr, p);
@@ -8034,13 +7913,15 @@ async function lazyllhttp () {
       },
       wasm_on_header_field: (p, at, len) => {
         assert$3.strictEqual(currentParser.ptr, p);
-        const start = at - currentBufferPtr + currentBufferRef.byteOffset;
-        return currentParser.onHeaderField(new FastBuffer(currentBufferRef.buffer, start, len)) || 0
+        const start = at - currentBufferPtr;
+        const end = start + len;
+        return currentParser.onHeaderField(currentBufferRef.slice(start, end)) || 0
       },
       wasm_on_header_value: (p, at, len) => {
         assert$3.strictEqual(currentParser.ptr, p);
-        const start = at - currentBufferPtr + currentBufferRef.byteOffset;
-        return currentParser.onHeaderValue(new FastBuffer(currentBufferRef.buffer, start, len)) || 0
+        const start = at - currentBufferPtr;
+        const end = start + len;
+        return currentParser.onHeaderValue(currentBufferRef.slice(start, end)) || 0
       },
       wasm_on_headers_complete: (p, statusCode, upgrade, shouldKeepAlive) => {
         assert$3.strictEqual(currentParser.ptr, p);
@@ -8048,8 +7929,9 @@ async function lazyllhttp () {
       },
       wasm_on_body: (p, at, len) => {
         assert$3.strictEqual(currentParser.ptr, p);
-        const start = at - currentBufferPtr + currentBufferRef.byteOffset;
-        return currentParser.onBody(new FastBuffer(currentBufferRef.buffer, start, len)) || 0
+        const start = at - currentBufferPtr;
+        const end = start + len;
+        return currentParser.onBody(currentBufferRef.slice(start, end)) || 0
       },
       wasm_on_message_complete: (p) => {
         assert$3.strictEqual(currentParser.ptr, p);
@@ -8106,9 +7988,9 @@ class Parser {
   setTimeout (value, type) {
     this.timeoutType = type;
     if (value !== this.timeoutValue) {
-      timers.clearTimeout(this.timeout);
+      clearTimeout(this.timeout);
       if (value) {
-        this.timeout = timers.setTimeout(onParserTimeout, value, this);
+        this.timeout = setTimeout(onParserTimeout, value, this);
         // istanbul ignore else: only for jest
         if (this.timeout.unref) {
           this.timeout.unref();
@@ -8224,7 +8106,7 @@ class Parser {
     this.llhttp.llhttp_free(this.ptr);
     this.ptr = null;
 
-    timers.clearTimeout(this.timeout);
+    clearTimeout(this.timeout);
     this.timeout = null;
     this.timeoutValue = null;
     this.timeoutType = null;
@@ -12703,11 +12585,7 @@ function requireHeaders () {
 
 	    // 2. Append (name, value) to list.
 	    if (exists) {
-	      const delimiter = lowercaseName === 'cookie' ? '; ' : ', ';
-	      this[kHeadersMap].set(lowercaseName, {
-	        name: exists.name,
-	        value: `${exists.value}${delimiter}${value}`
-	      });
+	      this[kHeadersMap].set(lowercaseName, { name: exists.name, value: `${exists.value}, ${value}` });
 	    } else {
 	      this[kHeadersMap].set(lowercaseName, { name, value });
 	    }
@@ -20717,11 +20595,6 @@ function requireUndici () {
 	  undici.getCookies = getCookies;
 	  undici.getSetCookies = getSetCookies;
 	  undici.setCookie = setCookie;
-
-	  const { parseMIMEType, serializeAMimeType } = requireDataURL();
-
-	  undici.parseMIMEType = parseMIMEType;
-	  undici.serializeAMimeType = serializeAMimeType;
 	}
 
 	if (nodeMajor >= 18 && hasCrypto) {
@@ -20745,9 +20618,6 @@ function requireUndici () {
 
 var undiciExports = requireUndici();
 
-// @ts-expect-error
-const File = buffer.File ?? undiciExports.File;
-
 /** @type {Record<string, any>} */
 const globals = {
 	crypto: webcrypto,
@@ -20758,8 +20628,7 @@ const globals = {
 	ReadableStream: ReadableStream$1,
 	TransformStream,
 	WritableStream,
-	FormData: undiciExports.FormData,
-	File
+	FormData: undiciExports.FormData
 };
 
 // exported for dev/preview and node environments

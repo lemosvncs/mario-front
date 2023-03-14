@@ -1,5 +1,8 @@
 function noop() {
 }
+function is_promise(value) {
+  return !!value && (typeof value === "object" || typeof value === "function") && typeof value.then === "function";
+}
 function run(fn) {
   return fn();
 }
@@ -18,6 +21,9 @@ function subscribe(store, ...callbacks) {
   }
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function null_to_empty(value) {
+  return value == null ? "" : value;
 }
 let current_component;
 function set_current_component(component) {
@@ -112,7 +118,9 @@ export {
   create_ssr_component as c,
   add_attribute as d,
   escape as e,
+  null_to_empty as f,
   getContext as g,
+  is_promise as i,
   missing_component as m,
   noop as n,
   safe_not_equal as s,
