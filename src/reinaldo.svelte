@@ -186,7 +186,8 @@
 </div>
 
 <div class="px-8">
-    <form class="flex-column w-full max-w-md">
+    <input type="hidden" name="form-name" value="name_of_my_form" />
+    <form name="reinaldo" method="POST" data-netlify="true" class="flex-column w-full max-w-md">
         <p>Qual sua idade?</p><input bind:value={idade} placeholder=48 class={inputstyle}/>
         <p class="my-4">Como você se identifica?</p>    
         <div class="flex">

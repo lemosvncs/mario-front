@@ -523,9 +523,9 @@ var init__ = __esm({
     init_layout();
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/components/pages/_layout.svelte-b09d65e2.js";
-    imports = ["_app/immutable/components/pages/_layout.svelte-b09d65e2.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/modules/pages/_layout.js-fa3c4266.js", "_app/immutable/chunks/_layout-9a8b0c19.js"];
-    stylesheets = ["_app/immutable/assets/_layout-fdcf0716.css"];
+    file = "_app/immutable/components/pages/_layout.svelte-f21d206b.js";
+    imports = ["_app/immutable/components/pages/_layout.svelte-f21d206b.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/modules/pages/_layout.js-fa3c4266.js", "_app/immutable/chunks/_layout-9a8b0c19.js"];
+    stylesheets = ["_app/immutable/assets/_layout-c6d5c8dc.css"];
     fonts = [];
   }
 });
@@ -966,7 +966,8 @@ var init_page_svelte3 = __esm({
       return `<div class="${"mx-auto text-center"}"><p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
     <h2 class="${"text-2xl"}">${escape(reinaldo.toFixed(2) * 100)}%</h2></div>
 
-<div class="${"px-8"}"><form class="${"flex-column w-full max-w-md"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
+<div class="${"px-8"}"><input type="${"hidden"}" name="${"form-name"}" value="${"name_of_my_form"}">
+    <form name="${"reinaldo"}" method="${"POST"}" data-netlify="${"true"}" class="${"flex-column w-full max-w-md"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
         <p class="${"my-4"}">Como voc\xEA se identifica?</p>    
         <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", "mulher", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Mulher</p></label>
@@ -1056,8 +1057,8 @@ var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/components/pages/reinaldo/_page.svelte-0c6fcaaf.js";
-    imports5 = ["_app/immutable/components/pages/reinaldo/_page.svelte-0c6fcaaf.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/faPaperPlane-7fb80dd0.js"];
+    file5 = "_app/immutable/components/pages/reinaldo/_page.svelte-72844b50.js";
+    imports5 = ["_app/immutable/components/pages/reinaldo/_page.svelte-72844b50.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/faPaperPlane-7fb80dd0.js"];
     stylesheets5 = ["_app/immutable/assets/faPaperPlane-51b1667c.css"];
     fonts5 = [];
   }
@@ -1597,7 +1598,7 @@ ${``}`;
   } while (!$$settled);
   return $$rendered;
 });
-set_version("1678895509837");
+set_version("1678897408338");
 var options = {
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
@@ -4240,7 +4241,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["PoweredByIniciativaFIS.svg", "favicon.png", "fisAI.svg", "img/mario.png", "img/mariobu.png", "img/noto_anxious-face-with-sweat.svg", "img/noto_astonished-face.svg", "img/noto_disappointed-face.svg", "img/noto_enraged-face.svg", "img/noto_grinning-face-with-smiling-eyes.svg", "img/noto_nauseated-face.svg", "img/reinaldo.png", "img/reinaldo2.png", "img/reinaldo3.png", "img/reinaldo4.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    entry: { "file": "_app/immutable/start-4deaf8b4.js", "imports": ["_app/immutable/start-4deaf8b4.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"], "stylesheets": [], "fonts": [] },
+    entry: { "file": "_app/immutable/start-baf459ef.js", "imports": ["_app/immutable/start-baf459ef.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"], "stylesheets": [], "fonts": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
