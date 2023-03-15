@@ -3,7 +3,7 @@
     
     import Header from "../../header.svelte";
     // import Quest from "../../quest.svelte";
-    import Reinaldob from "../../reinaldo2.svelte";
+    import Reinaldo from "../../reinaldo.svelte";
 
     import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
     import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
@@ -31,5 +31,5 @@
             <!-- <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe> -->
         </div>
     </div>
-        <Reinaldob/>
+        <Reinaldo/>
     </div>
