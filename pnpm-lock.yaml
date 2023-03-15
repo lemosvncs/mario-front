@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@fortawesome/free-solid-svg-icons': ^6.3.0
   '@sveltejs/adapter-auto': ^2.0.0
-  '@sveltejs/adapter-netlify': ^2.0.3
+  '@sveltejs/adapter-netlify': ^1.0.0-next.88
   '@sveltejs/kit': ^1.5.0
   autoprefixer: ^10.4.7
   fa-svelte: ^3.1.0
@@ -22,7 +22,7 @@ dependencies:
 
 devDependencies:
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.5
-  '@sveltejs/adapter-netlify': 2.0.3_@sveltejs+kit@1.5.5
+  '@sveltejs/adapter-netlify': 1.0.5_@sveltejs+kit@1.5.5
   '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
   autoprefixer: 10.4.13_postcss@8.4.21
   fa-svelte: 3.1.0
@@ -304,10 +304,10 @@ packages:
       import-meta-resolve: 2.2.1
     dev: true
 
-  /@sveltejs/adapter-netlify/2.0.3_@sveltejs+kit@1.5.5:
-    resolution: {integrity: sha512-1oMW2jftYDNdYeTI8XViM1Mk0SCf5r4jKYjhMXfMJty6VbljvxY7hxLzmIwkxbBurC9B1KiL7/Q1h4QbtDf5Fg==}
+  /@sveltejs/adapter-netlify/1.0.5_@sveltejs+kit@1.5.5:
+    resolution: {integrity: sha512-CQpSf2y29+DdaSELLWb4P5ewWSPUFRfJn2DwtiDZ+YOiIVhUk0caudFZoscH1GAP/sFrJekIMtawP542BjWA1g==}
     peerDependencies:
-      '@sveltejs/kit': ^1.5.0
+      '@sveltejs/kit': ^1.0.0
     dependencies:
       '@iarna/toml': 2.2.5
       '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
