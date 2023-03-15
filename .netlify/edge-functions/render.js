@@ -515,19 +515,17 @@ __export(__exports, {
   imports: () => imports,
   index: () => index,
   stylesheets: () => stylesheets,
-  universal: () => layout_exports,
-  universal_id: () => universal_id
+  universal: () => layout_exports
 });
-var index, component, file, universal_id, imports, stylesheets, fonts;
+var index, component, file, imports, stylesheets, fonts;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout();
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/entry/_layout.svelte.bd99e79e.mjs";
-    universal_id = "src/routes/+layout.js";
-    imports = ["_app/immutable/entry/_layout.svelte.bd99e79e.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/entry/_layout.js.fb1865a6.mjs", "_app/immutable/chunks/_layout.da46b06b.mjs"];
-    stylesheets = ["_app/immutable/assets/_layout.c160e880.css"];
+    file = "_app/immutable/components/pages/_layout.svelte-b09d65e2.js";
+    imports = ["_app/immutable/components/pages/_layout.svelte-b09d65e2.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/modules/pages/_layout.js-fa3c4266.js", "_app/immutable/chunks/_layout-9a8b0c19.js"];
+    stylesheets = ["_app/immutable/assets/_layout-fdcf0716.css"];
     fonts = [];
   }
 });
@@ -585,8 +583,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/entry/error.svelte.09ebbbc4.mjs";
-    imports2 = ["_app/immutable/entry/error.svelte.09ebbbc4.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.f88e583b.mjs"];
+    file2 = "_app/immutable/components/error.svelte-ca099c72.js";
+    imports2 = ["_app/immutable/components/error.svelte-ca099c72.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -622,8 +620,8 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    file3 = "_app/immutable/entry/_page.svelte.f566edd8.mjs";
-    imports3 = ["_app/immutable/entry/_page.svelte.f566edd8.mjs", "_app/immutable/chunks/index.a6020e24.mjs"];
+    file3 = "_app/immutable/components/pages/_page.svelte-f01f9b73.js";
+    imports3 = ["_app/immutable/components/pages/_page.svelte-f01f9b73.js", "_app/immutable/chunks/index-e4d2abc4.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -658,9 +656,9 @@ var init_header = __esm({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
 var require_faPaperPlane = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -693,9 +691,9 @@ var require_faPaperPlane = __commonJS({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
 var require_faAnglesDown = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -728,9 +726,9 @@ var require_faAnglesDown = __commonJS({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
 var require_faSpinner = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -938,9 +936,9 @@ var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     index4 = 3;
     component4 = async () => (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
-    file4 = "_app/immutable/entry/mario-page.svelte.fb07990d.mjs";
-    imports4 = ["_app/immutable/entry/mario-page.svelte.fb07990d.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/faPaperPlane.b54f7bb8.mjs"];
-    stylesheets4 = ["_app/immutable/assets/faPaperPlane.22963853.css"];
+    file4 = "_app/immutable/components/pages/mario/_page.svelte-0178d24f.js";
+    imports4 = ["_app/immutable/components/pages/mario/_page.svelte-0178d24f.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/faPaperPlane-7fb80dd0.js"];
+    stylesheets4 = ["_app/immutable/assets/faPaperPlane-51b1667c.css"];
     fonts4 = [];
   }
 });
@@ -1058,9 +1056,9 @@ var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/entry/reinaldo-page.svelte.0b38e005.mjs";
-    imports5 = ["_app/immutable/entry/reinaldo-page.svelte.0b38e005.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/faPaperPlane.b54f7bb8.mjs"];
-    stylesheets5 = ["_app/immutable/assets/faPaperPlane.22963853.css"];
+    file5 = "_app/immutable/components/pages/reinaldo/_page.svelte-0c6fcaaf.js";
+    imports5 = ["_app/immutable/components/pages/reinaldo/_page.svelte-0c6fcaaf.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/faPaperPlane-7fb80dd0.js"];
+    stylesheets5 = ["_app/immutable/assets/faPaperPlane-51b1667c.css"];
     fonts5 = [];
   }
 });
@@ -1513,9 +1511,13 @@ init_chunks();
 init_chunks();
 var base = "";
 var assets = base;
+var version = "";
 var public_env = {};
 function set_public_env(environment) {
   public_env = environment;
+}
+function set_version(value) {
+  version = value;
 }
 function afterUpdate() {
 }
@@ -1595,8 +1597,8 @@ ${``}`;
   } while (!$$settled);
   return $$rendered;
 });
+set_version("1678895509837");
 var options = {
-  app_template_contains_nonce: false,
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
   embedded: false,
@@ -1653,8 +1655,7 @@ var options = {
 	<body>
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
-  },
-  version_hash: "g30y8k"
+  }
 };
 function get_hooks() {
   return {};
@@ -1755,7 +1756,7 @@ function json(data, init2) {
   const body = JSON.stringify(data);
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
   }
   if (!headers.has("content-type")) {
     headers.set("content-type", "application/json");
@@ -1765,11 +1766,11 @@ function json(data, init2) {
     headers
   });
 }
-var encoder$3 = new TextEncoder();
+var encoder$1 = new TextEncoder();
 function text(body, init2) {
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
   }
   return new Response(body, {
     ...init2,
@@ -1805,7 +1806,7 @@ function method_not_allowed(mod, method) {
 }
 function allowed_methods(mod) {
   const allowed = [];
-  for (const method in ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]) {
+  for (const method of ["GET", "POST", "PUT", "PATCH", "DELETE"]) {
     if (method in mod)
       allowed.push(method);
   }
@@ -1859,21 +1860,27 @@ function clarify_devalue_error(event, error2) {
   }
   return error2.message;
 }
-function stringify_uses(node) {
+function serialize_data_node(node) {
+  if (!node)
+    return "null";
+  if (node.type === "error" || node.type === "skip") {
+    return JSON.stringify(node);
+  }
+  const stringified = stringify(node.data);
   const uses = [];
-  if (node.uses && node.uses.dependencies.size > 0) {
+  if (node.uses.dependencies.size > 0) {
     uses.push(`"dependencies":${JSON.stringify(Array.from(node.uses.dependencies))}`);
   }
-  if (node.uses && node.uses.params.size > 0) {
+  if (node.uses.params.size > 0) {
     uses.push(`"params":${JSON.stringify(Array.from(node.uses.params))}`);
   }
-  if (node.uses?.parent)
+  if (node.uses.parent)
     uses.push(`"parent":1`);
-  if (node.uses?.route)
+  if (node.uses.route)
     uses.push(`"route":1`);
-  if (node.uses?.url)
+  if (node.uses.url)
     uses.push(`"url":1`);
-  return `"uses":{${uses.join(",")}}`;
+  return `{"type":"data","data":${stringified},"uses":{${uses.join(",")}}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
 }
 async function render_endpoint(event, route, mod, state) {
   const method = (
@@ -1925,7 +1932,7 @@ async function render_endpoint(event, route, mod, state) {
 }
 function is_endpoint_request(event) {
   const { method, headers } = event.request;
-  if (method === "PUT" || method === "PATCH" || method === "DELETE" || method === "OPTIONS") {
+  if (method === "PUT" || method === "PATCH" || method === "DELETE") {
     return true;
   }
   if (method === "POST" && headers.get("x-sveltekit-action") === "true")
@@ -2246,15 +2253,12 @@ async function load_server_data({ event, state, node, parent }) {
       uses.parent = true;
       return parent();
     },
-    route: new Proxy(event.route, {
-      get: (target, key2) => {
+    route: {
+      get id() {
         uses.route = true;
-        return target[
-          /** @type {'id'} */
-          key2
-        ];
+        return event.route.id;
       }
-    }),
+    },
     url
   });
   const data = result ? await unwrap_promises(result) : null;
@@ -2291,6 +2295,11 @@ async function load_data({
     parent
   });
   const data = result ? await unwrap_promises(result) : null;
+  validate_load_response(
+    data,
+    /** @type {string} */
+    event.route.id
+  );
   return data;
 }
 function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
@@ -2401,6 +2410,13 @@ async function stream_to_string(stream) {
     result += decoder.decode(value);
   }
   return result;
+}
+function validate_load_response(data, routeId) {
+  if (data != null && Object.getPrototypeOf(data) !== Object.prototype) {
+    throw new Error(
+      `a load function related to route '${routeId}' returned ${typeof data !== "object" ? `a ${typeof data}` : data instanceof Response ? "a Response object" : Array.isArray(data) ? "an array" : "a non-plain object"}, but must return a plain object at the top level (i.e. \`return {...}\`)`
+    );
+  }
 }
 var subscriber_queue = [];
 function readable(value, start) {
@@ -2539,7 +2555,7 @@ function serialize_data(fetched, filter, prerendering = false) {
   return `<script ${attrs.join(" ")}>${safe_payload}<\/script>`;
 }
 var s = JSON.stringify;
-var encoder$2 = new TextEncoder();
+var encoder = new TextEncoder();
 function sha256(data) {
   if (!key[0])
     precompute();
@@ -2626,7 +2642,7 @@ function reverse_endianness(bytes) {
   }
 }
 function encode(str) {
-  const encoded = encoder$2.encode(str);
+  const encoded = encoder.encode(str);
   const length = encoded.length * 8;
   const size = 512 * Math.ceil((length + 65) / 512);
   const bytes = new Uint8Array(size / 8);
@@ -2842,39 +2858,10 @@ var Csp = class {
     this.report_only_provider.add_style(content);
   }
 };
-function defer() {
-  let fulfil;
-  let reject;
-  const promise = new Promise((f, r) => {
-    fulfil = f;
-    reject = r;
-  });
-  return { promise, fulfil, reject };
-}
-function create_async_iterator() {
-  let deferred = defer();
-  return {
-    iterator: {
-      [Symbol.asyncIterator]() {
-        return {
-          next: () => deferred.promise
-        };
-      }
-    },
-    push: (value) => {
-      deferred.fulfil({ value, done: false });
-      deferred = defer();
-    },
-    done: () => {
-      deferred.fulfil({ done: true });
-    }
-  };
-}
 var updated = {
   ...readable(false),
   check: () => false
 };
-var encoder$1 = new TextEncoder();
 async function render_response({
   branch,
   fetched,
@@ -2896,10 +2883,10 @@ async function render_response({
       throw new Error("Cannot use prerendering if page template contains %sveltekit.nonce%");
     }
   }
-  const { client } = manifest2._;
-  const modulepreloads = /* @__PURE__ */ new Set([...client.start.imports, ...client.app.imports]);
-  const stylesheets6 = new Set(client.app.stylesheets);
-  const fonts6 = new Set(client.app.fonts);
+  const { entry } = manifest2._;
+  const stylesheets6 = new Set(entry.stylesheets);
+  const modulepreloads = new Set(entry.imports);
+  const fonts6 = new Set(manifest2._.entry.fonts);
   const link_header_preloads = /* @__PURE__ */ new Set();
   const inline_styles = /* @__PURE__ */ new Map();
   let rendered;
@@ -2914,10 +2901,10 @@ async function render_response({
       constructors: await Promise.all(branch.map(({ node }) => node.component())),
       form: form_value
     };
-    let data2 = {};
+    let data = {};
     for (let i = 0; i < branch.length; i += 1) {
-      data2 = { ...data2, ...branch[i].data };
-      props[`data_${i}`] = data2;
+      data = { ...data, ...branch[i].data };
+      props[`data_${i}`] = data;
     }
     props.page = {
       error: error2,
@@ -2928,19 +2915,22 @@ async function render_response({
       route: event.route,
       status,
       url: event.url,
-      data: data2,
+      data,
       form: form_value
     };
     {
       rendered = options2.root.render(props);
     }
     for (const { node } of branch) {
-      for (const url of node.imports)
-        modulepreloads.add(url);
-      for (const url of node.stylesheets)
-        stylesheets6.add(url);
-      for (const url of node.fonts)
-        fonts6.add(url);
+      if (node.imports) {
+        node.imports.forEach((url) => modulepreloads.add(url));
+      }
+      if (node.stylesheets) {
+        node.stylesheets.forEach((url) => stylesheets6.add(url));
+      }
+      if (node.fonts) {
+        node.fonts.forEach((url) => fonts6.add(url));
+      }
       if (node.inline_styles) {
         Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
       }
@@ -2948,32 +2938,66 @@ async function render_response({
   } else {
     rendered = { head: "", html: "", css: { code: "", map: null } };
   }
-  let resolved_assets;
-  let asset_expression;
-  if (assets) {
-    resolved_assets = assets;
-    asset_expression = s(assets);
-  } else if (state.prerendering?.fallback) {
-    resolved_assets = base;
-    asset_expression = s(base);
-  } else {
-    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
-    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
-    asset_expression = `new URL(${s(
-      resolved_assets
-    )}, location.href).pathname.replace(/^\\/$/, '')`;
-  }
   let head = "";
   let body = rendered.html;
   const csp = new Csp(options2.csp, {
     prerender: !!state.prerendering
   });
+  const target = hash(body);
+  let resolved_assets;
+  if (assets) {
+    resolved_assets = assets;
+  } else if (state.prerendering?.fallback) {
+    resolved_assets = base;
+  } else {
+    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
+    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
+  }
   const prefixed = (path) => {
     if (path.startsWith("/")) {
       return base + path;
     }
     return `${resolved_assets}/${path}`;
   };
+  const serialized = { data: "", form: "null", error: "null" };
+  try {
+    serialized.data = `[${branch.map(({ server_data }) => {
+      if (server_data?.type === "data") {
+        const data = uneval(server_data.data);
+        const uses = [];
+        if (server_data.uses.dependencies.size > 0) {
+          uses.push(`dependencies:${s(Array.from(server_data.uses.dependencies))}`);
+        }
+        if (server_data.uses.params.size > 0) {
+          uses.push(`params:${s(Array.from(server_data.uses.params))}`);
+        }
+        if (server_data.uses.parent)
+          uses.push(`parent:1`);
+        if (server_data.uses.route)
+          uses.push(`route:1`);
+        if (server_data.uses.url)
+          uses.push(`url:1`);
+        return `{type:"data",data:${data},uses:{${uses.join(",")}}${server_data.slash ? `,slash:${s(server_data.slash)}` : ""}}`;
+      }
+      return s(server_data);
+    }).join(",")}]`;
+  } catch (e) {
+    const error3 = (
+      /** @type {any} */
+      e
+    );
+    throw new Error(clarify_devalue_error(event, error3));
+  }
+  if (form_value) {
+    serialized.form = uneval_action_response(
+      form_value,
+      /** @type {string} */
+      event.route.id
+    );
+  }
+  if (error2) {
+    serialized.error = uneval(error2);
+  }
   if (inline_styles.size > 0) {
     const content = Array.from(inline_styles.values()).join("\n");
     const attributes = [];
@@ -3012,67 +3036,17 @@ async function render_response({
 		<link ${attributes.join(" ")}>`;
     }
   }
-  const global = `__sveltekit_${options2.version_hash}`;
-  const { data, chunks } = get_data(
-    event,
-    options2,
-    branch.map((b) => b.server_data),
-    global
-  );
-  if (page_config.ssr && page_config.csr) {
-    body += `
-			${fetched.map(
-      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
-    ).join("\n			")}`;
-  }
   if (page_config.csr) {
-    const included_modulepreloads = Array.from(modulepreloads, (dep) => prefixed(dep)).filter(
-      (path) => resolve_opts.preload({ type: "js", path })
-    );
-    for (const path of included_modulepreloads) {
-      link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
-      head += `
-		<link rel="preload" as="script" crossorigin="anonymous" href="${path}">`;
-    }
-    const blocks = [];
-    const properties = [
+    const opts = [
+      `assets: ${s(assets)}`,
       `env: ${s(public_env)}`,
-      `assets: ${asset_expression}`,
-      `element: document.currentScript.parentElement`
+      `target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode`,
+      `version: ${s(version)}`
     ];
-    if (chunks) {
-      blocks.push(`const deferred = new Map();`);
-      properties.push(`defer: (id) => new Promise((fulfil, reject) => {
-							deferred.set(id, { fulfil, reject });
-						})`);
-      properties.push(`resolve: ({ id, data, error }) => {
-							const { fulfil, reject } = deferred.get(id);
-							deferred.delete(id);
-
-							if (error) reject(error);
-							else fulfil(data);
-						}`);
-    }
-    blocks.push(`${global} = {
-						${properties.join(",\n						")}
-					};`);
-    const args = [`app`, `${global}.element`];
     if (page_config.ssr) {
-      const serialized = { form: "null", error: "null" };
-      blocks.push(`const data = ${data};`);
-      if (form_value) {
-        serialized.form = uneval_action_response(
-          form_value,
-          /** @type {string} */
-          event.route.id
-        );
-      }
-      if (error2) {
-        serialized.error = uneval(error2);
-      }
       const hydrate = [
         `node_ids: [${branch.map(({ node }) => node.index).join(", ")}]`,
-        `data`,
+        `data: ${serialized.data}`,
         `form: ${serialized.form}`,
         `error: ${serialized.error}`
       ];
@@ -3082,38 +3056,54 @@ async function render_response({
       if (options2.embedded) {
         hydrate.push(`params: ${uneval(event.params)}`, `route: ${s(event.route)}`);
       }
-      args.push(`{
-							${hydrate.join(",\n							")}
-						}`);
-    }
-    blocks.push(`Promise.all([
-						import(${s(prefixed(client.start.file))}),
-						import(${s(prefixed(client.app.file))})
-					]).then(([kit, app]) => {
-						kit.start(${args.join(", ")});
-					});`);
-    if (options2.service_worker) {
-      const opts = "";
-      blocks.push(`if ('serviceWorker' in navigator) {
-						addEventListener('load', function () {
-							navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
-						});
-					}`);
+      opts.push(`hydrate: {
+					${hydrate.join(",\n					")}
+				}`);
     }
     const init_app = `
-				{
-					${blocks.join("\n\n					")}
-				}
-			`;
-    csp.add_script(init_app);
-    body += `
-			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_app}<\/script>
+			import { start } from ${s(prefixed(entry.file))};
+
+			start({
+				${opts.join(",\n				")}
+			});
 		`;
+    for (const dep of modulepreloads) {
+      const path = prefixed(dep);
+      if (resolve_opts.preload({ type: "js", path })) {
+        link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
+        if (state.prerendering) {
+          head += `
+		<link rel="modulepreload" href="${path}">`;
+        }
+      }
+    }
+    const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
+    csp.add_script(init_app);
+    if (csp.script_needs_nonce) {
+      attributes.push(`nonce="${csp.nonce}"`);
+    }
+    body += `
+		<script ${attributes.join(" ")}>${init_app}<\/script>`;
   }
-  const headers = new Headers({
-    "x-sveltekit-page": "true",
-    "content-type": "text/html"
-  });
+  if (page_config.ssr && page_config.csr) {
+    body += `
+	${fetched.map(
+      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
+    ).join("\n	")}`;
+  }
+  if (options2.service_worker) {
+    const opts = "";
+    const init_service_worker = `
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
+				});
+			}
+		`;
+    csp.add_script(init_service_worker);
+    head += `
+		<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
+  }
   if (state.prerendering) {
     const http_equiv = [];
     const csp_headers = csp.csp_provider.get_meta();
@@ -3125,18 +3115,6 @@ async function render_response({
     }
     if (http_equiv.length > 0) {
       head = http_equiv.join("\n") + head;
-    }
-  } else {
-    const csp_header = csp.csp_provider.get_header();
-    if (csp_header) {
-      headers.set("content-security-policy", csp_header);
-    }
-    const report_only_header = csp.report_only_provider.get_header();
-    if (report_only_header) {
-      headers.set("content-security-policy-report-only", report_only_header);
-    }
-    if (link_header_preloads.size) {
-      headers.set("link", Array.from(link_header_preloads).join(", "));
     }
   }
   head += rendered.head;
@@ -3154,90 +3132,28 @@ async function render_response({
     html,
     done: true
   }) || "";
-  if (!chunks) {
-    headers.set("etag", `"${hash(transformed)}"`);
+  const headers = new Headers({
+    "x-sveltekit-page": "true",
+    "content-type": "text/html",
+    etag: `"${hash(transformed)}"`
+  });
+  if (!state.prerendering) {
+    const csp_header = csp.csp_provider.get_header();
+    if (csp_header) {
+      headers.set("content-security-policy", csp_header);
+    }
+    const report_only_header = csp.report_only_provider.get_header();
+    if (report_only_header) {
+      headers.set("content-security-policy-report-only", report_only_header);
+    }
+    if (link_header_preloads.size) {
+      headers.set("link", Array.from(link_header_preloads).join(", "));
+    }
   }
-  return !chunks ? text(transformed, {
+  return text(transformed, {
     status,
     headers
-  }) : new Response(
-    new ReadableStream({
-      async start(controller) {
-        controller.enqueue(encoder$1.encode(transformed + "\n"));
-        for await (const chunk of chunks) {
-          controller.enqueue(encoder$1.encode(chunk));
-        }
-        controller.close();
-      },
-      type: "bytes"
-    }),
-    {
-      headers: {
-        "content-type": "text/html"
-      }
-    }
-  );
-}
-function get_data(event, options2, nodes, global) {
-  let promise_id = 1;
-  let count = 0;
-  const { iterator, push, done } = create_async_iterator();
-  function replacer(thing) {
-    if (typeof thing?.then === "function") {
-      const id = promise_id++;
-      count += 1;
-      thing.then(
-        /** @param {any} data */
-        (data) => ({ data })
-      ).catch(
-        /** @param {any} error */
-        async (error2) => ({
-          error: await handle_error_and_jsonify(event, options2, error2)
-        })
-      ).then(
-        /**
-         * @param {{data: any; error: any}} result
-         */
-        async ({ data, error: error2 }) => {
-          count -= 1;
-          let str;
-          try {
-            str = uneval({ id, data, error: error2 }, replacer);
-          } catch (e) {
-            error2 = await handle_error_and_jsonify(
-              event,
-              options2,
-              new Error(`Failed to serialize promise while rendering ${event.route.id}`)
-            );
-            data = void 0;
-            str = uneval({ id, data, error: error2 }, replacer);
-          }
-          push(`<script>${global}.resolve(${str})<\/script>
-`);
-          if (count === 0)
-            done();
-        }
-      );
-      return `${global}.defer(${id})`;
-    }
-  }
-  try {
-    const strings = nodes.map((node) => {
-      if (!node)
-        return "null";
-      return `{"type":"data","data":${uneval(node.data, replacer)},${stringify_uses(node)}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
-    });
-    return {
-      data: `[${strings.join(",")}]`,
-      chunks: count > 0 ? iterator : null
-    };
-  } catch (e) {
-    throw new Error(clarify_devalue_error(
-      event,
-      /** @type {any} */
-      e
-    ));
-  }
+  });
 }
 function get_option(nodes, option) {
   return nodes.reduce(
@@ -3323,218 +3239,6 @@ async function respond_with_error({
       e instanceof HttpError ? e.status : 500,
       (await handle_error_and_jsonify(event, options2, e)).message
     );
-  }
-}
-function once(fn) {
-  let done = false;
-  let result;
-  return () => {
-    if (done)
-      return result;
-    done = true;
-    return result = fn();
-  };
-}
-var INVALIDATED_PARAM = "x-sveltekit-invalidated";
-var encoder = new TextEncoder();
-async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
-  if (!route.page) {
-    return new Response(void 0, {
-      status: 404
-    });
-  }
-  state.initiator = route;
-  try {
-    const node_ids = [...route.page.layouts, route.page.leaf];
-    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
-    let aborted = false;
-    const url = new URL(event.url);
-    url.pathname = normalize_path(url.pathname, trailing_slash);
-    const new_event = { ...event, url };
-    const functions = node_ids.map((n, i) => {
-      return once(async () => {
-        try {
-          if (aborted) {
-            return (
-              /** @type {import('types').ServerDataSkippedNode} */
-              {
-                type: "skip"
-              }
-            );
-          }
-          const node = n == void 0 ? n : await manifest2._.nodes[n]();
-          return load_server_data({
-            event: new_event,
-            state,
-            node,
-            parent: async () => {
-              const data2 = {};
-              for (let j = 0; j < i; j += 1) {
-                const parent = (
-                  /** @type {import('types').ServerDataNode | null} */
-                  await functions[j]()
-                );
-                if (parent) {
-                  Object.assign(data2, parent.data);
-                }
-              }
-              return data2;
-            }
-          });
-        } catch (e) {
-          aborted = true;
-          throw e;
-        }
-      });
-    });
-    const promises = functions.map(async (fn, i) => {
-      if (!invalidated[i]) {
-        return (
-          /** @type {import('types').ServerDataSkippedNode} */
-          {
-            type: "skip"
-          }
-        );
-      }
-      return fn();
-    });
-    let length = promises.length;
-    const nodes = await Promise.all(
-      promises.map(
-        (p, i) => p.catch(async (error2) => {
-          if (error2 instanceof Redirect) {
-            throw error2;
-          }
-          length = Math.min(length, i + 1);
-          return (
-            /** @type {import('types').ServerErrorNode} */
-            {
-              type: "error",
-              error: await handle_error_and_jsonify(event, options2, error2),
-              status: error2 instanceof HttpError ? error2.status : void 0
-            }
-          );
-        })
-      )
-    );
-    const { data, chunks } = get_data_json(event, options2, nodes);
-    if (!chunks) {
-      return json_response(data);
-    }
-    return new Response(
-      new ReadableStream({
-        async start(controller) {
-          controller.enqueue(encoder.encode(data));
-          for await (const chunk of chunks) {
-            controller.enqueue(encoder.encode(chunk));
-          }
-          controller.close();
-        },
-        type: "bytes"
-      }),
-      {
-        headers: {
-          // we use a proprietary content type to prevent buffering.
-          // the `text` prefix makes it inspectable
-          "content-type": "text/sveltekit-data",
-          "cache-control": "private, no-store"
-        }
-      }
-    );
-  } catch (e) {
-    const error2 = normalize_error(e);
-    if (error2 instanceof Redirect) {
-      return redirect_json_response(error2);
-    } else {
-      return json_response(await handle_error_and_jsonify(event, options2, error2), 500);
-    }
-  }
-}
-function json_response(json2, status = 200) {
-  return text(typeof json2 === "string" ? json2 : JSON.stringify(json2), {
-    status,
-    headers: {
-      "content-type": "application/json",
-      "cache-control": "private, no-store"
-    }
-  });
-}
-function redirect_json_response(redirect) {
-  return json_response({
-    type: "redirect",
-    location: redirect.location
-  });
-}
-function get_data_json(event, options2, nodes) {
-  let promise_id = 1;
-  let count = 0;
-  const { iterator, push, done } = create_async_iterator();
-  const reducers = {
-    /** @param {any} thing */
-    Promise: (thing) => {
-      if (typeof thing?.then === "function") {
-        const id = promise_id++;
-        count += 1;
-        let key2 = "data";
-        thing.catch(
-          /** @param {any} e */
-          async (e) => {
-            key2 = "error";
-            return handle_error_and_jsonify(
-              event,
-              options2,
-              /** @type {any} */
-              e
-            );
-          }
-        ).then(
-          /** @param {any} value */
-          async (value) => {
-            let str;
-            try {
-              str = stringify(value, reducers);
-            } catch (e) {
-              const error2 = await handle_error_and_jsonify(
-                event,
-                options2,
-                new Error(`Failed to serialize promise while rendering ${event.route.id}`)
-              );
-              key2 = "error";
-              str = stringify(error2, reducers);
-            }
-            count -= 1;
-            push(`{"type":"chunk","id":${id},"${key2}":${str}}
-`);
-            if (count === 0)
-              done();
-          }
-        );
-        return id;
-      }
-    }
-  };
-  try {
-    const strings = nodes.map((node) => {
-      if (!node)
-        return "null";
-      if (node.type === "error" || node.type === "skip") {
-        return JSON.stringify(node);
-      }
-      return `{"type":"data","data":${stringify(node.data, reducers)},${stringify_uses(
-        node
-      )}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
-    });
-    return {
-      data: `{"type":"data","nodes":[${strings.join(",")}]}
-`,
-      chunks: count > 0 ? iterator : null
-    };
-  } catch (e) {
-    throw new Error(clarify_devalue_error(
-      event,
-      /** @type {any} */
-      e
-    ));
   }
 }
 async function render_page(event, route, page2, options2, manifest2, state, resolve_opts) {
@@ -3748,19 +3452,10 @@ async function render_page(event, route, page2, options2, manifest2, state, reso
       }
     }
     if (state.prerendering && should_prerender_data) {
-      let { data, chunks } = get_data_json(
-        event,
-        options2,
-        branch.map((node) => node?.server_data)
-      );
-      if (chunks) {
-        for await (const chunk of chunks) {
-          data += chunk;
-        }
-      }
+      const body = `{"type":"data","nodes":[${branch.map((node) => serialize_data_node(node?.server_data)).join(",")}]}`;
       state.prerendering.dependencies.set(data_pathname, {
-        response: text(data),
-        body: data
+        response: text(body),
+        body
       });
     }
     return await render_response({
@@ -3821,6 +3516,134 @@ function exec(match, params, matchers) {
   if (buffered)
     return;
   return result;
+}
+function once(fn) {
+  let done = false;
+  let result;
+  return () => {
+    if (done)
+      return result;
+    done = true;
+    return result = fn();
+  };
+}
+var INVALIDATED_PARAM = "x-sveltekit-invalidated";
+async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
+  if (!route.page) {
+    return new Response(void 0, {
+      status: 404
+    });
+  }
+  state.initiator = route;
+  try {
+    const node_ids = [...route.page.layouts, route.page.leaf];
+    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
+    let aborted = false;
+    const url = new URL(event.url);
+    url.pathname = normalize_path(url.pathname, trailing_slash);
+    const new_event = { ...event, url };
+    const functions = node_ids.map((n, i) => {
+      return once(async () => {
+        try {
+          if (aborted) {
+            return (
+              /** @type {import('types').ServerDataSkippedNode} */
+              {
+                type: "skip"
+              }
+            );
+          }
+          const node = n == void 0 ? n : await manifest2._.nodes[n]();
+          return load_server_data({
+            event: new_event,
+            state,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = (
+                  /** @type {import('types').ServerDataNode | null} */
+                  await functions[j]()
+                );
+                if (parent) {
+                  Object.assign(data, parent.data);
+                }
+              }
+              return data;
+            }
+          });
+        } catch (e) {
+          aborted = true;
+          throw e;
+        }
+      });
+    });
+    const promises = functions.map(async (fn, i) => {
+      if (!invalidated[i]) {
+        return (
+          /** @type {import('types').ServerDataSkippedNode} */
+          {
+            type: "skip"
+          }
+        );
+      }
+      return fn();
+    });
+    let length = promises.length;
+    const nodes = await Promise.all(
+      promises.map(
+        (p, i) => p.catch(async (error2) => {
+          if (error2 instanceof Redirect) {
+            throw error2;
+          }
+          length = Math.min(length, i + 1);
+          return (
+            /** @type {import('types').ServerErrorNode} */
+            {
+              type: "error",
+              error: await handle_error_and_jsonify(event, options2, error2),
+              status: error2 instanceof HttpError ? error2.status : void 0
+            }
+          );
+        })
+      )
+    );
+    try {
+      const stubs = nodes.slice(0, length).map(serialize_data_node);
+      const json2 = `{"type":"data","nodes":[${stubs.join(",")}]}`;
+      return json_response(json2);
+    } catch (e) {
+      const error2 = (
+        /** @type {any} */
+        e
+      );
+      return json_response(JSON.stringify(clarify_devalue_error(event, error2)), 500);
+    }
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      return redirect_json_response(error2);
+    } else {
+      return json_response(JSON.stringify(await handle_error_and_jsonify(event, options2, error2)));
+    }
+  }
+}
+function json_response(json2, status = 200) {
+  return text(json2, {
+    status,
+    headers: {
+      "content-type": "application/json",
+      "cache-control": "private, no-store"
+    }
+  });
+}
+function redirect_json_response(redirect) {
+  return json_response(
+    JSON.stringify({
+      type: "redirect",
+      location: redirect.location
+    })
+  );
 }
 function get_cookies(request, url, trailing_slash) {
   const header = request.headers.get("cookie") ?? "";
@@ -4035,35 +3858,29 @@ function normalize_fetch_input(info, init2, url) {
 }
 function validator(expected) {
   const set = new Set(expected);
-  function validate(module, file6) {
+  function validate(module, route_id) {
     if (!module)
       return;
     for (const key2 in module) {
-      if (key2[0] === "_" || set.has(key2))
-        continue;
-      const hint = hint_for_supported_files(key2, file6?.slice(file6.lastIndexOf("."))) ?? `valid exports are ${expected.join(", ")}, or anything with a '_' prefix`;
-      throw new Error(`Invalid export '${key2}'${file6 ? ` in ${file6}` : ""} (${hint})`);
+      if (key2[0] !== "_" && !set.has(key2)) {
+        const valid = expected.join(", ");
+        throw new Error(
+          `Invalid export '${key2}'${route_id ? ` in ${route_id}` : ""} (valid exports are ${valid}, or anything with a '_' prefix)`
+        );
+      }
     }
   }
   return validate;
 }
-function hint_for_supported_files(key2, ext = ".js") {
-  let supported_files = [];
-  if (valid_common_exports.includes(key2)) {
-    supported_files.push(`+page${ext}`);
-  }
-  if (valid_page_server_exports.includes(key2)) {
-    supported_files.push(`+page.server${ext}`);
-  }
-  if (valid_server_exports.includes(key2)) {
-    supported_files.push(`+server${ext}`);
-  }
-  if (supported_files.length > 0) {
-    return `'${key2}' is a valid export in ${supported_files.join(` or `)}`;
-  }
-}
-var valid_common_exports = ["load", "prerender", "csr", "ssr", "trailingSlash", "config"];
-var valid_page_server_exports = [
+var validate_common_exports = validator([
+  "load",
+  "prerender",
+  "csr",
+  "ssr",
+  "trailingSlash",
+  "config"
+]);
+var validate_page_server_exports = validator([
   "load",
   "prerender",
   "csr",
@@ -4071,21 +3888,17 @@ var valid_page_server_exports = [
   "actions",
   "trailingSlash",
   "config"
-];
-var valid_server_exports = [
+]);
+var validate_server_exports = validator([
   "GET",
   "POST",
   "PATCH",
   "PUT",
   "DELETE",
-  "OPTIONS",
   "prerender",
   "trailingSlash",
   "config"
-];
-var validate_common_exports = validator(valid_common_exports);
-var validate_page_server_exports = validator(valid_page_server_exports);
-var validate_server_exports = validator(valid_server_exports);
+]);
 var default_transform = ({ html }) => html;
 var default_filter = () => false;
 var default_preload = ({ type }) => type === "js" || type === "css";
@@ -4427,7 +4240,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["PoweredByIniciativaFIS.svg", "favicon.png", "fisAI.svg", "img/mario.png", "img/mariobu.png", "img/noto_anxious-face-with-sweat.svg", "img/noto_astonished-face.svg", "img/noto_disappointed-face.svg", "img/noto_enraged-face.svg", "img/noto_grinning-face-with-smiling-eyes.svg", "img/noto_nauseated-face.svg", "img/reinaldo.png", "img/reinaldo2.png", "img/reinaldo3.png", "img/reinaldo4.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    client: { "start": { "file": "_app/immutable/entry/start.56e42236.mjs", "imports": ["_app/immutable/entry/start.56e42236.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.f88e583b.mjs"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.235ccfc7.mjs", "imports": ["_app/immutable/entry/app.235ccfc7.mjs", "_app/immutable/chunks/index.a6020e24.mjs"], "stylesheets": [], "fonts": [] } },
+    entry: { "file": "_app/immutable/start-4deaf8b4.js", "imports": ["_app/immutable/start-4deaf8b4.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"], "stylesheets": [], "fonts": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
