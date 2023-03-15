@@ -3,12 +3,9 @@ import preprocess from "svelte-preprocess";
 // import adapter from '@sveltejs/adapter-node';
 import adapter from "@sveltejs/adapter-netlify";
 // import adapter from '@sveltejs/adapter-static';
-// import vercel from '@sveltejs/adapter-vercel'
 
 export default {
   kit: {
-    // adapter: vercel(),
-    // target: '#svelte',
     adapter: adapter({
       // if true, will create a Netlify Edge Function rather
       // than using standard Node-based functions

@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import Icon from 'fa-svelte';
     // import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
     import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
@@ -39,7 +41,7 @@
     // export let cigarro ;// = '1';    
     
     function reinaldoRaiz (idade               =48.92,
-                            sexo                ='2',
+                            sexo                ='mulher',
                             peso                =73.40,
                             altura              =165,
                             exc_dias_por_semana =3.61,
@@ -157,6 +159,46 @@
         return p;
     }
 
+    async function reinaldoIsBack(
+                            idade               =48.92,
+                            sexo                ='homem',
+                            peso                =73.40,
+                            altura              =165,
+                            exc_dias_por_semana =3.61,
+                            exc_qual            ='caminhada',
+                            idade_comecou_fumar =17.34,
+                            diag_doenca_mental  ='nao',
+                            diag_colesterol     ='nao',
+                            cigarro             ='nao',) {
+        let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/reinaldo?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + 
+            "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana +
+            "&exc_qual=" + exc_qual + 
+            "&idade_comecou_fumar=" + idade_comecou_fumar +
+            "&diag_doenca_mental=" + diag_doenca_mental +
+            "&diag_colesterol=" + diag_colesterol +
+            "&cigarro=" + cigarro;
+            
+        console.log(url);
+        const res = await fetch(url, {
+            mode: "cors",
+            headers: { dataType: "json" },
+        });
+
+        const reinaldo_res = await res.json();
+
+        if (res.ok) {
+            let reinaldo = reinaldo_res
+            console.log(reinaldo)
+            // estado_botao = true;
+            return reinaldo;
+        } else {
+            throw new Error(reinaldo_res);
+        }
+    }
+
+    let promise = reinaldoIsBack();
+
+
     function handleClick() {
         idade               = idade              ;
         sexo                = sexo               ;
@@ -187,7 +229,7 @@
 
 <div class="px-8">
     <input type="hidden" name="form-name" value="name_of_my_form" />
-    <form name="reinaldo" method="POST" data-netlify="true" class="flex-column w-full max-w-md">
+    <f  class="flex-column w-full max-w-md">
         <p>Qual sua idade?</p><input bind:value={idade} placeholder=48 class={inputstyle}/>
         <p class="my-4">Como você se identifica?</p>    
         <div class="flex">
@@ -319,6 +361,6 @@
                 Enviar
             </button>
         </div>
-    </form>
+    </f>
     sv
 </div>
