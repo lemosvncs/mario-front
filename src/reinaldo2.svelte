@@ -1,5 +1,7 @@
 <script>
 
+    // import Bar from "../bar.svelte";
+    // import Chart from "../src/chart.svelte";
     import Icon from 'fa-svelte';
     // import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
     import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
@@ -242,161 +244,168 @@
 
     console.log(idade, sexo, peso, altura)
     // reinaldo = reinaldo;
-    
+
 </script>
+
 <div id="top"></div>
+
 <div class="mx-auto text-center border-white border-4 w-80 rounded-md p-4">
     {#await promise}
-        <p>Probabilidade de você <b>NÃO</b> ser diagnosticado com hipertensão:</p>
+        <p>Probabilidade de você ser diagnosticado com hipertensão:</p>
         <h2 class="text-2xl">{0.00}%</h2>
     {:then reinaldo} 
-        <p>Probabilidade de você <b>NÃO</b> ser diagnosticado com hipertensão:</p>
-        <h2 class="text-2xl">{(reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2)}%</h2>
+        <p>Probabilidade de você ser diagnosticado com hipertensão:</p>
+        <h2 class="text-2xl">{(100 - reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2)}%</h2>
     {:catch error}
-        <p>Probabilidade de você <b>NÃO</b> ser diagnosticado com hipertensão:</p>
+        <p>Probabilidade de você ser diagnosticado com hipertensão:</p>
         <h2 class="text-2xl">{0.1}%</h2>
     {/await}
 </div>
 
-
-<div class="px-8">
-    <input type="hidden" name="form-name" value="name_of_my_form" />
-    <form  class="flex-column w-full max-w-md ml-10 mt-10 mb-10">
-        <p>Qual sua idade?</p><input bind:value={idade} placeholder=48 class={inputstyle}/>
-        <p class="my-4">Como você se identifica?</p>    
-        <div class="flex">
-            <label class="m-2">
-                <input name="sexo" bind:group={sexo} value='mulher' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Mulher</p>
-            </label>
-            <label class="m-2">
-                <input name="sexo" bind:group={sexo} value='homem' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Homem</p>
-            </label>
-            <label class="m-2">
-                <input name="sexo" bind:group={sexo} value='outro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Outro</p>
-            </label>
+<div class="flex">
+    <div class="px-8 float-left">
+        <input type="hidden" name="form-name" value="name_of_my_form" />
+        <form  class="flex-column w-full max-w-md ml-10 mt-10 mb-10">
+            <p>Qual sua idade?</p><input bind:value={idade} placeholder=48 class={inputstyle}/>
+            <p class="my-4">Como você se identifica?</p>    
+            <div class="flex">
+                <label class="m-2">
+                    <input name="sexo" bind:group={sexo} value='mulher' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Mulher</p>
+                </label>
+                <label class="m-2">
+                    <input name="sexo" bind:group={sexo} value='homem' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Homem</p>
+                </label>
+                <label class="m-2">
+                    <input name="sexo" bind:group={sexo} value='outro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Outro</p>
+                </label>
+            </div>
+            <p class="my-4">Qual seu peso em Kg?:</p><input bind:value={peso} placeholder=80 class={inputstyle}/>
+            <p class="my-4">Qual sua altura em centímetros?</p><input bind:value={altura} placeholder=180 class={inputstyle}/>
+            <p class="my-4">Em quantos dias da semana você costuma praticar exercícios físicos ou esporte?</p><input bind:value={exc_dias_por_semana} placeholder=2 class={inputstyle}/>    
+            <p class="my-4">Qual o exercicio físico ou esporte que você pratica com mais frequência?</p>
+            <div class="flex flex-col">
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='caminhada' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Caminhada</p>
+                    
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='caminhada_esteira' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Caminhada em esteira</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input  name="exc_qual" bind:group={exc_qual} value='corrida' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Corrida</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='musculacao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Musculação</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='ginastica_aerobica' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Ginástica aeróbica/spinning/step/jump</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='hidro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Hidroginástica</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='ginastica' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Ginástica / localizada/pilates/alongamento/ioga</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='natacao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Natação</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='luta' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Artes marciais e luta</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='bicicleta' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Bicicleta/bicicleta ergométrica</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='futebol' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Futebol</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='basquete' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Basquetebol</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='volei' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Voleibol</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='tenis' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Tênis</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input name="exc_qual" bind:group={exc_qual} value='danca' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Dança (com o objetivo de praticar atividade física)</p>
+                </label>
+                <label class="m-2 flex inline-flex">
+                    <input  name="exc_qual" bind:group={exc_qual} value='outro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Outro</p>
+                </label>
+            </div>
+            <p class="my-4">Você fuma ou já fumou algum produto de tabaco?</p>
+            <div class="flex">
+                <label class="m-2">
+                    <input name="cigarro" bind:group={cigarro} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Sim</p>
+                </label>
+                <label class="m-2">
+                    <input name="cigarro" bind:group={cigarro} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Não</p>
+                </label>
+            </div>
+            {#if cigarro=='sim'}
+                <p class="my-4">Com quantos anos você começou a fumar?</p><input bind:value={idade_comecou_fumar}        placeholder=98 class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block               p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>    
+            {/if}
+            <p class="my-4">Você já foi diagnosticado com algum tipo de doença mental, como ansiedade ou depressão?</p>
+            <div class="flex">
+                <label class="m-2">
+                    <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Sim</p>
+                </label>
+                <label class="m-2">
+                    <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Não</p>
+                </label>
+            </div>
+            <p class="my-4">Você já foi diagnosticado colesterol alto?</p>
+            <div class="flex">
+                <label class="m-2">
+                    <input name="diag_colesterol" bind:group={diag_colesterol} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Sim</p>
+                </label>
+                <label class="m-2">
+                    <input name="diag_colesterol" bind:group={diag_colesterol} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    <p>Não</p>
+                </label>
+            </div>
+            <div class="flex inline-flex mt-4">
+                <button type="button"
+                    on:click={handleClick}
+                    class="w-64 h-16  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    <!-- <Icon icon={paperPlane}></Icon> -->
+                    Enviar
+                </button>
+            </div>
+        </form>
+        <div class="mx-auto text-center mb-10">
+            <a href="#top" class=" border-white border-4 w-80 rounded-md p-4">
+                <button type="button">Voltar ao topo</button>
+            </a>
         </div>
-        <p class="my-4">Qual seu peso em Kg?:</p><input bind:value={peso} placeholder=80 class={inputstyle}/>
-        <p class="my-4">Qual sua altura em centímetros?</p><input bind:value={altura} placeholder=180 class={inputstyle}/>
-        <p class="my-4">Em quantos dias da semana você costuma praticar exercícios físicos ou esporte?</p><input bind:value={exc_dias_por_semana} placeholder=2 class={inputstyle}/>    
-        <p class="my-4">Qual o exercicio físico ou esporte que você pratica com mais frequência?</p>
-        <div class="flex flex-col">
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='caminhada' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Caminhada</p>
-                
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='caminhada_esteira' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Caminhada em esteira</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input  name="exc_qual" bind:group={exc_qual} value='corrida' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Corrida</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='musculacao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Musculação</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='ginastica_aerobica' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Ginástica aeróbica/spinning/step/jump</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='hidro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Hidroginástica</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='ginastica' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Ginástica / localizada/pilates/alongamento/ioga</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='natacao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Natação</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='luta' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Artes marciais e luta</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='bicicleta' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Bicicleta/bicicleta ergométrica</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='futebol' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Futebol</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='basquete' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Basquetebol</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='volei' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Voleibol</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='tenis' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Tênis</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input name="exc_qual" bind:group={exc_qual} value='danca' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Dança (com o objetivo de praticar atividade física)</p>
-            </label>
-            <label class="m-2 flex inline-flex">
-                <input  name="exc_qual" bind:group={exc_qual} value='outro' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Outro</p>
-            </label>
-        </div>
-        <p class="my-4">Você fuma ou já fumou algum produto de tabaco?</p>
-        <div class="flex">
-            <label class="m-2">
-                <input name="cigarro" bind:group={cigarro} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Sim</p>
-            </label>
-            <label class="m-2">
-                <input name="cigarro" bind:group={cigarro} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Não</p>
-            </label>
-        </div>
-        {#if cigarro=='sim'}
-            <p class="my-4">Com quantos anos você começou a fumar?</p><input bind:value={idade_comecou_fumar}        placeholder=98 class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block               p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>    
-        {/if}
-        <p class="my-4">Você já foi diagnosticado com algum tipo de doença mental, como ansiedade ou depressão?</p>
-        <div class="flex">
-            <label class="m-2">
-                <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Sim</p>
-            </label>
-            <label class="m-2">
-                <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Não</p>
-            </label>
-        </div>
-        <p class="my-4">Você já foi diagnosticado colesterol alto?</p>
-        <div class="flex">
-            <label class="m-2">
-                <input name="diag_colesterol" bind:group={diag_colesterol} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Sim</p>
-            </label>
-            <label class="m-2">
-                <input name="diag_colesterol" bind:group={diag_colesterol} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                <p>Não</p>
-            </label>
-        </div>
-        <div class="flex inline-flex mt-4">
-            <button type="button"
-                on:click={handleClick}
-                class="w-64 h-16  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                <!-- <Icon icon={paperPlane}></Icon> -->
-                Enviar
-            </button>
-        </div>
-    </form>
-    <div class="mx-auto text-center mb-10">
-        <a href="#top" class=" border-white border-4 w-80 rounded-md p-4">
-            <button type="button">Voltar ao topo</button>
-        </a>
+    </div>
+    
+    <div class="float-right mx-auto">
+        <!-- <Chart/> -->
     </div>
 </div>

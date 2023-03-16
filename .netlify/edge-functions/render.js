@@ -519,10 +519,10 @@ var init__ = __esm({
     init_layout();
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/entry/_layout.svelte.1d2485bb.mjs";
+    file = "_app/immutable/entry/_layout.svelte.25c305e8.mjs";
     universal_id = "src/routes/+layout.js";
-    imports = ["_app/immutable/entry/_layout.svelte.1d2485bb.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/entry/_layout.js.4ed993c7.mjs"];
-    stylesheets = ["_app/immutable/assets/_layout.e478bcaa.css"];
+    imports = ["_app/immutable/entry/_layout.svelte.25c305e8.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/entry/_layout.js.4ed993c7.mjs"];
+    stylesheets = ["_app/immutable/assets/_layout.3db08d89.css"];
     fonts = [];
   }
 });
@@ -580,8 +580,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/entry/error.svelte.6493e476.mjs";
-    imports2 = ["_app/immutable/entry/error.svelte.6493e476.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.885b8d95.mjs"];
+    file2 = "_app/immutable/entry/error.svelte.f5d99cad.mjs";
+    imports2 = ["_app/immutable/entry/error.svelte.f5d99cad.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.4f783a69.mjs"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -986,88 +986,90 @@ var init_page_svelte3 = __esm({
       let promise = reinaldoIsBack();
       console.log(idade, sexo, peso, altura);
       return `<div id="${"top"}"></div>
+
 <div class="${"mx-auto text-center border-white border-4 w-80 rounded-md p-4"}">${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop);
           return `
-        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
+        <p>Probabilidade de voc\xEA ser diagnosticado com hipertens\xE3o:</p>
         <h2 class="${"text-2xl"}">${escape(0)}%</h2>
     `;
         }
         return function(reinaldo) {
           return ` 
-        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
-        <h2 class="${"text-2xl"}">${escape((reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2))}%</h2>
+        <p>Probabilidade de voc\xEA ser diagnosticado com hipertens\xE3o:</p>
+        <h2 class="${"text-2xl"}">${escape((100 - reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2))}%</h2>
     `;
         }(__value);
       }(promise)}</div>
 
-
-<div class="${"px-8"}"><input type="${"hidden"}" name="${"form-name"}" value="${"name_of_my_form"}">
-    <form class="${"flex-column w-full max-w-md ml-10 mt-10 mb-10"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
-        <p class="${"my-4"}">Como voc\xEA se identifica?</p>    
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"sexo"}" value="${"mulher"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Mulher</p></label>
-            <label class="${"m-2"}"><input name="${"sexo"}" value="${"homem"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
-                <p>Homem</p></label>
-            <label class="${"m-2"}"><input name="${"sexo"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Outro</p></label></div>
-        <p class="${"my-4"}">Qual seu peso em Kg?:</p><input placeholder="${"80"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", peso, 0)}>
-        <p class="${"my-4"}">Qual sua altura em cent\xEDmetros?</p><input placeholder="${"180"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", altura, 0)}>
-        <p class="${"my-4"}">Em quantos dias da semana voc\xEA costuma praticar exerc\xEDcios f\xEDsicos ou esporte?</p><input placeholder="${"2"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", exc_dias_por_semana, 0)}>    
-        <p class="${"my-4"}">Qual o exercicio f\xEDsico ou esporte que voc\xEA pratica com mais frequ\xEAncia?</p>
-        <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
-                <p>Caminhada</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada_esteira"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Caminhada em esteira</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"corrida"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Corrida</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"musculacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Muscula\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica_aerobica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Gin\xE1stica aer\xF3bica/spinning/step/jump</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"hidro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Hidrogin\xE1stica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Gin\xE1stica / localizada/pilates/alongamento/ioga</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"natacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Nata\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"luta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Artes marciais e luta</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"bicicleta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Bicicleta/bicicleta ergom\xE9trica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"futebol"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Futebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"basquete"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Basquetebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"volei"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Voleibol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"tenis"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>T\xEAnis</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"danca"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Dan\xE7a (com o objetivo de praticar atividade f\xEDsica)</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Outro</p></label></div>
-        <p class="${"my-4"}">Voc\xEA fuma ou j\xE1 fumou algum produto de tabaco?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"cigarro"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"cigarro"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
-                <p>N\xE3o</p></label></div>
-        ${``}
-        <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado com algum tipo de doen\xE7a mental, como ansiedade ou depress\xE3o?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
-                <p>N\xE3o</p></label></div>
-        <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado colesterol alto?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
-                <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
-                <p>N\xE3o</p></label></div>
-        <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">
-                Enviar
-            </button></div></form>
-    <div class="${"mx-auto text-center mb-10"}"><a href="${"#top"}" class="${"border-white border-4 w-80 rounded-md p-4"}"><button type="${"button"}">Voltar ao topo</button></a></div></div>`;
+<div class="${"flex"}"><div class="${"px-8 float-left"}"><input type="${"hidden"}" name="${"form-name"}" value="${"name_of_my_form"}">
+        <form class="${"flex-column w-full max-w-md ml-10 mt-10 mb-10"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
+            <p class="${"my-4"}">Como voc\xEA se identifica?</p>    
+            <div class="${"flex"}"><label class="${"m-2"}"><input name="${"sexo"}" value="${"mulher"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Mulher</p></label>
+                <label class="${"m-2"}"><input name="${"sexo"}" value="${"homem"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+                    <p>Homem</p></label>
+                <label class="${"m-2"}"><input name="${"sexo"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Outro</p></label></div>
+            <p class="${"my-4"}">Qual seu peso em Kg?:</p><input placeholder="${"80"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", peso, 0)}>
+            <p class="${"my-4"}">Qual sua altura em cent\xEDmetros?</p><input placeholder="${"180"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", altura, 0)}>
+            <p class="${"my-4"}">Em quantos dias da semana voc\xEA costuma praticar exerc\xEDcios f\xEDsicos ou esporte?</p><input placeholder="${"2"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", exc_dias_por_semana, 0)}>    
+            <p class="${"my-4"}">Qual o exercicio f\xEDsico ou esporte que voc\xEA pratica com mais frequ\xEAncia?</p>
+            <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+                    <p>Caminhada</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada_esteira"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Caminhada em esteira</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"corrida"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Corrida</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"musculacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Muscula\xE7\xE3o</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica_aerobica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Gin\xE1stica aer\xF3bica/spinning/step/jump</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"hidro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Hidrogin\xE1stica</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Gin\xE1stica / localizada/pilates/alongamento/ioga</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"natacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Nata\xE7\xE3o</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"luta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Artes marciais e luta</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"bicicleta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Bicicleta/bicicleta ergom\xE9trica</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"futebol"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Futebol</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"basquete"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Basquetebol</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"volei"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Voleibol</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"tenis"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>T\xEAnis</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"danca"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Dan\xE7a (com o objetivo de praticar atividade f\xEDsica)</p></label>
+                <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Outro</p></label></div>
+            <p class="${"my-4"}">Voc\xEA fuma ou j\xE1 fumou algum produto de tabaco?</p>
+            <div class="${"flex"}"><label class="${"m-2"}"><input name="${"cigarro"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Sim</p></label>
+                <label class="${"m-2"}"><input name="${"cigarro"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+                    <p>N\xE3o</p></label></div>
+            ${``}
+            <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado com algum tipo de doen\xE7a mental, como ansiedade ou depress\xE3o?</p>
+            <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Sim</p></label>
+                <label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+                    <p>N\xE3o</p></label></div>
+            <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado colesterol alto?</p>
+            <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+                    <p>Sim</p></label>
+                <label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+                    <p>N\xE3o</p></label></div>
+            <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">
+                    Enviar
+                </button></div></form>
+        <div class="${"mx-auto text-center mb-10"}"><a href="${"#top"}" class="${"border-white border-4 w-80 rounded-md p-4"}"><button type="${"button"}">Voltar ao topo</button></a></div></div>
+    
+    <div class="${"float-right mx-auto"}"></div></div>`;
     });
     Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"dark bg-black container min-w-full min-h-full text-white"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
@@ -1093,8 +1095,8 @@ var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/entry/reinaldo-page.svelte.bd583abd.mjs";
-    imports5 = ["_app/immutable/entry/reinaldo-page.svelte.bd583abd.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
+    file5 = "_app/immutable/entry/reinaldo-page.svelte.160fbb9c.mjs";
+    imports5 = ["_app/immutable/entry/reinaldo-page.svelte.160fbb9c.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
     stylesheets5 = ["_app/immutable/assets/header.22963853.css"];
     fonts5 = [];
   }
@@ -1828,7 +1830,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1ix68d9"
+  version_hash: "6yglww"
 };
 function get_hooks() {
   return {};
@@ -4601,7 +4603,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["PoweredByIniciativaFIS.svg", "favicon.png", "fisAI.svg", "img/mario.png", "img/mariobu.png", "img/noto_anxious-face-with-sweat.svg", "img/noto_astonished-face.svg", "img/noto_disappointed-face.svg", "img/noto_enraged-face.svg", "img/noto_grinning-face-with-smiling-eyes.svg", "img/noto_nauseated-face.svg", "img/reinaldo.png", "img/reinaldo2.png", "img/reinaldo3.png", "img/reinaldo4.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    client: { "start": { "file": "_app/immutable/entry/start.58cb5d90.mjs", "imports": ["_app/immutable/entry/start.58cb5d90.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.885b8d95.mjs"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.bdbb147f.mjs", "imports": ["_app/immutable/entry/app.bdbb147f.mjs", "_app/immutable/chunks/index.a6020e24.mjs"], "stylesheets": [], "fonts": [] } },
+    client: { "start": { "file": "_app/immutable/entry/start.2f9640c9.mjs", "imports": ["_app/immutable/entry/start.2f9640c9.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.4f783a69.mjs"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.a355646a.mjs", "imports": ["_app/immutable/entry/app.a355646a.mjs", "_app/immutable/chunks/index.a6020e24.mjs"], "stylesheets": [], "fonts": [] } },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
