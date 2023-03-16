@@ -244,8 +244,8 @@
     // reinaldo = reinaldo;
     
 </script>
-
-<div class="mx-auto text-center">
+<div id="top"></div>
+<div class="mx-auto text-center border-white border-4 w-80 rounded-md p-4">
     {#await promise}
         <p>Probabilidade de você <b>NÃO</b> ser diagnosticado com hipertensão:</p>
         <h2 class="text-2xl">{0.00}%</h2>
@@ -258,9 +258,10 @@
     {/await}
 </div>
 
+
 <div class="px-8">
     <input type="hidden" name="form-name" value="name_of_my_form" />
-    <form  class="flex-column w-full max-w-md">
+    <form  class="flex-column w-full max-w-md ml-10 mt-10 mb-10">
         <p>Qual sua idade?</p><input bind:value={idade} placeholder=48 class={inputstyle}/>
         <p class="my-4">Como você se identifica?</p>    
         <div class="flex">
@@ -365,22 +366,22 @@
         <p class="my-4">Você já foi diagnosticado com algum tipo de doença mental, como ansiedade ou depressão?</p>
         <div class="flex">
             <label class="m-2">
-                <input name="cigarro" bind:group={diag_doenca_mental} value=0 type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 <p>Sim</p>
             </label>
             <label class="m-2">
-                <input name="cigarro" bind:group={diag_doenca_mental} value=1 type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <input name="diag_doenca_mental" bind:group={diag_doenca_mental} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 <p>Não</p>
             </label>
         </div>
         <p class="my-4">Você já foi diagnosticado colesterol alto?</p>
         <div class="flex">
             <label class="m-2">
-                <input name="diag_colesterol" bind:group={diag_colesterol} value=0 type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <input name="diag_colesterol" bind:group={diag_colesterol} value='sim' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 <p>Sim</p>
             </label>
             <label class="m-2">
-                <input name="diag_colesterol" bind:group={diag_colesterol} value=1 type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <input name="diag_colesterol" bind:group={diag_colesterol} value='nao' type="radio"                                                  placeholder={placeholder} class="mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 <p>Não</p>
             </label>
         </div>
@@ -393,4 +394,9 @@
             </button>
         </div>
     </form>
+    <div class="mx-auto text-center mb-10">
+        <a href="#top" class=" border-white border-4 w-80 rounded-md p-4">
+            <button type="button">Voltar ao topo</button>
+        </a>
+    </div>
 </div>

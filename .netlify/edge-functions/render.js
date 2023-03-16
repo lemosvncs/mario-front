@@ -510,17 +510,19 @@ __export(__exports, {
   imports: () => imports,
   index: () => index,
   stylesheets: () => stylesheets,
-  universal: () => layout_exports
+  universal: () => layout_exports,
+  universal_id: () => universal_id
 });
-var index, component, file, imports, stylesheets, fonts;
+var index, component, file, universal_id, imports, stylesheets, fonts;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout();
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/components/pages/_layout.svelte-f21d206b.js";
-    imports = ["_app/immutable/components/pages/_layout.svelte-f21d206b.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/modules/pages/_layout.js-4ed993c7.js"];
-    stylesheets = ["_app/immutable/assets/_layout-c6d5c8dc.css"];
+    file = "_app/immutable/entry/_layout.svelte.1d2485bb.mjs";
+    universal_id = "src/routes/+layout.js";
+    imports = ["_app/immutable/entry/_layout.svelte.1d2485bb.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/entry/_layout.js.4ed993c7.mjs"];
+    stylesheets = ["_app/immutable/assets/_layout.e478bcaa.css"];
     fonts = [];
   }
 });
@@ -578,8 +580,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/components/error.svelte-ca099c72.js";
-    imports2 = ["_app/immutable/components/error.svelte-ca099c72.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"];
+    file2 = "_app/immutable/entry/error.svelte.6493e476.mjs";
+    imports2 = ["_app/immutable/entry/error.svelte.6493e476.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.885b8d95.mjs"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -615,8 +617,8 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    file3 = "_app/immutable/components/pages/_page.svelte-f01f9b73.js";
-    imports3 = ["_app/immutable/components/pages/_page.svelte-f01f9b73.js", "_app/immutable/chunks/index-e4d2abc4.js"];
+    file3 = "_app/immutable/entry/_page.svelte.f566edd8.mjs";
+    imports3 = ["_app/immutable/entry/_page.svelte.f566edd8.mjs", "_app/immutable/chunks/index.a6020e24.mjs"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -660,9 +662,9 @@ var init_Icon = __esm({
   }
 });
 
-// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
+// node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
 var require_faPaperPlane = __commonJS({
-  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
+  "node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -695,9 +697,9 @@ var require_faPaperPlane = __commonJS({
   }
 });
 
-// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
+// node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
 var require_faAnglesDown = __commonJS({
-  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
+  "node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -730,9 +732,9 @@ var require_faAnglesDown = __commonJS({
   }
 });
 
-// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
+// node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
 var require_faSpinner = __commonJS({
-  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
+  "node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -941,9 +943,9 @@ var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     index4 = 3;
     component4 = async () => (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
-    file4 = "_app/immutable/components/pages/mario/_page.svelte-64c01190.js";
-    imports4 = ["_app/immutable/components/pages/mario/_page.svelte-64c01190.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/faPaperPlane-ba3ecb4b.js", "_app/immutable/chunks/header-68a8a6de.js"];
-    stylesheets4 = ["_app/immutable/assets/header-51b1667c.css"];
+    file4 = "_app/immutable/entry/mario-page.svelte.e7b6efd4.mjs";
+    imports4 = ["_app/immutable/entry/mario-page.svelte.e7b6efd4.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/faPaperPlane.16d35e80.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
+    stylesheets4 = ["_app/immutable/assets/header.22963853.css"];
     fonts4 = [];
   }
 });
@@ -954,8 +956,7 @@ __export(page_svelte_exports3, {
   default: () => Page3
 });
 async function reinaldoIsBack(idade = 48.92, sexo = "homem", peso = 73.4, altura = 165, exc_dias_por_semana = 3.61, exc_qual = "caminhada", idade_comecou_fumar = 17.34, diag_doenca_mental = "nao", diag_colesterol = "nao", cigarro = "nao") {
-  let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/reinaldo?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
-  console.log(url);
+  let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
   const res = await fetch(url, {
     mode: "cors",
     headers: { dataType: "json" }
@@ -969,98 +970,110 @@ async function reinaldoIsBack(idade = 48.92, sexo = "homem", peso = 73.4, altura
     throw new Error(reinaldo_res);
   }
 }
-var import_faPaperPlane2, placeholder2, inputstyle, Reinaldo, Page3;
+var placeholder2, inputstyle, Reinaldo2, Page3;
 var init_page_svelte3 = __esm({
   ".svelte-kit/output/server/entries/pages/reinaldo/_page.svelte.js"() {
     init_chunks();
     init_header();
-    init_Icon();
-    import_faPaperPlane2 = __toESM(require_faPaperPlane(), 1);
     placeholder2 = "1";
     inputstyle = "mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block              p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
-    Reinaldo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let paperPlane = import_faPaperPlane2.faPaperPlane;
-      let idade;
-      let peso;
-      let altura;
-      let exc_dias_por_semana;
-      let reinaldo = 0;
-      reinaldoIsBack();
-      return `<div class="${"mx-auto text-center"}"><p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
-    <h2 class="${"text-2xl"}">${escape(reinaldo.toFixed(2) * 100)}%</h2></div>
+    Reinaldo2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let idade = 48.92;
+      let sexo = "homem";
+      let peso = 73.4;
+      let altura = 165;
+      let exc_dias_por_semana = 3.61;
+      let promise = reinaldoIsBack();
+      console.log(idade, sexo, peso, altura);
+      return `<div id="${"top"}"></div>
+<div class="${"mx-auto text-center border-white border-4 w-80 rounded-md p-4"}">${function(__value) {
+        if (is_promise(__value)) {
+          __value.then(null, noop);
+          return `
+        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
+        <h2 class="${"text-2xl"}">${escape(0)}%</h2>
+    `;
+        }
+        return function(reinaldo) {
+          return ` 
+        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
+        <h2 class="${"text-2xl"}">${escape((reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2))}%</h2>
+    `;
+        }(__value);
+      }(promise)}</div>
+
 
 <div class="${"px-8"}"><input type="${"hidden"}" name="${"form-name"}" value="${"name_of_my_form"}">
-    <f class="${"flex-column w-full max-w-md"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
+    <form class="${"flex-column w-full max-w-md ml-10 mt-10 mb-10"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", idade, 0)}>
         <p class="${"my-4"}">Como voc\xEA se identifica?</p>    
-        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", "mulher", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"sexo"}" value="${"mulher"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Mulher</p></label>
-            <label class="${"m-2"}"><input${add_attribute("value", "homem", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input name="${"sexo"}" value="${"homem"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>Homem</p></label>
-            <label class="${"m-2"}"><input${add_attribute("value", "outro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input name="${"sexo"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Outro</p></label></div>
         <p class="${"my-4"}">Qual seu peso em Kg?:</p><input placeholder="${"80"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", peso, 0)}>
         <p class="${"my-4"}">Qual sua altura em cent\xEDmetros?</p><input placeholder="${"180"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", altura, 0)}>
         <p class="${"my-4"}">Em quantos dias da semana voc\xEA costuma praticar exerc\xEDcios f\xEDsicos ou esporte?</p><input placeholder="${"2"}"${add_attribute("class", inputstyle, 0)}${add_attribute("value", exc_dias_por_semana, 0)}>    
         <p class="${"my-4"}">Qual o exercicio f\xEDsico ou esporte que voc\xEA pratica com mais frequ\xEAncia?</p>
-        <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "caminhada", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>Caminhada</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "caminhada_esteira", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada_esteira"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Caminhada em esteira</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "corrida", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"corrida"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Corrida</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "musculacao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"musculacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Muscula\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "ginastica_aerobica", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica_aerobica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Gin\xE1stica aer\xF3bica/spinning/step/jump</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "hidro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"hidro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Hidrogin\xE1stica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "ginastica", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Gin\xE1stica / localizada/pilates/alongamento/ioga</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "natacao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"natacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Nata\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "luta", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"luta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Artes marciais e luta</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "bicicleta", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"bicicleta"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Bicicleta/bicicleta ergom\xE9trica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "futebol", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"futebol"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Futebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "basquete", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"basquete"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Basquetebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "volei", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"volei"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Voleibol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "tenis", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"tenis"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>T\xEAnis</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "danca", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"danca"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Dan\xE7a (com o objetivo de praticar atividade f\xEDsica)</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "outro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Outro</p></label></div>
         <p class="${"my-4"}">Voc\xEA fuma ou j\xE1 fumou algum produto de tabaco?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", "sim", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"cigarro"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input${add_attribute("value", "nao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+            <label class="${"m-2"}"><input name="${"cigarro"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>N\xE3o</p></label></div>
         ${``}
         <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado com algum tipo de doen\xE7a mental, como ansiedade ou depress\xE3o?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", 0, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input${add_attribute("value", 1, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input name="${"diag_doenca_mental"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>N\xE3o</p></label></div>
         <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado colesterol alto?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", 0, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input${add_attribute("value", 1, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder2, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>N\xE3o</p></label></div>
-        <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">${validate_component(Icon, "Icon").$$render($$result, { icon: paperPlane }, {}, {})}
+        <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">
                 Enviar
-            </button></div></f>
-    sv
-</div>`;
+            </button></div></form>
+    <div class="${"mx-auto text-center mb-10"}"><a href="${"#top"}" class="${"border-white border-4 w-80 rounded-md p-4"}"><button type="${"button"}">Voltar ao topo</button></a></div></div>`;
     });
     Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"dark bg-black container min-w-full min-h-full text-white"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
     <div class="${"container mx-auto px-10 py-12"}"><div class="${"flex justify-center mb-10"}"><img class="${"rounded-full w-60 h-60 border-white border-4"}" src="${"img/reinaldo3.png"}" alt="${"Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"}" width="${"200"}" height="${"200"}">
             </div></div>
-        ${validate_component(Reinaldo, "Reinaldo").$$render($$result, {}, {}, {})}</div>`;
+        ${validate_component(Reinaldo2, "Reinaldob").$$render($$result, {}, {}, {})}</div>`;
     });
   }
 });
@@ -1080,20 +1093,21 @@ var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/components/pages/reinaldo/_page.svelte-fabd7c21.js";
-    imports5 = ["_app/immutable/components/pages/reinaldo/_page.svelte-fabd7c21.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/header-68a8a6de.js", "_app/immutable/chunks/faPaperPlane-ba3ecb4b.js"];
-    stylesheets5 = ["_app/immutable/assets/header-51b1667c.css"];
+    file5 = "_app/immutable/entry/reinaldo-page.svelte.bd583abd.mjs";
+    imports5 = ["_app/immutable/entry/reinaldo-page.svelte.bd583abd.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
+    stylesheets5 = ["_app/immutable/assets/header.22963853.css"];
     fonts5 = [];
   }
 });
 
-// .svelte-kit/output/server/entries/pages/reinaldo2/_page.svelte.js
+// .svelte-kit/output/server/entries/pages/reinaldo_old/_page.svelte.js
 var page_svelte_exports4 = {};
 __export(page_svelte_exports4, {
   default: () => Page4
 });
 async function reinaldoIsBack2(idade = 48.92, sexo = "homem", peso = 73.4, altura = 165, exc_dias_por_semana = 3.61, exc_qual = "caminhada", idade_comecou_fumar = 17.34, diag_doenca_mental = "nao", diag_colesterol = "nao", cigarro = "nao") {
-  let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
+  let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/reinaldo?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
+  console.log(url);
   const res = await fetch(url, {
     mode: "cors",
     headers: { dataType: "json" }
@@ -1107,107 +1121,98 @@ async function reinaldoIsBack2(idade = 48.92, sexo = "homem", peso = 73.4, altur
     throw new Error(reinaldo_res);
   }
 }
-var placeholder3, inputstyle2, Reinaldo2, Page4;
+var import_faPaperPlane2, placeholder3, inputstyle2, Reinaldo, Page4;
 var init_page_svelte4 = __esm({
-  ".svelte-kit/output/server/entries/pages/reinaldo2/_page.svelte.js"() {
+  ".svelte-kit/output/server/entries/pages/reinaldo_old/_page.svelte.js"() {
     init_chunks();
     init_header();
+    init_Icon();
+    import_faPaperPlane2 = __toESM(require_faPaperPlane(), 1);
     placeholder3 = "1";
     inputstyle2 = "mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block              p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
-    Reinaldo2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let idade = 48.92;
-      let sexo = "homem";
-      let peso = 73.4;
-      let altura = 165;
-      let exc_dias_por_semana = 3.61;
-      let promise = reinaldoIsBack2();
-      console.log(idade, sexo, peso, altura);
-      return `<div class="${"mx-auto text-center"}">${function(__value) {
-        if (is_promise(__value)) {
-          __value.then(null, noop);
-          return `
-        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
-        <h2 class="${"text-2xl"}">${escape(0)}%</h2>
-    `;
-        }
-        return function(reinaldo) {
-          return ` 
-        <p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
-        <h2 class="${"text-2xl"}">${escape((reinaldo.reinaldo.probabilidade_nao * 100).toFixed(2))}%</h2>
-    `;
-        }(__value);
-      }(promise)}</div>
+    Reinaldo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let paperPlane = import_faPaperPlane2.faPaperPlane;
+      let idade;
+      let peso;
+      let altura;
+      let exc_dias_por_semana;
+      let reinaldo = 0;
+      reinaldoIsBack2();
+      return `<div class="${"mx-auto text-center"}"><p>Probabilidade de voc\xEA <b>N\xC3O</b> ser diagnosticado com hipertens\xE3o:</p>
+    <h2 class="${"text-2xl"}">${escape(reinaldo.toFixed(2) * 100)}%</h2></div>
 
 <div class="${"px-8"}"><input type="${"hidden"}" name="${"form-name"}" value="${"name_of_my_form"}">
-    <form class="${"flex-column w-full max-w-md"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle2, 0)}${add_attribute("value", idade, 0)}>
+    <f class="${"flex-column w-full max-w-md"}"><p>Qual sua idade?</p><input placeholder="${"48"}"${add_attribute("class", inputstyle2, 0)}${add_attribute("value", idade, 0)}>
         <p class="${"my-4"}">Como voc\xEA se identifica?</p>    
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"sexo"}" value="${"mulher"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", "mulher", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Mulher</p></label>
-            <label class="${"m-2"}"><input name="${"sexo"}" value="${"homem"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+            <label class="${"m-2"}"><input${add_attribute("value", "homem", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Homem</p></label>
-            <label class="${"m-2"}"><input name="${"sexo"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input${add_attribute("value", "outro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Outro</p></label></div>
         <p class="${"my-4"}">Qual seu peso em Kg?:</p><input placeholder="${"80"}"${add_attribute("class", inputstyle2, 0)}${add_attribute("value", peso, 0)}>
         <p class="${"my-4"}">Qual sua altura em cent\xEDmetros?</p><input placeholder="${"180"}"${add_attribute("class", inputstyle2, 0)}${add_attribute("value", altura, 0)}>
         <p class="${"my-4"}">Em quantos dias da semana voc\xEA costuma praticar exerc\xEDcios f\xEDsicos ou esporte?</p><input placeholder="${"2"}"${add_attribute("class", inputstyle2, 0)}${add_attribute("value", exc_dias_por_semana, 0)}>    
         <p class="${"my-4"}">Qual o exercicio f\xEDsico ou esporte que voc\xEA pratica com mais frequ\xEAncia?</p>
-        <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+        <div class="${"flex flex-col"}"><label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "caminhada", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Caminhada</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"caminhada_esteira"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "caminhada_esteira", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Caminhada em esteira</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"corrida"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "corrida", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Corrida</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"musculacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "musculacao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Muscula\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica_aerobica"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "ginastica_aerobica", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Gin\xE1stica aer\xF3bica/spinning/step/jump</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"hidro"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "hidro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Hidrogin\xE1stica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"ginastica"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "ginastica", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Gin\xE1stica / localizada/pilates/alongamento/ioga</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"natacao"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "natacao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Nata\xE7\xE3o</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"luta"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "luta", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Artes marciais e luta</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"bicicleta"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "bicicleta", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Bicicleta/bicicleta ergom\xE9trica</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"futebol"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "futebol", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Futebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"basquete"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "basquete", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Basquetebol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"volei"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "volei", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Voleibol</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"tenis"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "tenis", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>T\xEAnis</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"danca"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "danca", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Dan\xE7a (com o objetivo de praticar atividade f\xEDsica)</p></label>
-            <label class="${"m-2 flex inline-flex"}"><input name="${"exc_qual"}" value="${"outro"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2 flex inline-flex"}"><input${add_attribute("value", "outro", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Outro</p></label></div>
         <p class="${"my-4"}">Voc\xEA fuma ou j\xE1 fumou algum produto de tabaco?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"cigarro"}" value="${"sim"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", "sim", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"cigarro"}" value="${"nao"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
+            <label class="${"m-2"}"><input${add_attribute("value", "nao", 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${add_attribute("checked", true, 1)}>
                 <p>N\xE3o</p></label></div>
         ${``}
         <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado com algum tipo de doen\xE7a mental, como ansiedade ou depress\xE3o?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"cigarro"}" value="${"0"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", 0, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"cigarro"}" value="${"1"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input${add_attribute("value", 1, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>N\xE3o</p></label></div>
         <p class="${"my-4"}">Voc\xEA j\xE1 foi diagnosticado colesterol alto?</p>
-        <div class="${"flex"}"><label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"0"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+        <div class="${"flex"}"><label class="${"m-2"}"><input${add_attribute("value", 0, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>Sim</p></label>
-            <label class="${"m-2"}"><input name="${"diag_colesterol"}" value="${"1"}" type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
+            <label class="${"m-2"}"><input${add_attribute("value", 1, 0)} type="${"radio"}"${add_attribute("placeholder", placeholder3, 0)} class="${"mr-4 mb-2 dark:border-white dark:border-2 dark:bg-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"}"${""}>
                 <p>N\xE3o</p></label></div>
-        <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">
+        <div class="${"flex inline-flex mt-4"}"><button type="${"button"}" class="${"w-64 h-16 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}">${validate_component(Icon, "Icon").$$render($$result, { icon: paperPlane }, {}, {})}
                 Enviar
-            </button></div></form></div>`;
+            </button></div></f>
+    sv
+</div>`;
     });
     Page4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"dark bg-black container min-w-full min-h-full text-white"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
     <div class="${"container mx-auto px-10 py-12"}"><div class="${"flex justify-center mb-10"}"><img class="${"rounded-full w-60 h-60 border-white border-4"}" src="${"img/reinaldo3.png"}" alt="${"Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"}" width="${"200"}" height="${"200"}">
             </div></div>
-        ${validate_component(Reinaldo2, "Reinaldob").$$render($$result, {}, {}, {})}</div>`;
+        ${validate_component(Reinaldo, "Reinaldo").$$render($$result, {}, {}, {})}</div>`;
     });
   }
 });
@@ -1227,9 +1232,9 @@ var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     index6 = 5;
     component6 = async () => (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
-    file6 = "_app/immutable/components/pages/reinaldo2/_page.svelte-255fd073.js";
-    imports6 = ["_app/immutable/components/pages/reinaldo2/_page.svelte-255fd073.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/header-68a8a6de.js"];
-    stylesheets6 = ["_app/immutable/assets/header-51b1667c.css"];
+    file6 = "_app/immutable/entry/reinaldo_old-page.svelte.16aab977.mjs";
+    imports6 = ["_app/immutable/entry/reinaldo_old-page.svelte.16aab977.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs", "_app/immutable/chunks/faPaperPlane.16d35e80.mjs"];
+    stylesheets6 = ["_app/immutable/assets/header.22963853.css"];
     fonts6 = [];
   }
 });
@@ -1682,13 +1687,9 @@ init_chunks();
 init_chunks();
 var base = "";
 var assets = base;
-var version = "";
 var public_env = {};
 function set_public_env(environment) {
   public_env = environment;
-}
-function set_version(value) {
-  version = value;
 }
 function afterUpdate() {
 }
@@ -1768,8 +1769,8 @@ ${``}`;
   } while (!$$settled);
   return $$rendered;
 });
-set_version("1678911278184");
 var options = {
+  app_template_contains_nonce: false,
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
   embedded: false,
@@ -1826,7 +1827,8 @@ var options = {
 	<body>
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
-  }
+  },
+  version_hash: "1ix68d9"
 };
 function get_hooks() {
   return {};
@@ -1927,7 +1929,7 @@ function json(data, init2) {
   const body = JSON.stringify(data);
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
   }
   if (!headers.has("content-type")) {
     headers.set("content-type", "application/json");
@@ -1937,11 +1939,11 @@ function json(data, init2) {
     headers
   });
 }
-var encoder$1 = new TextEncoder();
+var encoder$3 = new TextEncoder();
 function text(body, init2) {
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
   }
   return new Response(body, {
     ...init2,
@@ -1977,7 +1979,7 @@ function method_not_allowed(mod, method) {
 }
 function allowed_methods(mod) {
   const allowed = [];
-  for (const method of ["GET", "POST", "PUT", "PATCH", "DELETE"]) {
+  for (const method in ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]) {
     if (method in mod)
       allowed.push(method);
   }
@@ -2031,27 +2033,21 @@ function clarify_devalue_error(event, error2) {
   }
   return error2.message;
 }
-function serialize_data_node(node) {
-  if (!node)
-    return "null";
-  if (node.type === "error" || node.type === "skip") {
-    return JSON.stringify(node);
-  }
-  const stringified = stringify(node.data);
+function stringify_uses(node) {
   const uses = [];
-  if (node.uses.dependencies.size > 0) {
+  if (node.uses && node.uses.dependencies.size > 0) {
     uses.push(`"dependencies":${JSON.stringify(Array.from(node.uses.dependencies))}`);
   }
-  if (node.uses.params.size > 0) {
+  if (node.uses && node.uses.params.size > 0) {
     uses.push(`"params":${JSON.stringify(Array.from(node.uses.params))}`);
   }
-  if (node.uses.parent)
+  if (node.uses?.parent)
     uses.push(`"parent":1`);
-  if (node.uses.route)
+  if (node.uses?.route)
     uses.push(`"route":1`);
-  if (node.uses.url)
+  if (node.uses?.url)
     uses.push(`"url":1`);
-  return `{"type":"data","data":${stringified},"uses":{${uses.join(",")}}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
+  return `"uses":{${uses.join(",")}}`;
 }
 async function render_endpoint(event, route, mod, state) {
   const method = (
@@ -2103,7 +2099,7 @@ async function render_endpoint(event, route, mod, state) {
 }
 function is_endpoint_request(event) {
   const { method, headers } = event.request;
-  if (method === "PUT" || method === "PATCH" || method === "DELETE") {
+  if (method === "PUT" || method === "PATCH" || method === "DELETE" || method === "OPTIONS") {
     return true;
   }
   if (method === "POST" && headers.get("x-sveltekit-action") === "true")
@@ -2424,12 +2420,15 @@ async function load_server_data({ event, state, node, parent }) {
       uses.parent = true;
       return parent();
     },
-    route: {
-      get id() {
+    route: new Proxy(event.route, {
+      get: (target, key2) => {
         uses.route = true;
-        return event.route.id;
+        return target[
+          /** @type {'id'} */
+          key2
+        ];
       }
-    },
+    }),
     url
   });
   const data = result ? await unwrap_promises(result) : null;
@@ -2466,11 +2465,6 @@ async function load_data({
     parent
   });
   const data = result ? await unwrap_promises(result) : null;
-  validate_load_response(
-    data,
-    /** @type {string} */
-    event.route.id
-  );
   return data;
 }
 function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
@@ -2581,13 +2575,6 @@ async function stream_to_string(stream) {
     result += decoder.decode(value);
   }
   return result;
-}
-function validate_load_response(data, routeId) {
-  if (data != null && Object.getPrototypeOf(data) !== Object.prototype) {
-    throw new Error(
-      `a load function related to route '${routeId}' returned ${typeof data !== "object" ? `a ${typeof data}` : data instanceof Response ? "a Response object" : Array.isArray(data) ? "an array" : "a non-plain object"}, but must return a plain object at the top level (i.e. \`return {...}\`)`
-    );
-  }
 }
 var subscriber_queue = [];
 function readable(value, start) {
@@ -2726,7 +2713,7 @@ function serialize_data(fetched, filter, prerendering = false) {
   return `<script ${attrs.join(" ")}>${safe_payload}<\/script>`;
 }
 var s = JSON.stringify;
-var encoder = new TextEncoder();
+var encoder$2 = new TextEncoder();
 function sha256(data) {
   if (!key[0])
     precompute();
@@ -2813,7 +2800,7 @@ function reverse_endianness(bytes) {
   }
 }
 function encode(str) {
-  const encoded = encoder.encode(str);
+  const encoded = encoder$2.encode(str);
   const length = encoded.length * 8;
   const size = 512 * Math.ceil((length + 65) / 512);
   const bytes = new Uint8Array(size / 8);
@@ -3029,10 +3016,39 @@ var Csp = class {
     this.report_only_provider.add_style(content);
   }
 };
+function defer() {
+  let fulfil;
+  let reject;
+  const promise = new Promise((f, r) => {
+    fulfil = f;
+    reject = r;
+  });
+  return { promise, fulfil, reject };
+}
+function create_async_iterator() {
+  let deferred = defer();
+  return {
+    iterator: {
+      [Symbol.asyncIterator]() {
+        return {
+          next: () => deferred.promise
+        };
+      }
+    },
+    push: (value) => {
+      deferred.fulfil({ value, done: false });
+      deferred = defer();
+    },
+    done: () => {
+      deferred.fulfil({ done: true });
+    }
+  };
+}
 var updated = {
   ...readable(false),
   check: () => false
 };
+var encoder$1 = new TextEncoder();
 async function render_response({
   branch,
   fetched,
@@ -3054,10 +3070,10 @@ async function render_response({
       throw new Error("Cannot use prerendering if page template contains %sveltekit.nonce%");
     }
   }
-  const { entry } = manifest2._;
-  const stylesheets7 = new Set(entry.stylesheets);
-  const modulepreloads = new Set(entry.imports);
-  const fonts7 = new Set(manifest2._.entry.fonts);
+  const { client } = manifest2._;
+  const modulepreloads = /* @__PURE__ */ new Set([...client.start.imports, ...client.app.imports]);
+  const stylesheets7 = new Set(client.app.stylesheets);
+  const fonts7 = new Set(client.app.fonts);
   const link_header_preloads = /* @__PURE__ */ new Set();
   const inline_styles = /* @__PURE__ */ new Map();
   let rendered;
@@ -3072,10 +3088,10 @@ async function render_response({
       constructors: await Promise.all(branch.map(({ node }) => node.component())),
       form: form_value
     };
-    let data = {};
+    let data2 = {};
     for (let i = 0; i < branch.length; i += 1) {
-      data = { ...data, ...branch[i].data };
-      props[`data_${i}`] = data;
+      data2 = { ...data2, ...branch[i].data };
+      props[`data_${i}`] = data2;
     }
     props.page = {
       error: error2,
@@ -3086,22 +3102,19 @@ async function render_response({
       route: event.route,
       status,
       url: event.url,
-      data,
+      data: data2,
       form: form_value
     };
     {
       rendered = options2.root.render(props);
     }
     for (const { node } of branch) {
-      if (node.imports) {
-        node.imports.forEach((url) => modulepreloads.add(url));
-      }
-      if (node.stylesheets) {
-        node.stylesheets.forEach((url) => stylesheets7.add(url));
-      }
-      if (node.fonts) {
-        node.fonts.forEach((url) => fonts7.add(url));
-      }
+      for (const url of node.imports)
+        modulepreloads.add(url);
+      for (const url of node.stylesheets)
+        stylesheets7.add(url);
+      for (const url of node.fonts)
+        fonts7.add(url);
       if (node.inline_styles) {
         Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
       }
@@ -3109,66 +3122,32 @@ async function render_response({
   } else {
     rendered = { head: "", html: "", css: { code: "", map: null } };
   }
+  let resolved_assets;
+  let asset_expression;
+  if (assets) {
+    resolved_assets = assets;
+    asset_expression = s(assets);
+  } else if (state.prerendering?.fallback) {
+    resolved_assets = base;
+    asset_expression = s(base);
+  } else {
+    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
+    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
+    asset_expression = `new URL(${s(
+      resolved_assets
+    )}, location.href).pathname.replace(/^\\/$/, '')`;
+  }
   let head = "";
   let body = rendered.html;
   const csp = new Csp(options2.csp, {
     prerender: !!state.prerendering
   });
-  const target = hash(body);
-  let resolved_assets;
-  if (assets) {
-    resolved_assets = assets;
-  } else if (state.prerendering?.fallback) {
-    resolved_assets = base;
-  } else {
-    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
-    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
-  }
   const prefixed = (path) => {
     if (path.startsWith("/")) {
       return base + path;
     }
     return `${resolved_assets}/${path}`;
   };
-  const serialized = { data: "", form: "null", error: "null" };
-  try {
-    serialized.data = `[${branch.map(({ server_data }) => {
-      if (server_data?.type === "data") {
-        const data = uneval(server_data.data);
-        const uses = [];
-        if (server_data.uses.dependencies.size > 0) {
-          uses.push(`dependencies:${s(Array.from(server_data.uses.dependencies))}`);
-        }
-        if (server_data.uses.params.size > 0) {
-          uses.push(`params:${s(Array.from(server_data.uses.params))}`);
-        }
-        if (server_data.uses.parent)
-          uses.push(`parent:1`);
-        if (server_data.uses.route)
-          uses.push(`route:1`);
-        if (server_data.uses.url)
-          uses.push(`url:1`);
-        return `{type:"data",data:${data},uses:{${uses.join(",")}}${server_data.slash ? `,slash:${s(server_data.slash)}` : ""}}`;
-      }
-      return s(server_data);
-    }).join(",")}]`;
-  } catch (e) {
-    const error3 = (
-      /** @type {any} */
-      e
-    );
-    throw new Error(clarify_devalue_error(event, error3));
-  }
-  if (form_value) {
-    serialized.form = uneval_action_response(
-      form_value,
-      /** @type {string} */
-      event.route.id
-    );
-  }
-  if (error2) {
-    serialized.error = uneval(error2);
-  }
   if (inline_styles.size > 0) {
     const content = Array.from(inline_styles.values()).join("\n");
     const attributes = [];
@@ -3207,17 +3186,67 @@ async function render_response({
 		<link ${attributes.join(" ")}>`;
     }
   }
+  const global = `__sveltekit_${options2.version_hash}`;
+  const { data, chunks } = get_data(
+    event,
+    options2,
+    branch.map((b) => b.server_data),
+    global
+  );
+  if (page_config.ssr && page_config.csr) {
+    body += `
+			${fetched.map(
+      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
+    ).join("\n			")}`;
+  }
   if (page_config.csr) {
-    const opts = [
-      `assets: ${s(assets)}`,
+    const included_modulepreloads = Array.from(modulepreloads, (dep) => prefixed(dep)).filter(
+      (path) => resolve_opts.preload({ type: "js", path })
+    );
+    for (const path of included_modulepreloads) {
+      link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
+      head += `
+		<link rel="preload" as="script" crossorigin="anonymous" href="${path}">`;
+    }
+    const blocks = [];
+    const properties = [
       `env: ${s(public_env)}`,
-      `target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode`,
-      `version: ${s(version)}`
+      `assets: ${asset_expression}`,
+      `element: document.currentScript.parentElement`
     ];
+    if (chunks) {
+      blocks.push(`const deferred = new Map();`);
+      properties.push(`defer: (id) => new Promise((fulfil, reject) => {
+							deferred.set(id, { fulfil, reject });
+						})`);
+      properties.push(`resolve: ({ id, data, error }) => {
+							const { fulfil, reject } = deferred.get(id);
+							deferred.delete(id);
+
+							if (error) reject(error);
+							else fulfil(data);
+						}`);
+    }
+    blocks.push(`${global} = {
+						${properties.join(",\n						")}
+					};`);
+    const args = [`app`, `${global}.element`];
     if (page_config.ssr) {
+      const serialized = { form: "null", error: "null" };
+      blocks.push(`const data = ${data};`);
+      if (form_value) {
+        serialized.form = uneval_action_response(
+          form_value,
+          /** @type {string} */
+          event.route.id
+        );
+      }
+      if (error2) {
+        serialized.error = uneval(error2);
+      }
       const hydrate = [
         `node_ids: [${branch.map(({ node }) => node.index).join(", ")}]`,
-        `data: ${serialized.data}`,
+        `data`,
         `form: ${serialized.form}`,
         `error: ${serialized.error}`
       ];
@@ -3227,54 +3256,38 @@ async function render_response({
       if (options2.embedded) {
         hydrate.push(`params: ${uneval(event.params)}`, `route: ${s(event.route)}`);
       }
-      opts.push(`hydrate: {
-					${hydrate.join(",\n					")}
-				}`);
+      args.push(`{
+							${hydrate.join(",\n							")}
+						}`);
+    }
+    blocks.push(`Promise.all([
+						import(${s(prefixed(client.start.file))}),
+						import(${s(prefixed(client.app.file))})
+					]).then(([kit, app]) => {
+						kit.start(${args.join(", ")});
+					});`);
+    if (options2.service_worker) {
+      const opts = "";
+      blocks.push(`if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
+						});
+					}`);
     }
     const init_app = `
-			import { start } from ${s(prefixed(entry.file))};
-
-			start({
-				${opts.join(",\n				")}
-			});
-		`;
-    for (const dep of modulepreloads) {
-      const path = prefixed(dep);
-      if (resolve_opts.preload({ type: "js", path })) {
-        link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
-        if (state.prerendering) {
-          head += `
-		<link rel="modulepreload" href="${path}">`;
-        }
-      }
-    }
-    const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
+				{
+					${blocks.join("\n\n					")}
+				}
+			`;
     csp.add_script(init_app);
-    if (csp.script_needs_nonce) {
-      attributes.push(`nonce="${csp.nonce}"`);
-    }
     body += `
-		<script ${attributes.join(" ")}>${init_app}<\/script>`;
-  }
-  if (page_config.ssr && page_config.csr) {
-    body += `
-	${fetched.map(
-      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
-    ).join("\n	")}`;
-  }
-  if (options2.service_worker) {
-    const opts = "";
-    const init_service_worker = `
-			if ('serviceWorker' in navigator) {
-				addEventListener('load', function () {
-					navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
-				});
-			}
+			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_app}<\/script>
 		`;
-    csp.add_script(init_service_worker);
-    head += `
-		<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
   }
+  const headers = new Headers({
+    "x-sveltekit-page": "true",
+    "content-type": "text/html"
+  });
   if (state.prerendering) {
     const http_equiv = [];
     const csp_headers = csp.csp_provider.get_meta();
@@ -3286,6 +3299,18 @@ async function render_response({
     }
     if (http_equiv.length > 0) {
       head = http_equiv.join("\n") + head;
+    }
+  } else {
+    const csp_header = csp.csp_provider.get_header();
+    if (csp_header) {
+      headers.set("content-security-policy", csp_header);
+    }
+    const report_only_header = csp.report_only_provider.get_header();
+    if (report_only_header) {
+      headers.set("content-security-policy-report-only", report_only_header);
+    }
+    if (link_header_preloads.size) {
+      headers.set("link", Array.from(link_header_preloads).join(", "));
     }
   }
   head += rendered.head;
@@ -3303,28 +3328,90 @@ async function render_response({
     html,
     done: true
   }) || "";
-  const headers = new Headers({
-    "x-sveltekit-page": "true",
-    "content-type": "text/html",
-    etag: `"${hash(transformed)}"`
-  });
-  if (!state.prerendering) {
-    const csp_header = csp.csp_provider.get_header();
-    if (csp_header) {
-      headers.set("content-security-policy", csp_header);
-    }
-    const report_only_header = csp.report_only_provider.get_header();
-    if (report_only_header) {
-      headers.set("content-security-policy-report-only", report_only_header);
-    }
-    if (link_header_preloads.size) {
-      headers.set("link", Array.from(link_header_preloads).join(", "));
-    }
+  if (!chunks) {
+    headers.set("etag", `"${hash(transformed)}"`);
   }
-  return text(transformed, {
+  return !chunks ? text(transformed, {
     status,
     headers
-  });
+  }) : new Response(
+    new ReadableStream({
+      async start(controller) {
+        controller.enqueue(encoder$1.encode(transformed + "\n"));
+        for await (const chunk of chunks) {
+          controller.enqueue(encoder$1.encode(chunk));
+        }
+        controller.close();
+      },
+      type: "bytes"
+    }),
+    {
+      headers: {
+        "content-type": "text/html"
+      }
+    }
+  );
+}
+function get_data(event, options2, nodes, global) {
+  let promise_id = 1;
+  let count = 0;
+  const { iterator, push, done } = create_async_iterator();
+  function replacer(thing) {
+    if (typeof thing?.then === "function") {
+      const id = promise_id++;
+      count += 1;
+      thing.then(
+        /** @param {any} data */
+        (data) => ({ data })
+      ).catch(
+        /** @param {any} error */
+        async (error2) => ({
+          error: await handle_error_and_jsonify(event, options2, error2)
+        })
+      ).then(
+        /**
+         * @param {{data: any; error: any}} result
+         */
+        async ({ data, error: error2 }) => {
+          count -= 1;
+          let str;
+          try {
+            str = uneval({ id, data, error: error2 }, replacer);
+          } catch (e) {
+            error2 = await handle_error_and_jsonify(
+              event,
+              options2,
+              new Error(`Failed to serialize promise while rendering ${event.route.id}`)
+            );
+            data = void 0;
+            str = uneval({ id, data, error: error2 }, replacer);
+          }
+          push(`<script>${global}.resolve(${str})<\/script>
+`);
+          if (count === 0)
+            done();
+        }
+      );
+      return `${global}.defer(${id})`;
+    }
+  }
+  try {
+    const strings = nodes.map((node) => {
+      if (!node)
+        return "null";
+      return `{"type":"data","data":${uneval(node.data, replacer)},${stringify_uses(node)}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
+    });
+    return {
+      data: `[${strings.join(",")}]`,
+      chunks: count > 0 ? iterator : null
+    };
+  } catch (e) {
+    throw new Error(clarify_devalue_error(
+      event,
+      /** @type {any} */
+      e
+    ));
+  }
 }
 function get_option(nodes, option) {
   return nodes.reduce(
@@ -3410,6 +3497,218 @@ async function respond_with_error({
       e instanceof HttpError ? e.status : 500,
       (await handle_error_and_jsonify(event, options2, e)).message
     );
+  }
+}
+function once(fn) {
+  let done = false;
+  let result;
+  return () => {
+    if (done)
+      return result;
+    done = true;
+    return result = fn();
+  };
+}
+var INVALIDATED_PARAM = "x-sveltekit-invalidated";
+var encoder = new TextEncoder();
+async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
+  if (!route.page) {
+    return new Response(void 0, {
+      status: 404
+    });
+  }
+  state.initiator = route;
+  try {
+    const node_ids = [...route.page.layouts, route.page.leaf];
+    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
+    let aborted = false;
+    const url = new URL(event.url);
+    url.pathname = normalize_path(url.pathname, trailing_slash);
+    const new_event = { ...event, url };
+    const functions = node_ids.map((n, i) => {
+      return once(async () => {
+        try {
+          if (aborted) {
+            return (
+              /** @type {import('types').ServerDataSkippedNode} */
+              {
+                type: "skip"
+              }
+            );
+          }
+          const node = n == void 0 ? n : await manifest2._.nodes[n]();
+          return load_server_data({
+            event: new_event,
+            state,
+            node,
+            parent: async () => {
+              const data2 = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = (
+                  /** @type {import('types').ServerDataNode | null} */
+                  await functions[j]()
+                );
+                if (parent) {
+                  Object.assign(data2, parent.data);
+                }
+              }
+              return data2;
+            }
+          });
+        } catch (e) {
+          aborted = true;
+          throw e;
+        }
+      });
+    });
+    const promises = functions.map(async (fn, i) => {
+      if (!invalidated[i]) {
+        return (
+          /** @type {import('types').ServerDataSkippedNode} */
+          {
+            type: "skip"
+          }
+        );
+      }
+      return fn();
+    });
+    let length = promises.length;
+    const nodes = await Promise.all(
+      promises.map(
+        (p, i) => p.catch(async (error2) => {
+          if (error2 instanceof Redirect) {
+            throw error2;
+          }
+          length = Math.min(length, i + 1);
+          return (
+            /** @type {import('types').ServerErrorNode} */
+            {
+              type: "error",
+              error: await handle_error_and_jsonify(event, options2, error2),
+              status: error2 instanceof HttpError ? error2.status : void 0
+            }
+          );
+        })
+      )
+    );
+    const { data, chunks } = get_data_json(event, options2, nodes);
+    if (!chunks) {
+      return json_response(data);
+    }
+    return new Response(
+      new ReadableStream({
+        async start(controller) {
+          controller.enqueue(encoder.encode(data));
+          for await (const chunk of chunks) {
+            controller.enqueue(encoder.encode(chunk));
+          }
+          controller.close();
+        },
+        type: "bytes"
+      }),
+      {
+        headers: {
+          // we use a proprietary content type to prevent buffering.
+          // the `text` prefix makes it inspectable
+          "content-type": "text/sveltekit-data",
+          "cache-control": "private, no-store"
+        }
+      }
+    );
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      return redirect_json_response(error2);
+    } else {
+      return json_response(await handle_error_and_jsonify(event, options2, error2), 500);
+    }
+  }
+}
+function json_response(json2, status = 200) {
+  return text(typeof json2 === "string" ? json2 : JSON.stringify(json2), {
+    status,
+    headers: {
+      "content-type": "application/json",
+      "cache-control": "private, no-store"
+    }
+  });
+}
+function redirect_json_response(redirect) {
+  return json_response({
+    type: "redirect",
+    location: redirect.location
+  });
+}
+function get_data_json(event, options2, nodes) {
+  let promise_id = 1;
+  let count = 0;
+  const { iterator, push, done } = create_async_iterator();
+  const reducers = {
+    /** @param {any} thing */
+    Promise: (thing) => {
+      if (typeof thing?.then === "function") {
+        const id = promise_id++;
+        count += 1;
+        let key2 = "data";
+        thing.catch(
+          /** @param {any} e */
+          async (e) => {
+            key2 = "error";
+            return handle_error_and_jsonify(
+              event,
+              options2,
+              /** @type {any} */
+              e
+            );
+          }
+        ).then(
+          /** @param {any} value */
+          async (value) => {
+            let str;
+            try {
+              str = stringify(value, reducers);
+            } catch (e) {
+              const error2 = await handle_error_and_jsonify(
+                event,
+                options2,
+                new Error(`Failed to serialize promise while rendering ${event.route.id}`)
+              );
+              key2 = "error";
+              str = stringify(error2, reducers);
+            }
+            count -= 1;
+            push(`{"type":"chunk","id":${id},"${key2}":${str}}
+`);
+            if (count === 0)
+              done();
+          }
+        );
+        return id;
+      }
+    }
+  };
+  try {
+    const strings = nodes.map((node) => {
+      if (!node)
+        return "null";
+      if (node.type === "error" || node.type === "skip") {
+        return JSON.stringify(node);
+      }
+      return `{"type":"data","data":${stringify(node.data, reducers)},${stringify_uses(
+        node
+      )}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
+    });
+    return {
+      data: `{"type":"data","nodes":[${strings.join(",")}]}
+`,
+      chunks: count > 0 ? iterator : null
+    };
+  } catch (e) {
+    throw new Error(clarify_devalue_error(
+      event,
+      /** @type {any} */
+      e
+    ));
   }
 }
 async function render_page(event, route, page2, options2, manifest2, state, resolve_opts) {
@@ -3623,10 +3922,19 @@ async function render_page(event, route, page2, options2, manifest2, state, reso
       }
     }
     if (state.prerendering && should_prerender_data) {
-      const body = `{"type":"data","nodes":[${branch.map((node) => serialize_data_node(node?.server_data)).join(",")}]}`;
+      let { data, chunks } = get_data_json(
+        event,
+        options2,
+        branch.map((node) => node?.server_data)
+      );
+      if (chunks) {
+        for await (const chunk of chunks) {
+          data += chunk;
+        }
+      }
       state.prerendering.dependencies.set(data_pathname, {
-        response: text(body),
-        body
+        response: text(data),
+        body: data
       });
     }
     return await render_response({
@@ -3687,134 +3995,6 @@ function exec(match, params, matchers) {
   if (buffered)
     return;
   return result;
-}
-function once(fn) {
-  let done = false;
-  let result;
-  return () => {
-    if (done)
-      return result;
-    done = true;
-    return result = fn();
-  };
-}
-var INVALIDATED_PARAM = "x-sveltekit-invalidated";
-async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
-  if (!route.page) {
-    return new Response(void 0, {
-      status: 404
-    });
-  }
-  state.initiator = route;
-  try {
-    const node_ids = [...route.page.layouts, route.page.leaf];
-    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
-    let aborted = false;
-    const url = new URL(event.url);
-    url.pathname = normalize_path(url.pathname, trailing_slash);
-    const new_event = { ...event, url };
-    const functions = node_ids.map((n, i) => {
-      return once(async () => {
-        try {
-          if (aborted) {
-            return (
-              /** @type {import('types').ServerDataSkippedNode} */
-              {
-                type: "skip"
-              }
-            );
-          }
-          const node = n == void 0 ? n : await manifest2._.nodes[n]();
-          return load_server_data({
-            event: new_event,
-            state,
-            node,
-            parent: async () => {
-              const data = {};
-              for (let j = 0; j < i; j += 1) {
-                const parent = (
-                  /** @type {import('types').ServerDataNode | null} */
-                  await functions[j]()
-                );
-                if (parent) {
-                  Object.assign(data, parent.data);
-                }
-              }
-              return data;
-            }
-          });
-        } catch (e) {
-          aborted = true;
-          throw e;
-        }
-      });
-    });
-    const promises = functions.map(async (fn, i) => {
-      if (!invalidated[i]) {
-        return (
-          /** @type {import('types').ServerDataSkippedNode} */
-          {
-            type: "skip"
-          }
-        );
-      }
-      return fn();
-    });
-    let length = promises.length;
-    const nodes = await Promise.all(
-      promises.map(
-        (p, i) => p.catch(async (error2) => {
-          if (error2 instanceof Redirect) {
-            throw error2;
-          }
-          length = Math.min(length, i + 1);
-          return (
-            /** @type {import('types').ServerErrorNode} */
-            {
-              type: "error",
-              error: await handle_error_and_jsonify(event, options2, error2),
-              status: error2 instanceof HttpError ? error2.status : void 0
-            }
-          );
-        })
-      )
-    );
-    try {
-      const stubs = nodes.slice(0, length).map(serialize_data_node);
-      const json2 = `{"type":"data","nodes":[${stubs.join(",")}]}`;
-      return json_response(json2);
-    } catch (e) {
-      const error2 = (
-        /** @type {any} */
-        e
-      );
-      return json_response(JSON.stringify(clarify_devalue_error(event, error2)), 500);
-    }
-  } catch (e) {
-    const error2 = normalize_error(e);
-    if (error2 instanceof Redirect) {
-      return redirect_json_response(error2);
-    } else {
-      return json_response(JSON.stringify(await handle_error_and_jsonify(event, options2, error2)));
-    }
-  }
-}
-function json_response(json2, status = 200) {
-  return text(json2, {
-    status,
-    headers: {
-      "content-type": "application/json",
-      "cache-control": "private, no-store"
-    }
-  });
-}
-function redirect_json_response(redirect) {
-  return json_response(
-    JSON.stringify({
-      type: "redirect",
-      location: redirect.location
-    })
-  );
 }
 function get_cookies(request, url, trailing_slash) {
   const header = request.headers.get("cookie") ?? "";
@@ -4029,29 +4209,35 @@ function normalize_fetch_input(info, init2, url) {
 }
 function validator(expected) {
   const set = new Set(expected);
-  function validate(module, route_id) {
+  function validate(module, file7) {
     if (!module)
       return;
     for (const key2 in module) {
-      if (key2[0] !== "_" && !set.has(key2)) {
-        const valid = expected.join(", ");
-        throw new Error(
-          `Invalid export '${key2}'${route_id ? ` in ${route_id}` : ""} (valid exports are ${valid}, or anything with a '_' prefix)`
-        );
-      }
+      if (key2[0] === "_" || set.has(key2))
+        continue;
+      const hint = hint_for_supported_files(key2, file7?.slice(file7.lastIndexOf("."))) ?? `valid exports are ${expected.join(", ")}, or anything with a '_' prefix`;
+      throw new Error(`Invalid export '${key2}'${file7 ? ` in ${file7}` : ""} (${hint})`);
     }
   }
   return validate;
 }
-var validate_common_exports = validator([
-  "load",
-  "prerender",
-  "csr",
-  "ssr",
-  "trailingSlash",
-  "config"
-]);
-var validate_page_server_exports = validator([
+function hint_for_supported_files(key2, ext = ".js") {
+  let supported_files = [];
+  if (valid_common_exports.includes(key2)) {
+    supported_files.push(`+page${ext}`);
+  }
+  if (valid_page_server_exports.includes(key2)) {
+    supported_files.push(`+page.server${ext}`);
+  }
+  if (valid_server_exports.includes(key2)) {
+    supported_files.push(`+server${ext}`);
+  }
+  if (supported_files.length > 0) {
+    return `'${key2}' is a valid export in ${supported_files.join(` or `)}`;
+  }
+}
+var valid_common_exports = ["load", "prerender", "csr", "ssr", "trailingSlash", "config"];
+var valid_page_server_exports = [
   "load",
   "prerender",
   "csr",
@@ -4059,17 +4245,21 @@ var validate_page_server_exports = validator([
   "actions",
   "trailingSlash",
   "config"
-]);
-var validate_server_exports = validator([
+];
+var valid_server_exports = [
   "GET",
   "POST",
   "PATCH",
   "PUT",
   "DELETE",
+  "OPTIONS",
   "prerender",
   "trailingSlash",
   "config"
-]);
+];
+var validate_common_exports = validator(valid_common_exports);
+var validate_page_server_exports = validator(valid_page_server_exports);
+var validate_server_exports = validator(valid_server_exports);
 var default_transform = ({ html }) => html;
 var default_filter = () => false;
 var default_preload = ({ type }) => type === "js" || type === "css";
@@ -4411,7 +4601,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["PoweredByIniciativaFIS.svg", "favicon.png", "fisAI.svg", "img/mario.png", "img/mariobu.png", "img/noto_anxious-face-with-sweat.svg", "img/noto_astonished-face.svg", "img/noto_disappointed-face.svg", "img/noto_enraged-face.svg", "img/noto_grinning-face-with-smiling-eyes.svg", "img/noto_nauseated-face.svg", "img/reinaldo.png", "img/reinaldo2.png", "img/reinaldo3.png", "img/reinaldo4.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    entry: { "file": "_app/immutable/start-ab75e9a4.js", "imports": ["_app/immutable/start-ab75e9a4.js", "_app/immutable/chunks/index-e4d2abc4.js", "_app/immutable/chunks/singletons-088ac2a6.js"], "stylesheets": [], "fonts": [] },
+    client: { "start": { "file": "_app/immutable/entry/start.58cb5d90.mjs", "imports": ["_app/immutable/entry/start.58cb5d90.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.885b8d95.mjs"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.bdbb147f.mjs", "imports": ["_app/immutable/entry/app.bdbb147f.mjs", "_app/immutable/chunks/index.a6020e24.mjs"], "stylesheets": [], "fonts": [] } },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
@@ -4436,8 +4626,8 @@ var manifest = {
         endpoint: null
       },
       {
-        id: "/reinaldo2",
-        pattern: /^\/reinaldo2\/?$/,
+        id: "/reinaldo_old",
+        pattern: /^\/reinaldo_old\/?$/,
         params: [],
         page: { layouts: [0], errors: [1], leaf: 5 },
         endpoint: null
