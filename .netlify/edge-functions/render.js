@@ -82,8 +82,8 @@ function subscribe(store, ...callbacks) {
 function null_to_empty(value) {
   return value == null ? "" : value;
 }
-function set_current_component(component7) {
-  current_component = component7;
+function set_current_component(component8) {
+  current_component = component8;
 }
 function get_current_component() {
   if (!current_component)
@@ -111,13 +111,13 @@ function escape(value, is_attr = false) {
   }
   return escaped2 + str.substring(last);
 }
-function validate_component(component7, name) {
-  if (!component7 || !component7.$$render) {
+function validate_component(component8, name) {
+  if (!component8 || !component8.$$render) {
     if (name === "svelte:component")
       name += " this={...}";
     throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name}>.`);
   }
-  return component7;
+  return component8;
 }
 function create_ssr_component(fn) {
   function $$render(result, props, bindings, slots, context) {
@@ -188,20 +188,20 @@ var require_cookie = __commonJS({
       var obj = {};
       var opt = options2 || {};
       var dec = opt.decode || decode;
-      var index7 = 0;
-      while (index7 < str.length) {
-        var eqIdx = str.indexOf("=", index7);
+      var index8 = 0;
+      while (index8 < str.length) {
+        var eqIdx = str.indexOf("=", index8);
         if (eqIdx === -1) {
           break;
         }
-        var endIdx = str.indexOf(";", index7);
+        var endIdx = str.indexOf(";", index8);
         if (endIdx === -1) {
           endIdx = str.length;
         } else if (endIdx < eqIdx) {
-          index7 = str.lastIndexOf(";", eqIdx - 1) + 1;
+          index8 = str.lastIndexOf(";", eqIdx - 1) + 1;
           continue;
         }
-        var key2 = str.slice(index7, eqIdx).trim();
+        var key2 = str.slice(index8, eqIdx).trim();
         if (void 0 === obj[key2]) {
           var val = str.slice(eqIdx + 1, endIdx).trim();
           if (val.charCodeAt(0) === 34) {
@@ -209,7 +209,7 @@ var require_cookie = __commonJS({
           }
           obj[key2] = tryDecode(val, dec);
         }
-        index7 = endIdx + 1;
+        index8 = endIdx + 1;
       }
       return obj;
     }
@@ -510,19 +510,17 @@ __export(__exports, {
   imports: () => imports,
   index: () => index,
   stylesheets: () => stylesheets,
-  universal: () => layout_exports,
-  universal_id: () => universal_id
+  universal: () => layout_exports
 });
-var index, component, file, universal_id, imports, stylesheets, fonts;
+var index, component, file, imports, stylesheets, fonts;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout();
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/entry/_layout.svelte.25c305e8.mjs";
-    universal_id = "src/routes/+layout.js";
-    imports = ["_app/immutable/entry/_layout.svelte.25c305e8.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/entry/_layout.js.4ed993c7.mjs"];
-    stylesheets = ["_app/immutable/assets/_layout.3db08d89.css"];
+    file = "_app/immutable/components/pages/_layout.svelte-383e951f.js";
+    imports = ["_app/immutable/components/pages/_layout.svelte-383e951f.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/modules/pages/_layout.js-4ed993c7.js"];
+    stylesheets = ["_app/immutable/assets/_layout-2fa2c027.css"];
     fonts = [];
   }
 });
@@ -580,8 +578,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/entry/error.svelte.f5d99cad.mjs";
-    imports2 = ["_app/immutable/entry/error.svelte.f5d99cad.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.4f783a69.mjs"];
+    file2 = "_app/immutable/components/error.svelte-3d5abacb.js";
+    imports2 = ["_app/immutable/components/error.svelte-3d5abacb.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/singletons-0ee7c03a.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -617,8 +615,8 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    file3 = "_app/immutable/entry/_page.svelte.f566edd8.mjs";
-    imports3 = ["_app/immutable/entry/_page.svelte.f566edd8.mjs", "_app/immutable/chunks/index.a6020e24.mjs"];
+    file3 = "_app/immutable/components/pages/_page.svelte-1879ec7b.js";
+    imports3 = ["_app/immutable/components/pages/_page.svelte-1879ec7b.js", "_app/immutable/chunks/index-5932b100.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -636,12 +634,50 @@ var init_header = __esm({
   }
 });
 
+// .svelte-kit/output/server/entries/pages/luide/_page.svelte.js
+var page_svelte_exports2 = {};
+__export(page_svelte_exports2, {
+  default: () => Page2
+});
+var Page2;
+var init_page_svelte2 = __esm({
+  ".svelte-kit/output/server/entries/pages/luide/_page.svelte.js"() {
+    init_chunks();
+    init_header();
+    Page2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `<div class="${"dark bg-black"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+    <iframe class="${"w-full"}" width="${"600"}" height="${"800"}" src="${"https://lookerstudio.google.com/embed/reporting/320faa37-bbda-41c1-ab2c-95729a3464d1/page/BwBKD"}" frameborder="${"0"}" style="${"border:0"}" allowfullscreen></iframe></div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/nodes/3.js
+var __exports4 = {};
+__export(__exports4, {
+  component: () => component4,
+  file: () => file4,
+  fonts: () => fonts4,
+  imports: () => imports4,
+  index: () => index4,
+  stylesheets: () => stylesheets4
+});
+var index4, component4, file4, imports4, stylesheets4, fonts4;
+var init__4 = __esm({
+  ".svelte-kit/output/server/nodes/3.js"() {
+    index4 = 3;
+    component4 = async () => (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
+    file4 = "_app/immutable/components/pages/luide/_page.svelte-bb20e9f5.js";
+    imports4 = ["_app/immutable/components/pages/luide/_page.svelte-bb20e9f5.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/header-aa277db2.js"];
+    stylesheets4 = [];
+    fonts4 = [];
+  }
+});
+
 // .svelte-kit/output/server/chunks/Icon.js
 var css, Icon;
 var init_Icon = __esm({
   ".svelte-kit/output/server/chunks/Icon.js"() {
     init_chunks();
-    init_header();
     css = {
       code: ".fa-svelte.svelte-qwu10m{width:1em;height:1em;overflow:visible;display:inline-block}",
       map: null
@@ -662,9 +698,9 @@ var init_Icon = __esm({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js
 var require_faPaperPlane = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faPaperPlane.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -697,9 +733,9 @@ var require_faPaperPlane = __commonJS({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js
 var require_faAnglesDown = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faAnglesDown.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -732,9 +768,9 @@ var require_faAnglesDown = __commonJS({
   }
 });
 
-// node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js
 var require_faSpinner = __commonJS({
-  "node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
+  "node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.3.0/node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var prefix2 = "fas";
@@ -768,12 +804,12 @@ var require_faSpinner = __commonJS({
 });
 
 // .svelte-kit/output/server/entries/pages/mario/_page.svelte.js
-var page_svelte_exports2 = {};
-__export(page_svelte_exports2, {
-  default: () => Page2
+var page_svelte_exports3 = {};
+__export(page_svelte_exports3, {
+  default: () => Page3
 });
-var import_faPaperPlane, import_faAnglesDown, import_faSpinner, Emocoes, texto_feedback_pos, texto_feedback_neg, placeholder, Page2;
-var init_page_svelte2 = __esm({
+var import_faPaperPlane, import_faAnglesDown, import_faSpinner, Emocoes, texto_feedback_pos, texto_feedback_neg, placeholder, Page3;
+var init_page_svelte3 = __esm({
   ".svelte-kit/output/server/entries/pages/mario/_page.svelte.js"() {
     init_chunks();
     init_Icon();
@@ -826,7 +862,7 @@ var init_page_svelte2 = __esm({
     texto_feedback_pos = "Acertou";
     texto_feedback_neg = "Errou";
     placeholder = "Escreva uma frase e clique em enviar";
-    Page2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let paperPlane = import_faPaperPlane.faPaperPlane;
       let hideButtonIcon = import_faAnglesDown.faAnglesDown;
       let spinner = import_faSpinner.faSpinner;
@@ -928,32 +964,32 @@ var init_page_svelte2 = __esm({
   }
 });
 
-// .svelte-kit/output/server/nodes/3.js
-var __exports4 = {};
-__export(__exports4, {
-  component: () => component4,
-  file: () => file4,
-  fonts: () => fonts4,
-  imports: () => imports4,
-  index: () => index4,
-  stylesheets: () => stylesheets4
+// .svelte-kit/output/server/nodes/4.js
+var __exports5 = {};
+__export(__exports5, {
+  component: () => component5,
+  file: () => file5,
+  fonts: () => fonts5,
+  imports: () => imports5,
+  index: () => index5,
+  stylesheets: () => stylesheets5
 });
-var index4, component4, file4, imports4, stylesheets4, fonts4;
-var init__4 = __esm({
-  ".svelte-kit/output/server/nodes/3.js"() {
-    index4 = 3;
-    component4 = async () => (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
-    file4 = "_app/immutable/entry/mario-page.svelte.e7b6efd4.mjs";
-    imports4 = ["_app/immutable/entry/mario-page.svelte.e7b6efd4.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/faPaperPlane.16d35e80.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
-    stylesheets4 = ["_app/immutable/assets/header.22963853.css"];
-    fonts4 = [];
+var index5, component5, file5, imports5, stylesheets5, fonts5;
+var init__5 = __esm({
+  ".svelte-kit/output/server/nodes/4.js"() {
+    index5 = 4;
+    component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
+    file5 = "_app/immutable/components/pages/mario/_page.svelte-7cfe2326.js";
+    imports5 = ["_app/immutable/components/pages/mario/_page.svelte-7cfe2326.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/faPaperPlane-decf859b.js", "_app/immutable/chunks/header-aa277db2.js"];
+    stylesheets5 = ["_app/immutable/assets/Icon-51b1667c.css"];
+    fonts5 = [];
   }
 });
 
 // .svelte-kit/output/server/entries/pages/reinaldo/_page.svelte.js
-var page_svelte_exports3 = {};
-__export(page_svelte_exports3, {
-  default: () => Page3
+var page_svelte_exports4 = {};
+__export(page_svelte_exports4, {
+  default: () => Page4
 });
 async function reinaldoIsBack(idade = 48.92, sexo = "homem", peso = 73.4, altura = 165, exc_dias_por_semana = 3.61, exc_qual = "caminhada", idade_comecou_fumar = 17.34, diag_doenca_mental = "nao", diag_colesterol = "nao", cigarro = "nao") {
   let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
@@ -970,8 +1006,8 @@ async function reinaldoIsBack(idade = 48.92, sexo = "homem", peso = 73.4, altura
     throw new Error(reinaldo_res);
   }
 }
-var placeholder2, inputstyle, Reinaldo2, Page3;
-var init_page_svelte3 = __esm({
+var placeholder2, inputstyle, Reinaldo2, Page4;
+var init_page_svelte4 = __esm({
   ".svelte-kit/output/server/entries/pages/reinaldo/_page.svelte.js"() {
     init_chunks();
     init_header();
@@ -1071,7 +1107,7 @@ var init_page_svelte3 = __esm({
     
     <div class="${"float-right mx-auto"}"></div></div>`;
     });
-    Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    Page4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"dark bg-black container min-w-full min-h-full text-white"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
     <div class="${"container mx-auto px-10 py-12"}"><div class="${"flex justify-center mb-10"}"><img class="${"rounded-full w-60 h-60 border-white border-4"}" src="${"img/reinaldo3.png"}" alt="${"Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"}" width="${"200"}" height="${"200"}">
             </div></div>
@@ -1080,32 +1116,32 @@ var init_page_svelte3 = __esm({
   }
 });
 
-// .svelte-kit/output/server/nodes/4.js
-var __exports5 = {};
-__export(__exports5, {
-  component: () => component5,
-  file: () => file5,
-  fonts: () => fonts5,
-  imports: () => imports5,
-  index: () => index5,
-  stylesheets: () => stylesheets5
+// .svelte-kit/output/server/nodes/5.js
+var __exports6 = {};
+__export(__exports6, {
+  component: () => component6,
+  file: () => file6,
+  fonts: () => fonts6,
+  imports: () => imports6,
+  index: () => index6,
+  stylesheets: () => stylesheets6
 });
-var index5, component5, file5, imports5, stylesheets5, fonts5;
-var init__5 = __esm({
-  ".svelte-kit/output/server/nodes/4.js"() {
-    index5 = 4;
-    component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/entry/reinaldo-page.svelte.160fbb9c.mjs";
-    imports5 = ["_app/immutable/entry/reinaldo-page.svelte.160fbb9c.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs"];
-    stylesheets5 = ["_app/immutable/assets/header.22963853.css"];
-    fonts5 = [];
+var index6, component6, file6, imports6, stylesheets6, fonts6;
+var init__6 = __esm({
+  ".svelte-kit/output/server/nodes/5.js"() {
+    index6 = 5;
+    component6 = async () => (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
+    file6 = "_app/immutable/components/pages/reinaldo/_page.svelte-4f51bcfd.js";
+    imports6 = ["_app/immutable/components/pages/reinaldo/_page.svelte-4f51bcfd.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/header-aa277db2.js"];
+    stylesheets6 = ["_app/immutable/assets/Icon-51b1667c.css"];
+    fonts6 = [];
   }
 });
 
 // .svelte-kit/output/server/entries/pages/reinaldo_old/_page.svelte.js
-var page_svelte_exports4 = {};
-__export(page_svelte_exports4, {
-  default: () => Page4
+var page_svelte_exports5 = {};
+__export(page_svelte_exports5, {
+  default: () => Page5
 });
 async function reinaldoIsBack2(idade = 48.92, sexo = "homem", peso = 73.4, altura = 165, exc_dias_por_semana = 3.61, exc_qual = "caminhada", idade_comecou_fumar = 17.34, diag_doenca_mental = "nao", diag_colesterol = "nao", cigarro = "nao") {
   let url = "https://reinaldo-x4fs6sryfq-rj.a.run.app/reinaldo?idade=" + idade + "&sexo=" + sexo + "&peso=" + peso + "&altura=" + altura + "&exc_dias_por_semana=" + exc_dias_por_semana + "&exc_qual=" + exc_qual + "&idade_comecou_fumar=" + idade_comecou_fumar + "&diag_doenca_mental=" + diag_doenca_mental + "&diag_colesterol=" + diag_colesterol + "&cigarro=" + cigarro;
@@ -1123,8 +1159,8 @@ async function reinaldoIsBack2(idade = 48.92, sexo = "homem", peso = 73.4, altur
     throw new Error(reinaldo_res);
   }
 }
-var import_faPaperPlane2, placeholder3, inputstyle2, Reinaldo, Page4;
-var init_page_svelte4 = __esm({
+var import_faPaperPlane2, placeholder3, inputstyle2, Reinaldo, Page5;
+var init_page_svelte5 = __esm({
   ".svelte-kit/output/server/entries/pages/reinaldo_old/_page.svelte.js"() {
     init_chunks();
     init_header();
@@ -1210,7 +1246,7 @@ var init_page_svelte4 = __esm({
     sv
 </div>`;
     });
-    Page4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    Page5 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"dark bg-black container min-w-full min-h-full text-white"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
     <div class="${"container mx-auto px-10 py-12"}"><div class="${"flex justify-center mb-10"}"><img class="${"rounded-full w-60 h-60 border-white border-4"}" src="${"img/reinaldo3.png"}" alt="${"Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"}" width="${"200"}" height="${"200"}">
             </div></div>
@@ -1219,25 +1255,25 @@ var init_page_svelte4 = __esm({
   }
 });
 
-// .svelte-kit/output/server/nodes/5.js
-var __exports6 = {};
-__export(__exports6, {
-  component: () => component6,
-  file: () => file6,
-  fonts: () => fonts6,
-  imports: () => imports6,
-  index: () => index6,
-  stylesheets: () => stylesheets6
+// .svelte-kit/output/server/nodes/6.js
+var __exports7 = {};
+__export(__exports7, {
+  component: () => component7,
+  file: () => file7,
+  fonts: () => fonts7,
+  imports: () => imports7,
+  index: () => index7,
+  stylesheets: () => stylesheets7
 });
-var index6, component6, file6, imports6, stylesheets6, fonts6;
-var init__6 = __esm({
-  ".svelte-kit/output/server/nodes/5.js"() {
-    index6 = 5;
-    component6 = async () => (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
-    file6 = "_app/immutable/entry/reinaldo_old-page.svelte.16aab977.mjs";
-    imports6 = ["_app/immutable/entry/reinaldo_old-page.svelte.16aab977.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/header.69c98f8a.mjs", "_app/immutable/chunks/faPaperPlane.16d35e80.mjs"];
-    stylesheets6 = ["_app/immutable/assets/header.22963853.css"];
-    fonts6 = [];
+var index7, component7, file7, imports7, stylesheets7, fonts7;
+var init__7 = __esm({
+  ".svelte-kit/output/server/nodes/6.js"() {
+    index7 = 6;
+    component7 = async () => (await Promise.resolve().then(() => (init_page_svelte5(), page_svelte_exports5))).default;
+    file7 = "_app/immutable/components/pages/reinaldo_old/_page.svelte-cea7aaf7.js";
+    imports7 = ["_app/immutable/components/pages/reinaldo_old/_page.svelte-cea7aaf7.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/header-aa277db2.js", "_app/immutable/chunks/faPaperPlane-decf859b.js"];
+    stylesheets7 = ["_app/immutable/assets/Icon-51b1667c.css"];
+    fonts7 = [];
   }
 });
 
@@ -1561,13 +1597,13 @@ function stringify(value, reducers) {
       return NEGATIVE_INFINITY;
     if (thing === 0 && 1 / thing < 0)
       return NEGATIVE_ZERO;
-    const index8 = p++;
-    indexes.set(thing, index8);
+    const index9 = p++;
+    indexes.set(thing, index9);
     for (const { key: key2, fn } of custom) {
       const value2 = fn(thing);
       if (value2) {
-        stringified[index8] = `["${key2}",${flatten(value2)}]`;
-        return index8;
+        stringified[index9] = `["${key2}",${flatten(value2)}]`;
+        return index9;
       }
     }
     let str = "";
@@ -1659,12 +1695,12 @@ function stringify(value, reducers) {
           }
       }
     }
-    stringified[index8] = str;
-    return index8;
+    stringified[index9] = str;
+    return index9;
   }
-  const index7 = flatten(value);
-  if (index7 < 0)
-    return `${index7}`;
+  const index8 = flatten(value);
+  if (index8 < 0)
+    return `${index8}`;
   return `[${stringified.join(",")}]`;
 }
 function stringify_primitive2(thing) {
@@ -1689,9 +1725,13 @@ init_chunks();
 init_chunks();
 var base = "";
 var assets = base;
+var version = "";
 var public_env = {};
 function set_public_env(environment) {
   public_env = environment;
+}
+function set_version(value) {
+  version = value;
 }
 function afterUpdate() {
 }
@@ -1771,8 +1811,8 @@ ${``}`;
   } while (!$$settled);
   return $$rendered;
 });
+set_version("1679940396066");
 var options = {
-  app_template_contains_nonce: false,
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
   embedded: false,
@@ -1829,8 +1869,7 @@ var options = {
 	<body>
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
-  },
-  version_hash: "6yglww"
+  }
 };
 function get_hooks() {
   return {};
@@ -1931,7 +1970,7 @@ function json(data, init2) {
   const body = JSON.stringify(data);
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
   }
   if (!headers.has("content-type")) {
     headers.set("content-type", "application/json");
@@ -1941,11 +1980,11 @@ function json(data, init2) {
     headers
   });
 }
-var encoder$3 = new TextEncoder();
+var encoder$1 = new TextEncoder();
 function text(body, init2) {
   const headers = new Headers(init2?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder$3.encode(body).byteLength.toString());
+    headers.set("content-length", encoder$1.encode(body).byteLength.toString());
   }
   return new Response(body, {
     ...init2,
@@ -1981,7 +2020,7 @@ function method_not_allowed(mod, method) {
 }
 function allowed_methods(mod) {
   const allowed = [];
-  for (const method in ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]) {
+  for (const method of ["GET", "POST", "PUT", "PATCH", "DELETE"]) {
     if (method in mod)
       allowed.push(method);
   }
@@ -2035,21 +2074,27 @@ function clarify_devalue_error(event, error2) {
   }
   return error2.message;
 }
-function stringify_uses(node) {
+function serialize_data_node(node) {
+  if (!node)
+    return "null";
+  if (node.type === "error" || node.type === "skip") {
+    return JSON.stringify(node);
+  }
+  const stringified = stringify(node.data);
   const uses = [];
-  if (node.uses && node.uses.dependencies.size > 0) {
+  if (node.uses.dependencies.size > 0) {
     uses.push(`"dependencies":${JSON.stringify(Array.from(node.uses.dependencies))}`);
   }
-  if (node.uses && node.uses.params.size > 0) {
+  if (node.uses.params.size > 0) {
     uses.push(`"params":${JSON.stringify(Array.from(node.uses.params))}`);
   }
-  if (node.uses?.parent)
+  if (node.uses.parent)
     uses.push(`"parent":1`);
-  if (node.uses?.route)
+  if (node.uses.route)
     uses.push(`"route":1`);
-  if (node.uses?.url)
+  if (node.uses.url)
     uses.push(`"url":1`);
-  return `"uses":{${uses.join(",")}}`;
+  return `{"type":"data","data":${stringified},"uses":{${uses.join(",")}}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
 }
 async function render_endpoint(event, route, mod, state) {
   const method = (
@@ -2101,7 +2146,7 @@ async function render_endpoint(event, route, mod, state) {
 }
 function is_endpoint_request(event) {
   const { method, headers } = event.request;
-  if (method === "PUT" || method === "PATCH" || method === "DELETE" || method === "OPTIONS") {
+  if (method === "PUT" || method === "PATCH" || method === "DELETE") {
     return true;
   }
   if (method === "POST" && headers.get("x-sveltekit-action") === "true")
@@ -2422,15 +2467,12 @@ async function load_server_data({ event, state, node, parent }) {
       uses.parent = true;
       return parent();
     },
-    route: new Proxy(event.route, {
-      get: (target, key2) => {
+    route: {
+      get id() {
         uses.route = true;
-        return target[
-          /** @type {'id'} */
-          key2
-        ];
+        return event.route.id;
       }
-    }),
+    },
     url
   });
   const data = result ? await unwrap_promises(result) : null;
@@ -2467,6 +2509,11 @@ async function load_data({
     parent
   });
   const data = result ? await unwrap_promises(result) : null;
+  validate_load_response(
+    data,
+    /** @type {string} */
+    event.route.id
+  );
   return data;
 }
 function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
@@ -2577,6 +2624,13 @@ async function stream_to_string(stream) {
     result += decoder.decode(value);
   }
   return result;
+}
+function validate_load_response(data, routeId) {
+  if (data != null && Object.getPrototypeOf(data) !== Object.prototype) {
+    throw new Error(
+      `a load function related to route '${routeId}' returned ${typeof data !== "object" ? `a ${typeof data}` : data instanceof Response ? "a Response object" : Array.isArray(data) ? "an array" : "a non-plain object"}, but must return a plain object at the top level (i.e. \`return {...}\`)`
+    );
+  }
 }
 var subscriber_queue = [];
 function readable(value, start) {
@@ -2715,7 +2769,7 @@ function serialize_data(fetched, filter, prerendering = false) {
   return `<script ${attrs.join(" ")}>${safe_payload}<\/script>`;
 }
 var s = JSON.stringify;
-var encoder$2 = new TextEncoder();
+var encoder = new TextEncoder();
 function sha256(data) {
   if (!key[0])
     precompute();
@@ -2802,7 +2856,7 @@ function reverse_endianness(bytes) {
   }
 }
 function encode(str) {
-  const encoded = encoder$2.encode(str);
+  const encoded = encoder.encode(str);
   const length = encoded.length * 8;
   const size = 512 * Math.ceil((length + 65) / 512);
   const bytes = new Uint8Array(size / 8);
@@ -3018,39 +3072,10 @@ var Csp = class {
     this.report_only_provider.add_style(content);
   }
 };
-function defer() {
-  let fulfil;
-  let reject;
-  const promise = new Promise((f, r) => {
-    fulfil = f;
-    reject = r;
-  });
-  return { promise, fulfil, reject };
-}
-function create_async_iterator() {
-  let deferred = defer();
-  return {
-    iterator: {
-      [Symbol.asyncIterator]() {
-        return {
-          next: () => deferred.promise
-        };
-      }
-    },
-    push: (value) => {
-      deferred.fulfil({ value, done: false });
-      deferred = defer();
-    },
-    done: () => {
-      deferred.fulfil({ done: true });
-    }
-  };
-}
 var updated = {
   ...readable(false),
   check: () => false
 };
-var encoder$1 = new TextEncoder();
 async function render_response({
   branch,
   fetched,
@@ -3072,10 +3097,10 @@ async function render_response({
       throw new Error("Cannot use prerendering if page template contains %sveltekit.nonce%");
     }
   }
-  const { client } = manifest2._;
-  const modulepreloads = /* @__PURE__ */ new Set([...client.start.imports, ...client.app.imports]);
-  const stylesheets7 = new Set(client.app.stylesheets);
-  const fonts7 = new Set(client.app.fonts);
+  const { entry } = manifest2._;
+  const stylesheets8 = new Set(entry.stylesheets);
+  const modulepreloads = new Set(entry.imports);
+  const fonts8 = new Set(manifest2._.entry.fonts);
   const link_header_preloads = /* @__PURE__ */ new Set();
   const inline_styles = /* @__PURE__ */ new Map();
   let rendered;
@@ -3090,10 +3115,10 @@ async function render_response({
       constructors: await Promise.all(branch.map(({ node }) => node.component())),
       form: form_value
     };
-    let data2 = {};
+    let data = {};
     for (let i = 0; i < branch.length; i += 1) {
-      data2 = { ...data2, ...branch[i].data };
-      props[`data_${i}`] = data2;
+      data = { ...data, ...branch[i].data };
+      props[`data_${i}`] = data;
     }
     props.page = {
       error: error2,
@@ -3104,19 +3129,22 @@ async function render_response({
       route: event.route,
       status,
       url: event.url,
-      data: data2,
+      data,
       form: form_value
     };
     {
       rendered = options2.root.render(props);
     }
     for (const { node } of branch) {
-      for (const url of node.imports)
-        modulepreloads.add(url);
-      for (const url of node.stylesheets)
-        stylesheets7.add(url);
-      for (const url of node.fonts)
-        fonts7.add(url);
+      if (node.imports) {
+        node.imports.forEach((url) => modulepreloads.add(url));
+      }
+      if (node.stylesheets) {
+        node.stylesheets.forEach((url) => stylesheets8.add(url));
+      }
+      if (node.fonts) {
+        node.fonts.forEach((url) => fonts8.add(url));
+      }
       if (node.inline_styles) {
         Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
       }
@@ -3124,32 +3152,66 @@ async function render_response({
   } else {
     rendered = { head: "", html: "", css: { code: "", map: null } };
   }
-  let resolved_assets;
-  let asset_expression;
-  if (assets) {
-    resolved_assets = assets;
-    asset_expression = s(assets);
-  } else if (state.prerendering?.fallback) {
-    resolved_assets = base;
-    asset_expression = s(base);
-  } else {
-    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
-    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
-    asset_expression = `new URL(${s(
-      resolved_assets
-    )}, location.href).pathname.replace(/^\\/$/, '')`;
-  }
   let head = "";
   let body = rendered.html;
   const csp = new Csp(options2.csp, {
     prerender: !!state.prerendering
   });
+  const target = hash(body);
+  let resolved_assets;
+  if (assets) {
+    resolved_assets = assets;
+  } else if (state.prerendering?.fallback) {
+    resolved_assets = base;
+  } else {
+    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
+    resolved_assets = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
+  }
   const prefixed = (path) => {
     if (path.startsWith("/")) {
       return base + path;
     }
     return `${resolved_assets}/${path}`;
   };
+  const serialized = { data: "", form: "null", error: "null" };
+  try {
+    serialized.data = `[${branch.map(({ server_data }) => {
+      if (server_data?.type === "data") {
+        const data = uneval(server_data.data);
+        const uses = [];
+        if (server_data.uses.dependencies.size > 0) {
+          uses.push(`dependencies:${s(Array.from(server_data.uses.dependencies))}`);
+        }
+        if (server_data.uses.params.size > 0) {
+          uses.push(`params:${s(Array.from(server_data.uses.params))}`);
+        }
+        if (server_data.uses.parent)
+          uses.push(`parent:1`);
+        if (server_data.uses.route)
+          uses.push(`route:1`);
+        if (server_data.uses.url)
+          uses.push(`url:1`);
+        return `{type:"data",data:${data},uses:{${uses.join(",")}}${server_data.slash ? `,slash:${s(server_data.slash)}` : ""}}`;
+      }
+      return s(server_data);
+    }).join(",")}]`;
+  } catch (e) {
+    const error3 = (
+      /** @type {any} */
+      e
+    );
+    throw new Error(clarify_devalue_error(event, error3));
+  }
+  if (form_value) {
+    serialized.form = uneval_action_response(
+      form_value,
+      /** @type {string} */
+      event.route.id
+    );
+  }
+  if (error2) {
+    serialized.error = uneval(error2);
+  }
   if (inline_styles.size > 0) {
     const content = Array.from(inline_styles.values()).join("\n");
     const attributes = [];
@@ -3159,7 +3221,7 @@ async function render_response({
     head += `
 	<style${attributes.join("")}>${content}</style>`;
   }
-  for (const dep of stylesheets7) {
+  for (const dep of stylesheets8) {
     const path = prefixed(dep);
     if (resolve_opts.preload({ type: "css", path })) {
       const attributes = ['rel="stylesheet"'];
@@ -3173,7 +3235,7 @@ async function render_response({
 		<link href="${path}" ${attributes.join(" ")}>`;
     }
   }
-  for (const dep of fonts7) {
+  for (const dep of fonts8) {
     const path = prefixed(dep);
     if (resolve_opts.preload({ type: "font", path })) {
       const ext = dep.slice(dep.lastIndexOf(".") + 1);
@@ -3188,67 +3250,17 @@ async function render_response({
 		<link ${attributes.join(" ")}>`;
     }
   }
-  const global = `__sveltekit_${options2.version_hash}`;
-  const { data, chunks } = get_data(
-    event,
-    options2,
-    branch.map((b) => b.server_data),
-    global
-  );
-  if (page_config.ssr && page_config.csr) {
-    body += `
-			${fetched.map(
-      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
-    ).join("\n			")}`;
-  }
   if (page_config.csr) {
-    const included_modulepreloads = Array.from(modulepreloads, (dep) => prefixed(dep)).filter(
-      (path) => resolve_opts.preload({ type: "js", path })
-    );
-    for (const path of included_modulepreloads) {
-      link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
-      head += `
-		<link rel="preload" as="script" crossorigin="anonymous" href="${path}">`;
-    }
-    const blocks = [];
-    const properties = [
+    const opts = [
+      `assets: ${s(assets)}`,
       `env: ${s(public_env)}`,
-      `assets: ${asset_expression}`,
-      `element: document.currentScript.parentElement`
+      `target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode`,
+      `version: ${s(version)}`
     ];
-    if (chunks) {
-      blocks.push(`const deferred = new Map();`);
-      properties.push(`defer: (id) => new Promise((fulfil, reject) => {
-							deferred.set(id, { fulfil, reject });
-						})`);
-      properties.push(`resolve: ({ id, data, error }) => {
-							const { fulfil, reject } = deferred.get(id);
-							deferred.delete(id);
-
-							if (error) reject(error);
-							else fulfil(data);
-						}`);
-    }
-    blocks.push(`${global} = {
-						${properties.join(",\n						")}
-					};`);
-    const args = [`app`, `${global}.element`];
     if (page_config.ssr) {
-      const serialized = { form: "null", error: "null" };
-      blocks.push(`const data = ${data};`);
-      if (form_value) {
-        serialized.form = uneval_action_response(
-          form_value,
-          /** @type {string} */
-          event.route.id
-        );
-      }
-      if (error2) {
-        serialized.error = uneval(error2);
-      }
       const hydrate = [
         `node_ids: [${branch.map(({ node }) => node.index).join(", ")}]`,
-        `data`,
+        `data: ${serialized.data}`,
         `form: ${serialized.form}`,
         `error: ${serialized.error}`
       ];
@@ -3258,38 +3270,54 @@ async function render_response({
       if (options2.embedded) {
         hydrate.push(`params: ${uneval(event.params)}`, `route: ${s(event.route)}`);
       }
-      args.push(`{
-							${hydrate.join(",\n							")}
-						}`);
-    }
-    blocks.push(`Promise.all([
-						import(${s(prefixed(client.start.file))}),
-						import(${s(prefixed(client.app.file))})
-					]).then(([kit, app]) => {
-						kit.start(${args.join(", ")});
-					});`);
-    if (options2.service_worker) {
-      const opts = "";
-      blocks.push(`if ('serviceWorker' in navigator) {
-						addEventListener('load', function () {
-							navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
-						});
-					}`);
+      opts.push(`hydrate: {
+					${hydrate.join(",\n					")}
+				}`);
     }
     const init_app = `
-				{
-					${blocks.join("\n\n					")}
-				}
-			`;
-    csp.add_script(init_app);
-    body += `
-			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_app}<\/script>
+			import { start } from ${s(prefixed(entry.file))};
+
+			start({
+				${opts.join(",\n				")}
+			});
 		`;
+    for (const dep of modulepreloads) {
+      const path = prefixed(dep);
+      if (resolve_opts.preload({ type: "js", path })) {
+        link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
+        if (state.prerendering) {
+          head += `
+		<link rel="modulepreload" href="${path}">`;
+        }
+      }
+    }
+    const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
+    csp.add_script(init_app);
+    if (csp.script_needs_nonce) {
+      attributes.push(`nonce="${csp.nonce}"`);
+    }
+    body += `
+		<script ${attributes.join(" ")}>${init_app}<\/script>`;
   }
-  const headers = new Headers({
-    "x-sveltekit-page": "true",
-    "content-type": "text/html"
-  });
+  if (page_config.ssr && page_config.csr) {
+    body += `
+	${fetched.map(
+      (item) => serialize_data(item, resolve_opts.filterSerializedResponseHeaders, !!state.prerendering)
+    ).join("\n	")}`;
+  }
+  if (options2.service_worker) {
+    const opts = "";
+    const init_service_worker = `
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('${prefixed("service-worker.js")}'${opts});
+				});
+			}
+		`;
+    csp.add_script(init_service_worker);
+    head += `
+		<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
+  }
   if (state.prerendering) {
     const http_equiv = [];
     const csp_headers = csp.csp_provider.get_meta();
@@ -3301,18 +3329,6 @@ async function render_response({
     }
     if (http_equiv.length > 0) {
       head = http_equiv.join("\n") + head;
-    }
-  } else {
-    const csp_header = csp.csp_provider.get_header();
-    if (csp_header) {
-      headers.set("content-security-policy", csp_header);
-    }
-    const report_only_header = csp.report_only_provider.get_header();
-    if (report_only_header) {
-      headers.set("content-security-policy-report-only", report_only_header);
-    }
-    if (link_header_preloads.size) {
-      headers.set("link", Array.from(link_header_preloads).join(", "));
     }
   }
   head += rendered.head;
@@ -3330,90 +3346,28 @@ async function render_response({
     html,
     done: true
   }) || "";
-  if (!chunks) {
-    headers.set("etag", `"${hash(transformed)}"`);
+  const headers = new Headers({
+    "x-sveltekit-page": "true",
+    "content-type": "text/html",
+    etag: `"${hash(transformed)}"`
+  });
+  if (!state.prerendering) {
+    const csp_header = csp.csp_provider.get_header();
+    if (csp_header) {
+      headers.set("content-security-policy", csp_header);
+    }
+    const report_only_header = csp.report_only_provider.get_header();
+    if (report_only_header) {
+      headers.set("content-security-policy-report-only", report_only_header);
+    }
+    if (link_header_preloads.size) {
+      headers.set("link", Array.from(link_header_preloads).join(", "));
+    }
   }
-  return !chunks ? text(transformed, {
+  return text(transformed, {
     status,
     headers
-  }) : new Response(
-    new ReadableStream({
-      async start(controller) {
-        controller.enqueue(encoder$1.encode(transformed + "\n"));
-        for await (const chunk of chunks) {
-          controller.enqueue(encoder$1.encode(chunk));
-        }
-        controller.close();
-      },
-      type: "bytes"
-    }),
-    {
-      headers: {
-        "content-type": "text/html"
-      }
-    }
-  );
-}
-function get_data(event, options2, nodes, global) {
-  let promise_id = 1;
-  let count = 0;
-  const { iterator, push, done } = create_async_iterator();
-  function replacer(thing) {
-    if (typeof thing?.then === "function") {
-      const id = promise_id++;
-      count += 1;
-      thing.then(
-        /** @param {any} data */
-        (data) => ({ data })
-      ).catch(
-        /** @param {any} error */
-        async (error2) => ({
-          error: await handle_error_and_jsonify(event, options2, error2)
-        })
-      ).then(
-        /**
-         * @param {{data: any; error: any}} result
-         */
-        async ({ data, error: error2 }) => {
-          count -= 1;
-          let str;
-          try {
-            str = uneval({ id, data, error: error2 }, replacer);
-          } catch (e) {
-            error2 = await handle_error_and_jsonify(
-              event,
-              options2,
-              new Error(`Failed to serialize promise while rendering ${event.route.id}`)
-            );
-            data = void 0;
-            str = uneval({ id, data, error: error2 }, replacer);
-          }
-          push(`<script>${global}.resolve(${str})<\/script>
-`);
-          if (count === 0)
-            done();
-        }
-      );
-      return `${global}.defer(${id})`;
-    }
-  }
-  try {
-    const strings = nodes.map((node) => {
-      if (!node)
-        return "null";
-      return `{"type":"data","data":${uneval(node.data, replacer)},${stringify_uses(node)}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
-    });
-    return {
-      data: `[${strings.join(",")}]`,
-      chunks: count > 0 ? iterator : null
-    };
-  } catch (e) {
-    throw new Error(clarify_devalue_error(
-      event,
-      /** @type {any} */
-      e
-    ));
-  }
+  });
 }
 function get_option(nodes, option) {
   return nodes.reduce(
@@ -3499,218 +3453,6 @@ async function respond_with_error({
       e instanceof HttpError ? e.status : 500,
       (await handle_error_and_jsonify(event, options2, e)).message
     );
-  }
-}
-function once(fn) {
-  let done = false;
-  let result;
-  return () => {
-    if (done)
-      return result;
-    done = true;
-    return result = fn();
-  };
-}
-var INVALIDATED_PARAM = "x-sveltekit-invalidated";
-var encoder = new TextEncoder();
-async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
-  if (!route.page) {
-    return new Response(void 0, {
-      status: 404
-    });
-  }
-  state.initiator = route;
-  try {
-    const node_ids = [...route.page.layouts, route.page.leaf];
-    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
-    let aborted = false;
-    const url = new URL(event.url);
-    url.pathname = normalize_path(url.pathname, trailing_slash);
-    const new_event = { ...event, url };
-    const functions = node_ids.map((n, i) => {
-      return once(async () => {
-        try {
-          if (aborted) {
-            return (
-              /** @type {import('types').ServerDataSkippedNode} */
-              {
-                type: "skip"
-              }
-            );
-          }
-          const node = n == void 0 ? n : await manifest2._.nodes[n]();
-          return load_server_data({
-            event: new_event,
-            state,
-            node,
-            parent: async () => {
-              const data2 = {};
-              for (let j = 0; j < i; j += 1) {
-                const parent = (
-                  /** @type {import('types').ServerDataNode | null} */
-                  await functions[j]()
-                );
-                if (parent) {
-                  Object.assign(data2, parent.data);
-                }
-              }
-              return data2;
-            }
-          });
-        } catch (e) {
-          aborted = true;
-          throw e;
-        }
-      });
-    });
-    const promises = functions.map(async (fn, i) => {
-      if (!invalidated[i]) {
-        return (
-          /** @type {import('types').ServerDataSkippedNode} */
-          {
-            type: "skip"
-          }
-        );
-      }
-      return fn();
-    });
-    let length = promises.length;
-    const nodes = await Promise.all(
-      promises.map(
-        (p, i) => p.catch(async (error2) => {
-          if (error2 instanceof Redirect) {
-            throw error2;
-          }
-          length = Math.min(length, i + 1);
-          return (
-            /** @type {import('types').ServerErrorNode} */
-            {
-              type: "error",
-              error: await handle_error_and_jsonify(event, options2, error2),
-              status: error2 instanceof HttpError ? error2.status : void 0
-            }
-          );
-        })
-      )
-    );
-    const { data, chunks } = get_data_json(event, options2, nodes);
-    if (!chunks) {
-      return json_response(data);
-    }
-    return new Response(
-      new ReadableStream({
-        async start(controller) {
-          controller.enqueue(encoder.encode(data));
-          for await (const chunk of chunks) {
-            controller.enqueue(encoder.encode(chunk));
-          }
-          controller.close();
-        },
-        type: "bytes"
-      }),
-      {
-        headers: {
-          // we use a proprietary content type to prevent buffering.
-          // the `text` prefix makes it inspectable
-          "content-type": "text/sveltekit-data",
-          "cache-control": "private, no-store"
-        }
-      }
-    );
-  } catch (e) {
-    const error2 = normalize_error(e);
-    if (error2 instanceof Redirect) {
-      return redirect_json_response(error2);
-    } else {
-      return json_response(await handle_error_and_jsonify(event, options2, error2), 500);
-    }
-  }
-}
-function json_response(json2, status = 200) {
-  return text(typeof json2 === "string" ? json2 : JSON.stringify(json2), {
-    status,
-    headers: {
-      "content-type": "application/json",
-      "cache-control": "private, no-store"
-    }
-  });
-}
-function redirect_json_response(redirect) {
-  return json_response({
-    type: "redirect",
-    location: redirect.location
-  });
-}
-function get_data_json(event, options2, nodes) {
-  let promise_id = 1;
-  let count = 0;
-  const { iterator, push, done } = create_async_iterator();
-  const reducers = {
-    /** @param {any} thing */
-    Promise: (thing) => {
-      if (typeof thing?.then === "function") {
-        const id = promise_id++;
-        count += 1;
-        let key2 = "data";
-        thing.catch(
-          /** @param {any} e */
-          async (e) => {
-            key2 = "error";
-            return handle_error_and_jsonify(
-              event,
-              options2,
-              /** @type {any} */
-              e
-            );
-          }
-        ).then(
-          /** @param {any} value */
-          async (value) => {
-            let str;
-            try {
-              str = stringify(value, reducers);
-            } catch (e) {
-              const error2 = await handle_error_and_jsonify(
-                event,
-                options2,
-                new Error(`Failed to serialize promise while rendering ${event.route.id}`)
-              );
-              key2 = "error";
-              str = stringify(error2, reducers);
-            }
-            count -= 1;
-            push(`{"type":"chunk","id":${id},"${key2}":${str}}
-`);
-            if (count === 0)
-              done();
-          }
-        );
-        return id;
-      }
-    }
-  };
-  try {
-    const strings = nodes.map((node) => {
-      if (!node)
-        return "null";
-      if (node.type === "error" || node.type === "skip") {
-        return JSON.stringify(node);
-      }
-      return `{"type":"data","data":${stringify(node.data, reducers)},${stringify_uses(
-        node
-      )}${node.slash ? `,"slash":${JSON.stringify(node.slash)}` : ""}}`;
-    });
-    return {
-      data: `{"type":"data","nodes":[${strings.join(",")}]}
-`,
-      chunks: count > 0 ? iterator : null
-    };
-  } catch (e) {
-    throw new Error(clarify_devalue_error(
-      event,
-      /** @type {any} */
-      e
-    ));
   }
 }
 async function render_page(event, route, page2, options2, manifest2, state, resolve_opts) {
@@ -3891,11 +3633,11 @@ async function render_page(event, route, page2, options2, manifest2, state, reso
           const error2 = await handle_error_and_jsonify(event, options2, err);
           while (i--) {
             if (page2.errors[i]) {
-              const index7 = (
+              const index8 = (
                 /** @type {number} */
                 page2.errors[i]
               );
-              const node2 = await manifest2._.nodes[index7]();
+              const node2 = await manifest2._.nodes[index8]();
               let j = i;
               while (!branch[j])
                 j -= 1;
@@ -3924,19 +3666,10 @@ async function render_page(event, route, page2, options2, manifest2, state, reso
       }
     }
     if (state.prerendering && should_prerender_data) {
-      let { data, chunks } = get_data_json(
-        event,
-        options2,
-        branch.map((node) => node?.server_data)
-      );
-      if (chunks) {
-        for await (const chunk of chunks) {
-          data += chunk;
-        }
-      }
+      const body = `{"type":"data","nodes":[${branch.map((node) => serialize_data_node(node?.server_data)).join(",")}]}`;
       state.prerendering.dependencies.set(data_pathname, {
-        response: text(data),
-        body: data
+        response: text(body),
+        body
       });
     }
     return await render_response({
@@ -3997,6 +3730,134 @@ function exec(match, params, matchers) {
   if (buffered)
     return;
   return result;
+}
+function once(fn) {
+  let done = false;
+  let result;
+  return () => {
+    if (done)
+      return result;
+    done = true;
+    return result = fn();
+  };
+}
+var INVALIDATED_PARAM = "x-sveltekit-invalidated";
+async function render_data(event, route, options2, manifest2, state, invalidated_data_nodes, trailing_slash) {
+  if (!route.page) {
+    return new Response(void 0, {
+      status: 404
+    });
+  }
+  state.initiator = route;
+  try {
+    const node_ids = [...route.page.layouts, route.page.leaf];
+    const invalidated = invalidated_data_nodes ?? node_ids.map(() => true);
+    let aborted = false;
+    const url = new URL(event.url);
+    url.pathname = normalize_path(url.pathname, trailing_slash);
+    const new_event = { ...event, url };
+    const functions = node_ids.map((n, i) => {
+      return once(async () => {
+        try {
+          if (aborted) {
+            return (
+              /** @type {import('types').ServerDataSkippedNode} */
+              {
+                type: "skip"
+              }
+            );
+          }
+          const node = n == void 0 ? n : await manifest2._.nodes[n]();
+          return load_server_data({
+            event: new_event,
+            state,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = (
+                  /** @type {import('types').ServerDataNode | null} */
+                  await functions[j]()
+                );
+                if (parent) {
+                  Object.assign(data, parent.data);
+                }
+              }
+              return data;
+            }
+          });
+        } catch (e) {
+          aborted = true;
+          throw e;
+        }
+      });
+    });
+    const promises = functions.map(async (fn, i) => {
+      if (!invalidated[i]) {
+        return (
+          /** @type {import('types').ServerDataSkippedNode} */
+          {
+            type: "skip"
+          }
+        );
+      }
+      return fn();
+    });
+    let length = promises.length;
+    const nodes = await Promise.all(
+      promises.map(
+        (p, i) => p.catch(async (error2) => {
+          if (error2 instanceof Redirect) {
+            throw error2;
+          }
+          length = Math.min(length, i + 1);
+          return (
+            /** @type {import('types').ServerErrorNode} */
+            {
+              type: "error",
+              error: await handle_error_and_jsonify(event, options2, error2),
+              status: error2 instanceof HttpError ? error2.status : void 0
+            }
+          );
+        })
+      )
+    );
+    try {
+      const stubs = nodes.slice(0, length).map(serialize_data_node);
+      const json2 = `{"type":"data","nodes":[${stubs.join(",")}]}`;
+      return json_response(json2);
+    } catch (e) {
+      const error2 = (
+        /** @type {any} */
+        e
+      );
+      return json_response(JSON.stringify(clarify_devalue_error(event, error2)), 500);
+    }
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      return redirect_json_response(error2);
+    } else {
+      return json_response(JSON.stringify(await handle_error_and_jsonify(event, options2, error2)));
+    }
+  }
+}
+function json_response(json2, status = 200) {
+  return text(json2, {
+    status,
+    headers: {
+      "content-type": "application/json",
+      "cache-control": "private, no-store"
+    }
+  });
+}
+function redirect_json_response(redirect) {
+  return json_response(
+    JSON.stringify({
+      type: "redirect",
+      location: redirect.location
+    })
+  );
 }
 function get_cookies(request, url, trailing_slash) {
   const header = request.headers.get("cookie") ?? "";
@@ -4153,10 +4014,10 @@ function create_fetch({ event, options: options2, manifest: manifest2, state, ge
         const is_asset = manifest2.assets.has(filename);
         const is_asset_html = manifest2.assets.has(filename_html);
         if (is_asset || is_asset_html) {
-          const file7 = is_asset ? filename : filename_html;
+          const file8 = is_asset ? filename : filename_html;
           if (state.read) {
             const type = is_asset ? manifest2.mimeTypes[filename.slice(filename.lastIndexOf("."))] : "text/html";
-            return new Response(state.read(file7), {
+            return new Response(state.read(file8), {
               headers: type ? { "content-type": type } : {}
             });
           }
@@ -4211,35 +4072,29 @@ function normalize_fetch_input(info, init2, url) {
 }
 function validator(expected) {
   const set = new Set(expected);
-  function validate(module, file7) {
+  function validate(module, route_id) {
     if (!module)
       return;
     for (const key2 in module) {
-      if (key2[0] === "_" || set.has(key2))
-        continue;
-      const hint = hint_for_supported_files(key2, file7?.slice(file7.lastIndexOf("."))) ?? `valid exports are ${expected.join(", ")}, or anything with a '_' prefix`;
-      throw new Error(`Invalid export '${key2}'${file7 ? ` in ${file7}` : ""} (${hint})`);
+      if (key2[0] !== "_" && !set.has(key2)) {
+        const valid = expected.join(", ");
+        throw new Error(
+          `Invalid export '${key2}'${route_id ? ` in ${route_id}` : ""} (valid exports are ${valid}, or anything with a '_' prefix)`
+        );
+      }
     }
   }
   return validate;
 }
-function hint_for_supported_files(key2, ext = ".js") {
-  let supported_files = [];
-  if (valid_common_exports.includes(key2)) {
-    supported_files.push(`+page${ext}`);
-  }
-  if (valid_page_server_exports.includes(key2)) {
-    supported_files.push(`+page.server${ext}`);
-  }
-  if (valid_server_exports.includes(key2)) {
-    supported_files.push(`+server${ext}`);
-  }
-  if (supported_files.length > 0) {
-    return `'${key2}' is a valid export in ${supported_files.join(` or `)}`;
-  }
-}
-var valid_common_exports = ["load", "prerender", "csr", "ssr", "trailingSlash", "config"];
-var valid_page_server_exports = [
+var validate_common_exports = validator([
+  "load",
+  "prerender",
+  "csr",
+  "ssr",
+  "trailingSlash",
+  "config"
+]);
+var validate_page_server_exports = validator([
   "load",
   "prerender",
   "csr",
@@ -4247,21 +4102,17 @@ var valid_page_server_exports = [
   "actions",
   "trailingSlash",
   "config"
-];
-var valid_server_exports = [
+]);
+var validate_server_exports = validator([
   "GET",
   "POST",
   "PATCH",
   "PUT",
   "DELETE",
-  "OPTIONS",
   "prerender",
   "trailingSlash",
   "config"
-];
-var validate_common_exports = validator(valid_common_exports);
-var validate_page_server_exports = validator(valid_page_server_exports);
-var validate_server_exports = validator(valid_server_exports);
+]);
 var default_transform = ({ html }) => html;
 var default_filter = () => false;
 var default_preload = ({ type }) => type === "js" || type === "css";
@@ -4603,14 +4454,15 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["PoweredByIniciativaFIS.svg", "favicon.png", "fisAI.svg", "img/mario.png", "img/mariobu.png", "img/noto_anxious-face-with-sweat.svg", "img/noto_astonished-face.svg", "img/noto_disappointed-face.svg", "img/noto_enraged-face.svg", "img/noto_grinning-face-with-smiling-eyes.svg", "img/noto_nauseated-face.svg", "img/reinaldo.png", "img/reinaldo2.png", "img/reinaldo3.png", "img/reinaldo4.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    client: { "start": { "file": "_app/immutable/entry/start.2f9640c9.mjs", "imports": ["_app/immutable/entry/start.2f9640c9.mjs", "_app/immutable/chunks/index.a6020e24.mjs", "_app/immutable/chunks/singletons.4f783a69.mjs"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.a355646a.mjs", "imports": ["_app/immutable/entry/app.a355646a.mjs", "_app/immutable/chunks/index.a6020e24.mjs"], "stylesheets": [], "fonts": [] } },
+    entry: { "file": "_app/immutable/start-1d0d0f24.js", "imports": ["_app/immutable/start-1d0d0f24.js", "_app/immutable/chunks/index-5932b100.js", "_app/immutable/chunks/singletons-0ee7c03a.js"], "stylesheets": [], "fonts": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
       () => Promise.resolve().then(() => (init__3(), __exports3)),
       () => Promise.resolve().then(() => (init__4(), __exports4)),
       () => Promise.resolve().then(() => (init__5(), __exports5)),
-      () => Promise.resolve().then(() => (init__6(), __exports6))
+      () => Promise.resolve().then(() => (init__6(), __exports6)),
+      () => Promise.resolve().then(() => (init__7(), __exports7))
     ],
     routes: [
       {
@@ -4621,24 +4473,31 @@ var manifest = {
         endpoint: null
       },
       {
+        id: "/luide",
+        pattern: /^\/luide\/?$/,
+        params: [],
+        page: { layouts: [0], errors: [1], leaf: 3 },
+        endpoint: null
+      },
+      {
         id: "/mario",
         pattern: /^\/mario\/?$/,
         params: [],
-        page: { layouts: [0], errors: [1], leaf: 3 },
+        page: { layouts: [0], errors: [1], leaf: 4 },
         endpoint: null
       },
       {
         id: "/reinaldo_old",
         pattern: /^\/reinaldo_old\/?$/,
         params: [],
-        page: { layouts: [0], errors: [1], leaf: 5 },
+        page: { layouts: [0], errors: [1], leaf: 6 },
         endpoint: null
       },
       {
         id: "/reinaldo",
         pattern: /^\/reinaldo\/?$/,
         params: [],
-        page: { layouts: [0], errors: [1], leaf: 4 },
+        page: { layouts: [0], errors: [1], leaf: 5 },
         endpoint: null
       }
     ],
@@ -4674,12 +4533,12 @@ function is_static_file(request) {
     return true;
   }
   const pathname = url.pathname.replace(/\/$/, "");
-  let file7 = pathname.substring(1);
+  let file8 = pathname.substring(1);
   try {
-    file7 = decodeURIComponent(file7);
+    file8 = decodeURIComponent(file8);
   } catch (err) {
   }
-  return manifest.assets.has(file7) || manifest.assets.has(file7 + "/index.html") || prerendered.has(pathname || "/");
+  return manifest.assets.has(file8) || manifest.assets.has(file8 + "/index.html") || prerendered.has(pathname || "/");
 }
 export {
   handler as default
