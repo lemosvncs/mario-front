@@ -1,5 +1,5 @@
 <nav
-  class="relative flex w-full flex-wrap items-center justify-between bg-neutral-100 py-4 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-black">
+  class="dark bg-black relative flex w-full flex-wrap items-center justify-between py-4 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-black">
   <div class="flex w-full flex-wrap items-center justify-between px-6">
     <div>
       <a
