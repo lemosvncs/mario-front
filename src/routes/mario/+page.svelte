@@ -138,7 +138,7 @@
             <div class="flex justify-center mb-10">
                 <img
                 class="rounded-full w-60 h-60 border-white border-4"
-                src="img/mario.png"
+                src="img/mario3.jpeg"
                 alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
                 width="200"
                 height="200"/>
@@ -285,7 +285,7 @@
             <p class="py-4">{ versao }</p>
             <img
                 class="rounded-full w-36 h-36"
-                src="img/mario.png"
+                src="img/mario3.jpeg"
                 alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
                 width="200"
                 height="200"
