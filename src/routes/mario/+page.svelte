@@ -113,7 +113,8 @@
         const res = await fetch(url, {
             mode: "cors",
             method: "POST",
-            headers: { dataType: "json" },
+            headers: { dataType: "json",
+            authorization: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IllJZm9NekpyV19GakNEOF9adFp0aCJ9.eyJpc3MiOiJodHRwczovL2JsdWV4LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJQWkRtMWdKeHJ3NGVkVk9NRmZEcWNyRUJ6VTJYdmEwbUBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9ibHVleC51cy5hdXRoMC5jb20vYXBpL3YyLyIsImlhdCI6MTY4MDgxMjQyNiwiZXhwIjoxNjgwODk4ODI2LCJhenAiOiJQWkRtMWdKeHJ3NGVkVk9NRmZEcWNyRUJ6VTJYdmEwbSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.a6y5m47JpR8nvjz7Xv-s7m4TJ3MBtd-Z85RLbXmhewZbE_9JB7Sc2wJ2Ec96TJxZNIoSOzFGiCrfciG2IIuZf65bl3AFowwvPN6GHhaPrfyC3CkNBJKNuHmf-p37vunRvi-UD9mqfwRGEbvK0bR65BiNxHZ1nfpBboKtj9jEPcee3Zlvj7aV0A2qa3J1unZiN7rb78LFSQFiK_eMaQeI9Xytu7eZriV9zwomAUzfsSR02Gif_r41I4vjUSgIXy1qram8yahS8eP-H5lqXAO_2TPDY76OTMDQQQq_3l72HCcKjkmoAkLeFbWeFKbbTtc5O2DiBcuFv1fb2msAyfhtFQ"},
         });
 
         const text = res.text();
