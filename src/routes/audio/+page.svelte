@@ -25,8 +25,9 @@
     let clips = [];
     let state = "waiting";
 
-    let rec_black = '<img width=40 height=40 src="img/rec_black.png">';
-    let rec_red = '<img width=50 height=50 src="img/rec_red.png">';
+    let rec_black = '<img width=35 height=35 class="py-1.5" src="img/rec_black.png">';
+    let rec_red = '<img width=35 height=35 class="py-1.5" src="img/rec_red.png">';
+    let rec_icon = rec_black;
 
     function onStop(e) {
         console.log("recorder stopped");
@@ -93,8 +94,9 @@
         state="recording"
         mediaRecorder.start();
         
-        recordButton.style.background = "red";
-        recordButton.style.color = "black";
+        // recordButton.style.background = "red";
+        // recordButton.style.color = "black";
+        rec_icon = rec_red;
     }
 
     function stop() {
@@ -103,9 +105,9 @@
         console.log(mediaRecorder.state);
         console.log("recorder stopped");
         
-        recordButton.style.background = "";
-        recordButton.style.color = "";
-
+        // recordButton.style.background = "";
+        // recordButton.style.color = "";
+        rec_icon = rec_black;
         // enviar_audio(chunks);
     }
 
@@ -124,7 +126,7 @@
         <div class="flex justify-center mb-10 py-12">
             <img
             class="rounded-full w-60 h-60 border-white border-4"
-            src="img/quail3.jpeg"
+            src="img/quail.jpeg"
             alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
             width="200"
             height="200"/>
@@ -134,7 +136,7 @@
 
     <div class="flex justify-items-center text-center">
         <div class="flex flex-col justify-center mx-auto text-center">
-            <div class="text-white h-8">
+            <div class="text-white h-8 mb-10">
                 {#if state=="waiting"}
                     <p></p>
                     <!-- <img class="animate-spin" src="img/loading.svg" alt="Loading" width=40 height=40> -->
@@ -142,7 +144,10 @@
                     <p></p>
                     <!-- <img class="animate-spin" src="img/loading.svg" alt="Loading" width=40 height=40> -->
                 {:else if state=="sending"}
-                    <img class="animate-spin" src="img/loading.svg" alt="Loading" width=40 height=40>
+                    <img 
+                        class="animate-spin mx-auto justify-center" 
+                        src="img/loading.svg" 
+                        alt="Loading" width=40 height=40>
                     <!-- <p>Enviando</p> -->
                 {:else}
                     <p></p>
@@ -150,12 +155,12 @@
             </div>
 
             <div id="buttons" class="mx-auto h-28">
-                <button class="record text-white"   on:click={record} bind:this={recordButton}><p>Gravar</p>{@html rec_black}</button>
+                <button class="record text-white"   on:click={record} bind:this={recordButton}><p>Gravar</p>{@html rec_icon}</button>
                 <button class="stop text-white"     on:click={stop}><p>Parar</p><img width=50 height=50 src="img/stop.png"></button>
             </div>
 
             <div class="h-28">
-                {#if cough == undefined}
+                {#if cough === undefined || cough === null}
                     <div class="text-white">
                         <h1>Tosse: </h1>
                         <h1>COVID: </h1>
