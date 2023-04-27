@@ -10,22 +10,26 @@
     import { faAnglesDown } from '@fortawesome/free-solid-svg-icons/faAnglesDown'
     import { faAnglesUp } from '@fortawesome/free-solid-svg-icons/faAnglesUp'
     import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner'
+    import { faThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp'
+    import { faThumbsDown } from '@fortawesome/free-solid-svg-icons/faThumbsDown'
     // import { escape_attribute_value } from "svelte/internal";
     // import { LOGNAME } from "$env/static/private";
 
     let infoHidden = true;
-    let scaleFactor = 0.4;
+    let scaleFactor = 20;
     let carregando = false;
 
     let icon = faCircle;
     let paperPlane = faPaperPlane;
     let hideButtonIcon = faAnglesDown;
     let spinner = faSpinner;
+    let thumbs_up = faThumbsUp;
+    let thumbs_down = faThumbsDown;
 
     let hideButtonText = "Saiba mais"
 
-    let texto_feedback_pos = "Acertou"
-    let texto_feedback_neg = "Errou"
+    let texto_feedback_pos =  "Acertou"
+    let texto_feedback_neg =  "Errou"
 
     let aval = [];
     let emocoes = {};
@@ -144,7 +148,9 @@
                 height="200"/>
                 <!-- <iframe src="https://gifer.com/embed/6a0x" width=240 height=240 frameBorder="0" allowFullScreen></iframe> -->
             </div>
-
+            <div class="flex justify-center">
+                <h1 class="text-white text-6xl">Mário</h1>
+            </div>
             <div class="text-white">
                 {#await promise}
                     <div class="text-center animate-spin">
@@ -166,10 +172,12 @@
                                 </button>
                         </label>
                     </div>
+
                     <div class="container grid place-items-center py-4 text-white">
                         <div class="flex flex-row">
-                            <button class="p-2 mr-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_pos } </button>
-                            <button class="p-2 ml-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
+                            <p class="text-white">A avaliação está correta?</p>
+                            <button class="p-2 mr-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> <Icon icon={paperPlane}></Icon> </button>
+                            <button class="p-2 ml-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> <Icon icon={paperPlane}></Icon> </button>
                         </div>
                     </div>
 
@@ -178,7 +186,7 @@
                         <Icon icon={spinner}/>
                     </div>
                     <Emocoes alegria={ mario.mario.emocoes.alegria } tristeza={ mario.mario.emocoes.tristeza } medo={ mario.mario.emocoes.medo } nojo={ mario.mario.emocoes.nojo } 
-                                raiva={ mario.mario.emocoes.raiva } surpresa={ mario.mario.emocoes.surpresa } scaleFactor=0.8/>
+                                raiva={ mario.mario.emocoes.raiva } surpresa={ mario.mario.emocoes.surpresa } scaleFactor={scaleFactor.toString()}/>
                                 <div class="mb-6 dark: bg-black">
                                     <label class="inline-flex w-full">
                                         <input bind:value={frase}
@@ -196,17 +204,19 @@
                                 </div>
                                 {#if estado_botao === true}
                                     <div class="container grid place-items-center py-4 text-white">
+                                        <p class="text-white mb-2">A avaliação está correta?</p>
                                         <div class="flex flex-row">
-                                            <button on:click={() => enviar_feedback(frase, 1, mario.mario.emocoes.alegria, mario.mario.emocoes.tristeza, mario.mario.emocoes.medo, mario.mario.emocoes.nojo, mario.mario.emocoes.raiva, mario.mario.emocoes.surpresa)} class="p-2 mr-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_pos } </button>
-                                            <button on:click={() => enviar_feedback(frase, 0, mario.mario.emocoes.alegria, mario.mario.emocoes.tristeza, mario.mario.emocoes.medo, mario.mario.emocoes.nojo, mario.mario.emocoes.raiva, mario.mario.emocoes.surpresa)} class="p-2 ml-2 rounded-lg border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
+                                            <button on:click={() => enviar_feedback(frase, 1, mario.mario.emocoes.alegria, mario.mario.emocoes.tristeza, mario.mario.emocoes.medo, mario.mario.emocoes.nojo, mario.mario.emocoes.raiva, mario.mario.emocoes.surpresa)} class="p-2 mr-2 rounded-full border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> <Icon icon={thumbs_up}></Icon>    </button>
+                                            <button on:click={() => enviar_feedback(frase, 0, mario.mario.emocoes.alegria, mario.mario.emocoes.tristeza, mario.mario.emocoes.medo, mario.mario.emocoes.nojo, mario.mario.emocoes.raiva, mario.mario.emocoes.surpresa)} class="p-2 ml-2 rounded-full border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> <Icon icon={thumbs_down}></Icon>  </button>
                                         </div>
                                     </div>
                                 {/if}
                                 {#if estado_botao === false}
                                     <div class="container grid place-items-center py-4 text-white">
+                                        <p class="text-white mb-2">A avaliação está correta?</p>
                                         <div class="flex flex-row">
-                                            <button class="p-2 mr-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_pos } </button>
-                                            <button class="p-2 ml-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
+                                            <button class="p-2 mr-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"><Icon icon={thumbs_up}></Icon>    </button>
+                                            <button class="p-2 ml-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"><Icon icon={thumbs_down}></Icon>  </button>
                                         </div>
                                     </div>
                                 {/if}
@@ -231,9 +241,10 @@
                         </label>
                     </div>
                     <div class="container grid place-items-center py-4 text-white">
+                        <p class="text-white mb-2">A avaliação está correta?</p>
                         <div class="flex flex-row">
-                            <button class="p-2 mr-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_pos } </button>
-                            <button class="p-2 ml-2 rounded-lg opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"> { texto_feedback_neg } </button>
+                            <button class="p-2 mr-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"><Icon icon={thumbs_up}></Icon>    </button>
+                            <button class="p-2 ml-2 rounded-full opacity-20 border-white border-2 bg-slate-900 hover:bg-slate-500 active:bg-green-900"><Icon icon={thumbs_down}></Icon>  </button>
                         </div>
                     </div>
                 {/await}
@@ -282,16 +293,15 @@
                 </tbody>
             </table> -->
 
-            <p class="py-4">{ versao }</p>
+            <!-- <p class="py-4">{ versao }</p>
             <img
                 class="rounded-full w-36 h-36"
                 src="img/mario3.jpeg"
                 alt="Imagem do um homem de bigodes anotando coisas em um caderno e te julgando"
                 width="200"
                 height="200"
-            />
+            /> -->
         </div>
         {/if}
     </div>
-    This is the end.
 </div>
