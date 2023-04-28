@@ -248,7 +248,12 @@
                         </div>
                     </div>
                 {/await}
-
+                <div class="text-sm py-20 text-zinc-500">
+                    <p><i>Este modelo foi estatisticamente validado.</i></p>
+                    <!-- <p></p> -->
+                    <p>Esta I.A. foi criada para prever emoções em textos com mais do que
+                    10 palavras em frases completas.</p>
+                </div>
             </div>
 
         
@@ -256,10 +261,12 @@
         <!-- <div class="flex justify-center min-w-full pt-20 rounded-lg text-white"> 
             <p><i>Este modelo foi estatisticamente validado.</i></p>
         </div> -->
+
+        
             
-        </div>
-        <div class="container grid place-items-center">
-            <button on:click={hideInfo} class="text-white">{ hideButtonText } <Icon icon={ hideButtonIcon }></Icon></button>
+        <!-- </div> -->
+        <!-- <div class="container grid place-items-center"> -->
+            <!-- <button on:click={hideInfo} class="text-white">{ hideButtonText } <Icon icon={ hideButtonIcon }></Icon></button> -->
         </div>
         <!-- <p>Carga: { emocoes.emoções.carga }</p> -->
         <!-- dark:border-white dark:border-2  -->
@@ -269,9 +276,8 @@
         <div class="min-w-full p-6 rounded-lg text-white"> 
             <p><i>Este modelo foi estatisticamente validado.</i></p>
             <!-- <p></p> -->
-            <p>
-                Esta I.A. foi criada para prever emoções em textos com mais do que
-                10 palavras em frases completas.</p>
+            <p>Esta I.A. foi criada para prever emoções em textos com mais do que
+            10 palavras em frases completas.</p>
             
             <!-- <p>A acurácia para cada emoção pode ser vista na tabela abaixo:</p>
             <table class="table-auto border-collapse w-1/2 border-white border-2 mt-2">
