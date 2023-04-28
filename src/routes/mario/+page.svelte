@@ -249,10 +249,11 @@
                     </div>
                 {/await}
                 <div class="text-sm py-20 text-zinc-500">
-                    <p><i>Este modelo foi estatisticamente validado.</i></p>
-                    <!-- <p></p> -->
                     <p>Esta I.A. foi criada para prever emoções em textos com mais do que
-                    10 palavras em frases completas.</p>
+                        10 palavras em frases completas.</p>
+                    <p><i>Este modelo foi estatisticamente validado para obter uma acurácia de mais do que 80% em frases com mais do que 10 palavras.</i></p>
+                    <p><b>Mário está em constante aprendizado :)</b></p>
+                    <!-- <p></p> -->
                 </div>
             </div>
 
